@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3TStone Ltd - Company Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #94a3b8 0%, #64748b 50%, #334155 100%);
+            min-height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .company-info h1 {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .company-info p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        aside {
+            width: 250px;
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .sidebar-item {
+            padding: 1rem 2rem;
+            color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1rem;
+        }
+
+        .sidebar-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+        }
+
+        .sidebar-item.expandable {
+            font-weight: 600;
+        }
+
+        .submenu {
+            display: none;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .submenu.active {
+            display: flex;
+        }
+
+        .submenu-item {
+            padding: 0.75rem 2.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .submenu-item.sub-level {
+            padding-left: 3.5rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .submenu-item.sub-level:hover {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .submenu-item:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .welcome-box {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            padding: 3rem;
+            max-width: 700px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .welcome-box h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .welcome-box p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+        }
+
+        .welcome-box h3 {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .welcome-box ul {
+            text-align: left;
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .welcome-box li {
+            margin: 0.5rem 0;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .btn {
+            background: white;
+            color: #334155;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            aside {
+                display: none;
+                position: fixed;
+                left: 0;
+                top: 60px;
+                width: 100%;
+                height: calc(100vh - 60px);
+                z-index: 99;
+            }
+
+            aside.mobile-open {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                background: transparent;
+                border: none;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            .welcome-box {
+                padding: 1.5rem;
+            }
+
+            .welcome-box h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .lang-dropdown {
+            position: relative;
+        }
+
+        .lang-selector {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .lang-selector:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .lang-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: rgba(30, 30, 40, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            min-width: 150px;
+            z-index: 101;
+        }
+
+        .lang-menu.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lang-menu button {
+            background: transparent;
+            border: none;
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .lang-menu button:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo-box">
+                <img id="logoImg" src="Logo_3TStone.PNG" alt="3TStone Logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2230%22 cy=%2235%22 r=%2220%22 fill=%22%2385b3d1%22/%3E%3Ccircle cx=%2270%22 cy=%2235%22 r=%2220%22 fill=%2264b5d1%22/%3E%3Ccircle cx=%2250%22 cy=%2265%22 r=%2220%22 fill=%2252c77f%22/%3E%3C/svg%3E'">
+            </div>
+            <div class="company-info">
+                <h1>3TStone Ltd</h1>
+                <p>Innovative Technology, Better Life</p>
+            </div>
+        </div>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <div class="lang-dropdown">
+                <button class="lang-selector" onclick="toggleLangMenu()">🌐 <span id="langText">English</span> ▼</button>
+                <div class="lang-menu" id="langMenu">
+                    <button onclick="setLanguage('en')">English</button>
+                    <button onclick="setLanguage('zh-CN')">简体中文</button>
+                    <button onclick="setLanguage('zh-TW')">繁體中文</button>
+                    <button onclick="setLanguage('ja')">日本語</button>
+                    <button onclick="setLanguage('ko')">한국어</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside id="sidebar">
+            <div class="sidebar-item expandable" onclick="toggleSubmenu('productList')">
+                <span id="productListLabel">Product List</span>
+                <span>›</span>
+            </div>
+            <div class="submenu" id="productList">
+                <div class="submenu-item" onclick="toggleSubmenu('ieDiary')">I/E Diary</div>
+                <div class="submenu" id="ieDiary">
+                    <div class="submenu-item sub-level" onclick="window.open('IE_Diary_privacy-policy.html', '_blank')">Privacy Policy</div>
+                    <div class="submenu-item sub-level" onclick="window.open('IE_Diary_Terms_of_Service.html', '_blank')">Terms of Service</div>
+                </div>
+            </div>
+            <div class="sidebar-item" onclick="showPage('about')">
+                <span id="aboutUsLabel">About Us</span>
+            </div>
+        </aside>
+
+        <main>
+            <div class="welcome-box" id="content">
+                <h2>Welcome to 3TStone Ltd</h2>
+                <p>We're a forward-thinking tech company dedicated to improving life through innovation. Discover how our products bring convenience, efficiency, and fresh digital experiences to users worldwide.</p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        © 2026 3TStone Ltd. All rights reserved.
+    </footer>
+
+    <script>
+        const translations = {
+            'en': {
+                welcomeTitle: 'Welcome to 3TStone Ltd',
+                welcomeText: 'We\'re a forward-thinking tech company dedicated to improving life through innovation. Discover how our products bring convenience, efficiency, and fresh digital experiences to users worldwide.',
+                aboutTitle: 'About 3TStone Ltd',
+                aboutText: 'We are an innovative tech company dedicated to improving life through technology. We develop multiple groundbreaking products to provide global users with convenience, efficiency, and fresh digital experiences. It\'s not just about finance management—it\'s a comprehensive solution for life optimization.',
+                missionTitle: 'Our Mission',
+                missionText: 'Through innovative technology and user-friendly design, we provide global users with convenient and efficient digital solutions, making technology truly improve life.',
+                visionTitle: 'Our Vision',
+                visionText: 'To become the leading tech innovation company globally, providing millions of users with convenient and efficient digital experiences through multiple diverse products and services.',
+                valuesTitle: 'Our Values',
+                value1: 'User-Centric - We always prioritize user needs',
+                value2: 'Innovation-Driven - We continuously innovate and improve our products',
+                value3: 'Secure & Reliable - We protect user data and privacy',
+                value4: 'Transparent & Honest - We maintain transparent communication with users',
+                teamTitle: 'Our Team',
+                teamText: 'We have a talented team of members from around the world with extensive experience in tech innovation, product design, engineering development, and user experience optimization.',
+                backHome: '← Back to Home',
+                privacyPolicy: 'Privacy Policy',
+                termsOfService: 'Terms of Service',
+                productList: 'Product List',
+                aboutUs: 'About Us'
+            },
+            'zh-CN': {
+                welcomeTitle: '欢迎来到 3TStone Ltd',
+                welcomeText: '我们是一家致力于用科技改善生活的创新科技公司。通过创新产品和解决方案，为用户带来便利、效率和全新的数字体验。',
+                aboutTitle: '关于 3TStone Ltd',
+                aboutText: '我们是一家致力于用科技改善生活的创新科技公司。我们开发了多款革新产品，致力于为全球用户提供便利、效率和全新的数字体验。不仅是财务管理，更是生活优化的全方位解决方案。',
+                missionTitle: '我们的使命',
+                missionText: '通过创新的技术和用户友好的设计，为全球用户提供便利、高效的数字解决方案，让技术真正改善生活。',
+                visionTitle: '我们的愿景',
+                visionText: '成为全球领先的科技创新公司，通过多款不同的产品和服务，为数万用户提供便利、高效的数字体验。',
+                valuesTitle: '我们的价值观',
+                value1: '用户至上 - 我们始终以用户需求为中心',
+                value2: '创新驱动 - 我们不断创新和改进产品',
+                value3: '安全可靠 - 我们保护用户的数据和隐私',
+                value4: '透明诚实 - 我们与用户保持透明沟通',
+                teamTitle: '我们的团队',
+                teamText: '我们拥有来自全球各地的才华横溢的团队成员，他们在科技创新、产品设计、工程开发和用户体验优化等领域拥有丰富的经验。',
+                backHome: '← 返回首页',
+                privacyPolicy: '隐私政策',
+                termsOfService: '服务条款',
+                productList: '产品列表',
+                aboutUs: '关于我们'
+            },
+            'zh-TW': {
+                welcomeTitle: '歡迎來到 3TStone Ltd',
+                welcomeText: '我們是一家致力於用科技改善生活的創新科技公司。通過創新產品和解決方案，為用戶帶來便利、效率和全新的數位體驗。',
+                aboutTitle: '關於 3TStone Ltd',
+                aboutText: '我們是一家致力於用科技改善生活的創新科技公司。我們開發了多款革新產品，致力於為全球用戶提供便利、效率和全新的數位體驗。不僅是財務管理，更是生活最佳化的全方位解決方案。',
+                missionTitle: '我們的使命',
+                missionText: '通過創新的技術和用戶友好的設計，為全球用戶提供便利、高效的數位解決方案，讓技術真正改善生活。',
+                visionTitle: '我們的願景',
+                visionText: '成為全球領先的科技創新公司，通過多款不同的產品和服務，為數萬用戶提供便利、高效的數位體驗。',
+                valuesTitle: '我們的價值觀',
+                value1: '用戶至上 - 我們始終以用戶需求為中心',
+                value2: '創新驅動 - 我們不斷創新和改進產品',
+                value3: '安全可靠 - 我們保護用戶的數據和隱私',
+                value4: '透明誠實 - 我們與用戶保持透明溝通',
+                teamTitle: '我們的團隊',
+                teamText: '我們擁有來自全球各地的才華橫溢的團隊成員，他們在科技創新、產品設計、工程開發和用戶體驗最佳化等領域擁有豐富的經驗。',
+                backHome: '← 返回首頁',
+                privacyPolicy: '隱私政策',
+                termsOfService: '服務條款',
+                productList: '產品列表',
+                aboutUs: '關於我們'
+            },
+            'ja': {
+                welcomeTitle: '3TStone Ltdへようこそ',
+                welcomeText: '私たちは、革新を通じて生活を改善することに専念する前向きなテクノロジー企業です。革新的な製品とソリューションを通じて、ユーザーに利便性、効率性、新しいデジタル体験をもたらします。',
+                aboutTitle: '3TStone Ltdについて',
+                aboutText: '私たちは、革新を通じて生活を改善することに専念する前向きなテクノロジー企業です。複数の革新的な製品を開発し、世界中のユーザーに利便性、効率性、新しいデジタル体験を提供することに取り組んでいます。財務管理だけでなく、生活最適化のための包括的なソリューションです。',
+                missionTitle: '私たちのミッション',
+                missionText: '革新的なテクノロジーとユーザーフレンドリーなデザインを通じて、世界中のユーザーに便利で効率的なデジタルソリューションを提供し、テクノロジーが本当に生活を改善するようにします。',
+                visionTitle: '私たちのビジョン',
+                visionText: '世界的に有力なテクノロジー革新企業になり、複数の多様な製品とサービスを通じて、数百万のユーザーに便利で効率的なデジタル体験を提供します。',
+                valuesTitle: '私たちの価値観',
+                value1: 'ユーザー中心 - 常にユーザーのニーズを優先します',
+                value2: '革新駆動 - 製品の継続的な革新と改善',
+                value3: '安全で信頼性 - ユーザーデータとプライバシーを保護',
+                value4: '透明性と誠実性 - ユーザーとの透明なコミュニケーション',
+                teamTitle: '私たちのチーム',
+                teamText: '世界中の才能あるチームメンバーで構成されており、テクノロジー革新、製品設計、エンジニアリング開発、ユーザー体験最適化などの分野で豊富な経験を持っています。',
+                backHome: '← ホームに戻る',
+                privacyPolicy: 'プライバシーポリシー',
+                termsOfService: '利用規約',
+                productList: '製品リスト',
+                aboutUs: '私たちについて'
+            },
+            'ko': {
+                welcomeTitle: '3TStone Ltd에 오신 것을 환영합니다',
+                welcomeText: '우리는 혁신을 통해 삶을 개선하는 데 전념하는 전향적인 기술 회사입니다. 혁신적인 제품과 솔루션을 통해 사용자에게 편의성, 효율성 및 새로운 디지털 경험을 제공합니다.',
+                aboutTitle: '3TStone Ltd 소개',
+                aboutText: '우리는 혁신을 통해 삶을 개선하는 데 전념하는 전향적인 기술 회사입니다. 여러 혁신적인 제품을 개발하여 전 세계 사용자에게 편의성, 효율성 및 새로운 디지털 경험을 제공하기 위해 노력하고 있습니다. 재무 관리뿐만 아니라 삶의 최적화를 위한 포괄적인 솔루션입니다.',
+                missionTitle: '우리의 사명',
+                missionText: '혁신적인 기술과 사용자 친화적인 디자인을 통해 전 세계 사용자에게 편리하고 효율적인 디지털 솔루션을 제공하여 기술이 실제로 삶을 개선하도록 합니다.',
+                visionTitle: '우리의 비전',
+                visionText: '글로벌 기술 혁신 회사의 선두주자가 되어 여러 다양한 제품과 서비스를 통해 수백만 사용자에게 편리하고 효율적인 디지털 경험을 제공합니다.',
+                valuesTitle: '우리의 가치관',
+                value1: '사용자 중심 - 항상 사용자의 필요를 우선합니다',
+                value2: '혁신 주도 - 제품의 지속적인 혁신과 개선',
+                value3: '안전하고 신뢰할 수 있음 - 사용자 데이터 및 개인정보 보호',
+                value4: '투명성과 정직성 - 사용자와의 투명한 소통',
+                teamTitle: '우리의 팀',
+                teamText: '기술 혁신, 제품 설계, 엔지니어링 개발 및 사용자 경험 최적화 분야에서 풍부한 경험을 가진 전 세계의 재능 있는 팀 멤버들로 구성되어 있습니다.',
+                backHome: '← 홈으로 돌아가기',
+                privacyPolicy: '개인정보 보호정책',
+                termsOfService: '서비스 약관',
+                productList: '제품 목록',
+                aboutUs: '회사 소개'
+            }
+        };
+
+        let currentLang = localStorage.getItem('language') || 'en';
+        let currentPage = 'home';
+
+        const langNames = {
+            'en': 'English',
+            'zh-CN': '简体中文',
+            'zh-TW': '繁體中文',
+            'ja': '日本語',
+            'ko': '한국어'
+        };
+
+        function toggleMobileMenu() {
+            document.getElementById('sidebar').classList.toggle('mobile-open');
+        }
+
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById(id);
+            if (submenu) {
+                submenu.classList.toggle('active');
+            }
+        }
+
+        function toggleLangMenu() {
+            document.getElementById('langMenu').classList.toggle('active');
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('language', lang);
+            document.getElementById('langText').textContent = langNames[lang];
+            document.getElementById('langMenu').classList.remove('active');
+            updateUI();
+            // Refresh current page with new language
+            if (currentPage === 'about') {
+                showPage('about');
+            } else {
+                showPage('home');
+            }
+        }
+
+        function updateUI() {
+            const t = translations[currentLang];
+            document.getElementById('productListLabel').textContent = t.productList;
+            document.getElementById('aboutUsLabel').textContent = t.aboutUs;
+        }
+
+        function showPage(page) {
+            currentPage = page;
+            const content = document.getElementById('content');
+            const t = translations[currentLang];
+
+            if (page === 'about') {
+                content.innerHTML = `
+                    <div class="welcome-box">
+                        <h2>${t.aboutTitle}</h2>
+                        <p style="text-align: left; margin-top: 1rem;">${t.aboutText}</p>
+                        <h3>${t.missionTitle}</h3>
+                        <p style="text-align: left; margin-bottom: 1.5rem;">${t.missionText}</p>
+                        <h3>${t.visionTitle}</h3>
+                        <p style="text-align: left; margin-bottom: 1.5rem;">${t.visionText}</p>
+                        <h3>${t.valuesTitle}</h3>
+                        <ul>
+                            <li>✓ ${t.value1}</li>
+                            <li>✓ ${t.value2}</li>
+                            <li>✓ ${t.value3}</li>
+                            <li>✓ ${t.value4}</li>
+                        </ul>
+                        <h3>${t.teamTitle}</h3>
+                        <p style="text-align: left; margin-bottom: 1.5rem;">${t.teamText}</p>
+                        <button class="btn" onclick="showPage('home')">${t.backHome}</button>
+                    </div>
+                `;
+            } else if (page === 'home') {
+                content.innerHTML = `
+                    <div class="welcome-box">
+                        <h2>${t.welcomeTitle}</h2>
+                        <p>${t.welcomeText}</p>
+                    </div>
+                `;
+            }
+            
+            document.getElementById('sidebar').classList.remove('mobile-open');
+        }
+
+        // Initialize
+        document.getElementById('langText').textContent = langNames[currentLang];
+        updateUI();
+        showPage('home');
+    </script>
+</body>
+</html>
