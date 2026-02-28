@@ -344,8 +344,8 @@
             <div class="submenu" id="productList">
                 <div class="submenu-item" onclick="toggleSubmenu('ieDiary')">I/E Diary</div>
                 <div class="submenu" id="ieDiary">
-                    <div class="submenu-item sub-level" onclick="window.open('IE_Diary_privacy-policy.html', '_blank')">Privacy Policy</div>
-                    <div class="submenu-item sub-level" onclick="window.open('IE_Diary_Terms_of_Service.html', '_blank')">Terms of Service</div>
+                    <div class="submenu-item sub-level" onclick="openPrivacyPolicy()"><span id="privacyPolicyLabel">Privacy Policy</span></div>
+                    <div class="submenu-item sub-level" onclick="openTermsOfService()"><span id="termsOfServiceLabel">Terms of Service</span></div>
                 </div>
             </div>
             <div class="sidebar-item" onclick="showPage('about')">
@@ -479,6 +479,30 @@
             }
         };
 
+        const documentURLs = {
+            'en': {
+                privacyPolicy: 'IE_Diary_privacy-policy.html',
+                termsOfService: 'IE_Diary_Terms_of_Service.html'
+            },
+            'zh-CN': {
+                privacyPolicy: 'IE_Diary_privacy-policy_zh.html',
+                termsOfService: 'IE_Diary_Terms_of_Service_zh.html'
+            },
+            'zh-TW': {
+                privacyPolicy: 'IE_Diary_privacy-policy_zh-tw.html',
+                termsOfService: 'IE_Diary_Terms_of_Service_zh-tw.html'
+            },
+            'ja': {
+                privacyPolicy: 'IE_Diary_privacy-policy_ja.html',
+                termsOfService: 'IE_Diary_Terms_of_Service_ja.html'
+            },
+            'ko': {
+                privacyPolicy: 'IE_Diary_privacy-policy_ko.html',
+                termsOfService: 'IE_Diary_Terms_of_Service_ko.html'
+            }
+    };
+
+        
         let currentLang = localStorage.getItem('language') || 'en';
         let currentPage = 'home';
 
@@ -523,8 +547,21 @@
             const t = translations[currentLang];
             document.getElementById('productListLabel').textContent = t.productList;
             document.getElementById('aboutUsLabel').textContent = t.aboutUs;
+            document.getElementById('privacyPolicyLabel').textContent = t.privacyPolicy;
+            document.getElementById('termsOfServiceLabel').textContent = t.termsOfService;
         }
 
+        function openPrivacyPolicy() {
+            const url = documentURLs[currentLang].privacyPolicy;
+            window.open(url, '_blank');
+        }
+
+        function openTermsOfService() {
+            const url = documentURLs[currentLang].termsOfService;
+            window.open(url, '_blank');
+        }
+
+        
         function showPage(page) {
             currentPage = page;
             const content = document.getElementById('content');
