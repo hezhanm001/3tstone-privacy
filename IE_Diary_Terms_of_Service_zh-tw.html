@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>財務日記 - 服務條款</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 15px;
+        }
+
+        .effective-date {
+            font-size: 0.95em;
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        h4 {
+            font-size: 1.1em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #444;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        em {
+            color: #555;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .toc {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+        }
+
+        .toc ul {
+            list-style-type: none;
+            margin-left: 0;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: #007bff;
+        }
+
+        .important-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .important-box strong {
+            color: #856404;
+        }
+
+        .disclaimer-box {
+            background-color: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .disclaimer-box strong {
+            color: #721c24;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .section-divider {
+            border-top: 2px solid #ddd;
+            margin: 40px 0;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>財務日記 - 服務條款</h1>
+        <p class="effective-date"><strong>生效日期：</strong>2026年2月21日</p>
+
+        <div class="toc">
+            <h3>目錄</h3>
+            <ul>
+                <li><a href="#introduction">1. 簡介</a></li>
+                <li><a href="#our-services">2. 我們的服務</a></li>
+                <li><a href="#your-account">3. 您的帳戶</a></li>
+                <li><a href="#user-content">4. 用戶內容和數據</a></li>
+                <li><a href="#paid-memberships">5. 付費會員</a></li>
+                <li><a href="#anonymous-data">6. 匿名數據分析</a></li>
+                <li><a href="#acceptable-use">7. 可接受使用政策</a></li>
+                <li><a href="#intellectual-property">8. 知識產權</a></li>
+                <li><a href="#disclaimers">9. 免責聲明、責任限制和賠償</a></li>
+                <li><a href="#governing-law">10. 管轄法律和爭議解決</a></li>
+                <li><a href="#service-changes">11. 服務變更、中斷和終止</a></li>
+                <li><a href="#general-provisions">12. 一般條款</a></li>
+                <li><a href="#contact">13. 聯絡信息</a></li>
+                <li><a href="#regional">14. 地區附加條款</a></li>
+            </ul>
+        </div>
+
+        <div class="important-box">
+            <h3 style="margin-top: 0;">重要提示：哪些條款適用於您？</h3>
+            <p>本服務條款（"條款"）在您和[您的公司名稱]（"公司"、"我們"、"本公司"）之間建立具有法律約束力的協議。</p>
+            <p>通過創建帳戶或使用我們的應用程序財務日記（"服務"），您同意這些全球服務條款。</p>
+            <p><strong>如果您是地區附加條款部分中列出的司法管轄區的居民，該司法管轄區的特定條款也適用於您。</strong>如果全球服務條款與地區附加條款之間存在衝突，該司法管轄區用戶應遵守地區附加條款的條款。</p>
+            <p>如果您不同意這些條款，您不得訪問或使用我們的服務。</p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <h2 id="introduction">1. 簡介</h2>
+        <p>歡迎使用財務日記。這些條款規管您對我們移動應用程序和任何相關服務的訪問和使用。如果您代表企業或實體使用服務，您聲明您有權將該實體約束到這些條款。</p>
+
+        <h2 id="our-services">2. 我們的服務</h2>
+        <p>財務日記為您提供追蹤和管理個人財務的工具。我們的服務包括但不限於：</p>
+        <ul>
+            <li><strong>交易記錄：</strong>手動輸入您的收入和支出，包括金額、類別和相關圖像（例如收據）。</li>
+            <li><strong>個人分析：</strong>根據您自己的財務數據生成統計報告、圖表和見解。</li>
+            <li><strong>付費會員：</strong>為訂閱費提供高級功能。</li>
+            <li><strong>匿名數據分析：</strong>在您明確同意的情況下，使用您的匿名和彙總數據提供比較分析。</li>
+        </ul>
+
+        <div class="disclaimer-box">
+            <h4 style="margin-top: 0; color: #721c24;">財務免責聲明</h4>
+            <p>您確認並同意該服務是個人財務信息管理工具，<strong>不打算提供財務、投資、法律、稅務或任何其他專業建議。</strong>我們不是財務規劃師、經紀人或稅務顧問。您的財務狀況是獨特的，通過服務呈現的任何信息和分析不應被視為專業建議的替代品。基於服務中的信息做出的所有決定是您的唯一責任，我們對因此類決定而產生的任何結果不承擔責任。</p>
+        </div>
+
+        <h2 id="your-account">3. 您的帳戶</h2>
+        <ul>
+            <li><strong>資格條件：</strong>您必須至少13歲，或達到您所在司法管轄區法律要求的最低年齡才能使用我們的服務。使用虛假信息創建帳戶違反了這些條款。</li>
+            <li><strong>帳戶安全：</strong>您負責維護您的帳戶密碼的保密性，以及在您的帳戶下發生的所有活動。您必須立即通知我們任何未經授權使用您帳戶的情況。</li>
+            <li><strong>帳戶信息：</strong>您同意在註冊過程中提供準確、最新和完整的信息，並更新此類信息以保持其準確、最新和完整。</li>
+        </ul>
+
+        <h2 id="user-content">4. 用戶內容和數據</h2>
+        <ul>
+            <li><strong>您的內容：</strong>您保留對您提交給服務的個人財務數據、文本、圖像和其他內容（"用戶內容"）的所有所有權。</li>
+            <li><strong>對我們的許可：</strong>通過使用該服務，您授予我們全球、非獨占、免版稅、可再許可和可轉讓的許可，以使用、複製、分發、準備衍生作品、顯示和執行您的用戶內容，僅用於運營、開發、提供和改進服務的目的。此許可僅限於向您提供服務，不允許我們在未經您同意的情況下將您的個人可識別內容用於其他目的。</li>
+            <li><strong>內容責任：</strong>您對您的用戶內容及其發佈或發表的後果單獨負責。您聲明並保證您擁有或擁有發佈您提交的用戶內容所需的必要許可、權利、同意和許可。</li>
+        </ul>
+
+        <h2 id="paid-memberships">5. 付費會員</h2>
+        <ul>
+            <li><strong>訂閱：</strong>我們通過付費訂閱（"付費會員"）提供增強功能。通過購買付費會員，您同意支付適用費用。</li>
+            <li><strong>帳單：</strong>訂閱按照定期基礎（例如每月或每年）提前計費。付款將通過各自的應用商店提供商（例如Apple App Store、Google Play Store）處理。</li>
+            <li><strong>自動續訂：</strong>您的訂閱將在每個計費週期結束時自動續訂，除非您在當前期間結束前至少24小時通過您的應用商店帳戶設置取消。</li>
+            <li><strong>價格變更：</strong>我們保留更改訂閱費的權利。任何價格變更將提前通知您，僅適用於後續計費週期。</li>
+            <li><strong>退款和取消：</strong>您的退款和取消權受您用於購買的應用商店的政策和您所在司法管轄區的強制法律約束，如地區附加條款中進一步詳述。</li>
+        </ul>
+
+        <h2 id="anonymous-data">6. 匿名數據分析</h2>
+        <p>我們的一個功能允許您將您的財務習慣與其他用戶的財務習慣進行比較。此功能嚴格<strong>可選擇。</strong></p>
+        <ul>
+            <li><strong>明確同意：</strong>僅當您在應用程序中提供明確的肯定同意時，我們才會將您的數據包含在我們的匿名分析池中。您可以隨時撤回您的同意。</li>
+            <li><strong>匿名化過程：</strong>如果您同意，我們將使用一個過程來去識別您的用戶內容。這涉及刪除所有個人可識別信息（例如您的用戶ID和圖像中的任何個人詳細信息）並將您的財務數據與其他同意用戶的數據彙總。生成的數據集被視為"匿名數據"。</li>
+            <li><strong>匿名數據許可：</strong>您授予我們永久、不可撤銷、全球、免版稅的許可，以使用、複製、修改和從此匿名數據創建衍生作品用於任何目的，包括商業目的，例如向我們的用戶群提供見解和改進我們的服務。</li>
+        </ul>
+
+        <h2 id="acceptable-use">7. 可接受使用政策</h2>
+        <p>您同意不濫用服務或幫助任何其他人這樣做。這包括但不限於以下內容：</p>
+        <ul>
+            <li>探測、掃描或測試任何系統或網絡的漏洞。</li>
+            <li>破壞或以其他方式規避任何安全或身份驗證措施。</li>
+            <li>上傳或共享非法、有害、威脅性、辱罵性或以其他方式令人反感的內容。</li>
+            <li>侵犯他人的隱私或侵犯他人的權利。</li>
+            <li>嘗試對服務進行反向工程、反編譯或發現源代碼。</li>
+        </ul>
+
+        <h2 id="intellectual-property">8. 知識產權</h2>
+        <p>服務中的所有權利、所有權和利益（不包括用戶內容），包括所有相關知識產權，是並將保持公司及其許可方的獨占財產。該服務受新加坡和外國的版權、商標和其他法律保護。</p>
+
+        <h2 id="disclaimers">9. 免責聲明、責任限制和賠償</h2>
+        <ul>
+            <li><strong>保證免責聲明：</strong>該服務按"現狀"和"可用時"提供，不提供任何形式的保證，無論是明示還是暗示。在不限制前述的情況下，我們明確否認任何商品性、特定用途適用性、安靜享受或非侵權性的保證。</li>
+            <li><strong>責任限制：</strong>在適用法律允許的最大範圍內，公司、其附屬公司、官員、員工、代理商、供應商或許可方在任何情況下對任何間接、附帶、特殊、後果性或懲罰性損害賠償，或任何利潤或收入損失，無論是直接還是間接產生，或任何數據、使用、商譽或其他無形損失的損失不承擔責任，這些損失由(A)您對服務的訪問或使用或無法訪問或使用服務；(B)服務上任何第三方的任何行為或內容；或(C)未經授權訪問、使用或改變您的傳輸或內容而產生。在任何情況下，公司對與服務相關的所有索賠的總責任不超過一百美元（美元100.00）或您在過去十二個月內為服務支付給公司的金額，以較大者為準。</li>
+            <li><strong>賠償：</strong>您同意為公司及其附屬公司、官員、代理商和員工辯護、賠償並使其免受因您對服務的訪問或使用或您違反這些條款而產生或以任何方式與之相關的任何索賠、責任、損害賠償、損失和費用（包括但不限於合理的法律和會計費用）的傷害。</li>
+        </ul>
+        <p><strong>注意：</strong>上述條款受您所在司法管轄區的強制法律約束，如地區附加條款中詳述。</p>
+
+        <h2 id="governing-law">10. 管轄法律和爭議解決</h2>
+        <p>這些條款應受<strong>新加坡</strong>法律管轄，不考慮其法律衝突原則。</p>
+        <p>由這些條款引起或與之相關的任何爭議，包括關於其存在、有效性或終止的任何問題，應由新加坡國際仲裁中心（"SIAC"）根據新加坡國際仲裁中心仲裁規則（"SIAC規則"）進行仲裁解決，該規則現已生效，被視為通過參考納入本條款。</p>
+        <p>仲裁地點應為新加坡。仲裁庭應由一名仲裁員組成。仲裁語言應為英文。</p>
+        <p>本部分不剝奪您根據您所在國家法律享有的任何強制消費者保護。請參閱地區附加條款了解特定司法管轄區的爭議解決機制。</p>
+
+        <h2 id="service-changes">11. 服務變更、中斷和終止</h2>
+        <ul>
+            <li><strong>變更：</strong>我們不斷改進我們的服務。我們可能添加或刪除功能或特性，我們可能完全暫停或停止服務。</li>
+            <li><strong>我們的終止：</strong>我們可以隨時以任何理由或不通知您的情況下終止或暫停您對服務的訪問。例如，如果您不遵守這些條款，或如果您以可能導致我們承擔法律責任、中斷服務或中斷他人使用服務的方式使用服務，我們可能會暫停或終止您的使用。</li>
+            <li><strong>您的終止：</strong>您可以隨時停止使用我們的服務。您也可以從應用程序設置中刪除您的帳戶。</li>
+        </ul>
+
+        <h2 id="general-provisions">12. 一般條款</h2>
+        <ul>
+            <li><strong>可分割性：</strong>如果這些條款的任何條款被認定為無效或不可執行，該條款將在最大可允許範圍內執行，這些條款的其他條款將保持完全有效。</li>
+            <li><strong>完整協議：</strong>這些條款構成您和公司之間關於服務的完整和排他性協議，並取代並替代適用於服務的任何其他協議、條款和條件。</li>
+            <li><strong>不放棄：</strong>我們未能執行條款不是我們以後這樣做的權利的放棄。</li>
+        </ul>
+
+        <h2 id="contact">13. 聯絡信息</h2>
+        <p>如果您對這些條款有任何疑問，請通過<strong>[您的支持電子郵件地址]</strong>或郵件<strong>[您的公司物理地址]</strong>與我們聯絡。</p>
+
+        <div class="section-divider"></div>
+
+        <h2 id="regional">14. 地區附加條款</h2>
+
+        <h3>其他司法管轄區</h3>
+        <p>如果您是任何未在下面特別列出的司法管轄區的用戶（包括但不限於菲律賓、巴西、印度、墨西哥、印度尼西亞、泰國、馬來西亞、越南、巴基斯坦、尼日利亞和所有其他未被特定地區附加條款覆蓋的國家和地區），以下條款適用於您：</p>
+        <ol>
+            <li><strong>管轄法律：</strong>這些條款應受新加坡法律管轄，不考慮其法律衝突原則。但是，如果您所在司法管轄區的法律禁止適用新加坡法律，則這些條款應在強制法律要求的範圍內受您所在司法管轄區的法律管轄。</li>
+            <li><strong>爭議解決：</strong>由這些條款引起或與之相關的任何爭議應由新加坡國際仲裁中心（"SIAC"）根據新加坡國際仲裁中心仲裁規則（"SIAC規則"）進行具有約束力的仲裁解決。仲裁地點應為新加坡。仲裁庭應由一名仲裁員組成。仲裁語言應為英文。</li>
+            <li><strong>責任限制：</strong>我們對因您使用服務而產生或與之相關的任何索賠的總責任不超過一百美元（美元100.00）或您在導致責任的事件之前的十二（12）個月內支付給我們的費用，以較大者為準，除非您所在司法管轄區的強制法律另有規定。</li>
+            <li><strong>保證免責聲明：</strong>服務按"現狀"和"可用時"提供，不提供任何保證，無論是明示還是暗示，在適用法律允許的最大範圍內。我們不保證服務將不間斷、無錯誤或不含病毒或其他有害成分。</li>
+            <li><strong>退款和取消：</strong>對於付費會員，退款和取消受您進行購買的應用商店的政策約束（Apple App Store、Google Play Store等）。如果您所在司法管轄區的強制消費者保護法為您提供了比應用商店政策更有利的取消或退款權，您可以通過向[您的支持電子郵件地址]提供購買證明來行使該權利與我們聯絡。</li>
+            <li><strong>不放棄強制權利：</strong>這些條款中的任何內容不應剝奪您根據您所在司法管轄區法律無法放棄的任何強制消費者權利或保護。如果這些條款的任何條款被發現不可執行或違反您所在司法管轄區的強制法律，該條款應在必要的最小範圍內進行改革以使其可執行，或如果這是不可能的，它應被刪除。</li>
+            <li><strong>消費者投訴：</strong>如果您對我們的服務有投訴，您可以將其提交給您所在司法管轄區的相關消費者保護機構。我們致力於公平和誠實地解決爭議。</li>
+            <li><strong>終止：</strong>如果您違反這些條款或適用法律，我們保留終止或暫停您對服務的訪問的權利。但是，除非需要立即終止以防止傷害或非法活動，否則我們將在終止前向您提供合理的通知。</li>
+        </ol>
+
+        <h3>中國大陸</h3>
+        <p>如果您是中國大陸的用戶（就這些條款而言，不包括香港特別行政區、澳門特別行政區和台灣）：</p>
+        <ol>
+            <li><strong>數據處理：</strong>您的個人信息將根據中華人民共和國個人信息保護法（PIPL）進行處理。通過使用服務，您同意按照我們的隱私政策中所述處理您的個人信息。您的個人信息將存儲在位於中國大陸的服務器上。在將您的個人信息轉移到中國大陸以外之前，我們將獲得您的單獨同意。</li>
+            <li><strong>責任限制：</strong>我們對因您使用服務而產生或與之相關的任何索賠的總責任不超過您在導致責任的事件之前的十二（12）個月內支付給我們的費用，除非適用的中國法律另有規定。</li>
+            <li><strong>爭議解決：</strong>任何爭議應提交給上海國際經濟貿易仲裁委員會（SHIAC）進行仲裁，該仲裁應根據委員會在申請仲裁時生效的仲裁規則進行。</li>
+        </ol>
+
+        <h3>香港特別行政區</h3>
+        <p>如果您是香港特別行政區的用戶：</p>
+        <ol>
+            <li><strong>數據隱私：</strong>您的個人數據將根據個人數據（隱私）條例（第486章）進行處理。</li>
+            <li><strong>管轄法律：</strong>這些條款受香港特別行政區法律管轄。</li>
+        </ol>
+
+        <h3>澳門特別行政區</h3>
+        <p>如果您是澳門特別行政區的用戶：</p>
+        <ol>
+            <li><strong>數據隱私：</strong>您的個人數據將根據個人數據保護法（法律8/2005）進行處理。</li>
+            <li><strong>管轄法律：</strong>這些條款受澳門特別行政區法律管轄。</li>
+        </ol>
+
+        <h3>台灣</h3>
+        <p>如果您是台灣的用戶：</p>
+        <ol>
+            <li><strong>消費者保護：</strong>您有權獲得台灣消費者保護法的保護。</li>
+            <li><strong>取消和退款：</strong>對於付費會員，您有從購買之日起七（7）天的冷靜期，在此期間您可以取消您的訂閱並獲得全額退款，前提是您尚未使用高級服務。</li>
+            <li><strong>責任限制：</strong>限制我們對重大過失或故意不當行為責任的任何條款無效。</li>
+        </ol>
+
+        <h3>日本</h3>
+        <p>如果您是日本的用戶：</p>
+        <ol>
+            <li><strong>消費者保護：</strong>日本消費者合同法適用。這些條款中以違反誠實信用原則的方式單方面損害消費者利益的任何條款無效。</li>
+            <li><strong>責任限制：</strong>完全免除我們損害賠償責任的任何條款無效。我們因過失（不包括重大過失）而產生的損害賠償責任應限於您在前十二（12）個月內支付給我們的費用。</li>
+        </ol>
+
+        <h3>韓國</h3>
+        <p>如果您是韓國的用戶：</p>
+        <ol>
+            <li><strong>取消和退款：</strong>對於付費會員，您有從購買之日起七（7）天的冷靜期來取消您的訂閱。我們將根據電子商務消費者保護法處理您的退款。</li>
+            <li><strong>數據隱私：</strong>我們將根據個人信息保護法（PIPA）的要求獲得您的個人信息收集和使用同意。</li>
+            <li><strong>終止：</strong>除非您的行為對服務造成了實質性傷害或違反了適用法律，否則我們將在終止您的帳戶之前向您提供事先通知。</li>
+        </ol>
+
+        <h3>新加坡</h3>
+        <p>如果您是新加坡的用戶：</p>
+        <ol>
+            <li><strong>數據隱私：</strong>您的個人數據將根據2012年個人數據保護法（PDPA）進行處理。</li>
+            <li><strong>管轄法律：</strong>這些條款受新加坡法律管轄，如條款正文中所述。</li>
+        </ol>
+
+        <h3>澳大利亞</h3>
+        <p>如果您是澳大利亞的用戶：</p>
+        <ol>
+            <li><strong>消費者保證：</strong>我們的服務附帶根據澳大利亞消費者法無法排除的保證。對於服務的主要故障，您有權與我們取消服務合同並獲得未使用部分的退款，或獲得其減少價值的賠償。您也有權獲得任何其他合理可預見的損失或損害的賠償。如果故障不構成主要故障，您有權在合理的時間內糾正故障。如果這沒有完成，您有權獲得服務的退款並取消服務合同並獲得任何未使用部分的退款。這些條款第9部分的責任限制僅在澳大利亞消費者法允許的範圍內適用。</li>
+        </ol>
+
+        <h3>美國</h3>
+        <p>如果您是美國的用戶：</p>
+        <ol>
+            <li><strong>仲裁和集團訴訟豁免：</strong>
+                <ul>
+                    <li><strong>強制仲裁：</strong>您和公司同意由這些條款引起或與之相關的任何爭議、索賠或爭議，或違反、終止、執行、解釋或有效性，或使用服務（統稱為"爭議"）將僅通過具有約束力的個人仲裁解決，而不是在任何集團、代表或合併訴訟或訴訟中。</li>
+                    <li><strong>集團訴訟豁免：</strong>您和公司同意每一方僅以您或其個人身份提出索賠，而不是作為任何聲稱的集團或代表訴訟中的原告或集團成員。</li>
+                    <li><strong>例外：</strong>作為有限的例外，如果符合條件，您可以尋求在小額索賠法院解決爭議。</li>
+                </ul>
+            </li>
+            <li><strong>加州居民：</strong>如果您是加州居民，您有權根據加州消費者隱私法（CCPA）（由加州隱私權法（CPRA）修訂）獲得特定的消費者權利保護。請參閱我們的隱私政策了解有關您的權利的更多詳細信息。</li>
+        </ol>
+
+        <h3>加拿大</h3>
+        <p>如果您是加拿大的用戶：</p>
+        <ol>
+            <li><strong>數據隱私：</strong>您的個人信息將根據個人信息保護和電子文件法（PIPEDA）和任何適用的省隱私立法進行處理。</li>
+            <li><strong>魁北克居民：</strong>如果您是魁北克的居民，這些條款將受魁北克法律管轄，任何爭議將在魁北克蒙特利爾法院解決。</li>
+        </ol>
+
+        <h3>歐洲地區</h3>
+        <p>如果您是歐洲經濟區、英國或瑞士的用戶（"歐洲地區"）：</p>
+        <ol>
+            <li><strong>撤銷權：</strong>對於付費會員，您有權在購買之日起十四（14）天內撤銷您的訂閱合同，無需提供任何理由。要行使此權利，您必須通知我們您的決定。如果您行使此權利，我們將向您退款從您那裡收到的所有付款。但是，如果您在撤銷期間已開始使用高級服務，我們可能會向您收取您溝通撤銷之前提供的服務的比例金額。</li>
+            <li><strong>責任限制：</strong>這些條款中的任何內容不應限制或排除我們對由我們的過失、欺詐性陳述或任何其他無法根據適用法律排除或限制的責任造成的死亡或人身傷害的責任。</li>
+            <li><strong>爭議解決：</strong>如果您有爭議，您可以使用歐盟委員會的在線爭議解決平台（ODR平台），可在<a href="http://ec.europa.eu/odr" target="_blank">http://ec.europa.eu/odr</a>訪問。我們沒有義務參與消費者仲裁委員會之前的爭議解決訴訟。</li>
+            <li><strong>數據保護：</strong>您的個人數據將根據通用數據保護條例（GDPR）或英國和瑞士的等效數據保護法進行處理。請參閱我們的隱私政策了解有關您作為數據主體的權利的詳細信息。</li>
+        </ol>
+
+        <div class="section-divider"></div>
+
+        <p style="text-align: center; font-weight: bold; margin-top: 40px;">服務條款結束</p>
+
+        <div class="footer">
+            <p>&copy; 2026 <strong>[您的公司名稱]</strong>。版權所有。</p>
+            <p>最後更新：2026年2月21日</p>
+            <a href="#" class="back-to-top">返回頂部</a>
+        </div>
+    </div>
+</body>
+</html>

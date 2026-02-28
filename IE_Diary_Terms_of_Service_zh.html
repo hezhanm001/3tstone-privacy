@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>财务日记 - 服务条款</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 15px;
+        }
+
+        .effective-date {
+            font-size: 0.95em;
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        h4 {
+            font-size: 1.1em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #444;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        em {
+            color: #555;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .toc {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+        }
+
+        .toc ul {
+            list-style-type: none;
+            margin-left: 0;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: #007bff;
+        }
+
+        .important-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .important-box strong {
+            color: #856404;
+        }
+
+        .disclaimer-box {
+            background-color: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .disclaimer-box strong {
+            color: #721c24;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .section-divider {
+            border-top: 2px solid #ddd;
+            margin: 40px 0;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>财务日记 - 服务条款</h1>
+        <p class="effective-date"><strong>生效日期：</strong>2026年2月21日</p>
+
+        <div class="toc">
+            <h3>目录</h3>
+            <ul>
+                <li><a href="#introduction">1. 简介</a></li>
+                <li><a href="#our-services">2. 我们的服务</a></li>
+                <li><a href="#your-account">3. 您的账户</a></li>
+                <li><a href="#user-content">4. 用户内容和数据</a></li>
+                <li><a href="#paid-memberships">5. 付费会员</a></li>
+                <li><a href="#anonymous-data">6. 匿名数据分析</a></li>
+                <li><a href="#acceptable-use">7. 可接受使用政策</a></li>
+                <li><a href="#intellectual-property">8. 知识产权</a></li>
+                <li><a href="#disclaimers">9. 免责声明、责任限制和赔偿</a></li>
+                <li><a href="#governing-law">10. 管辖法律和争议解决</a></li>
+                <li><a href="#service-changes">11. 服务变更、中断和终止</a></li>
+                <li><a href="#general-provisions">12. 一般条款</a></li>
+                <li><a href="#contact">13. 联系信息</a></li>
+                <li><a href="#regional">14. 地区附加条款</a></li>
+            </ul>
+        </div>
+
+        <div class="important-box">
+            <h3 style="margin-top: 0;">重要提示：哪些条款适用于您？</h3>
+            <p>本服务条款（"条款"）在您和[您的公司名称]（"公司"、"我们"、"本公司"）之间建立具有法律约束力的协议。</p>
+            <p>通过创建账户或使用我们的应用程序财务日记（"服务"），您同意这些全球服务条款。</p>
+            <p><strong>如果您是地区附加条款部分中列出的司法管辖区的居民，该司法管辖区的特定条款也适用于您。</strong>如果全球服务条款与地区附加条款之间存在冲突，该司法管辖区用户应遵守地区附加条款的条款。</p>
+            <p>如果您不同意这些条款，您不得访问或使用我们的服务。</p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <h2 id="introduction">1. 简介</h2>
+        <p>欢迎使用财务日记。这些条款规管您对我们移动应用程序和任何相关服务的访问和使用。如果您代表企业或实体使用服务，您声明您有权将该实体约束到这些条款。</p>
+
+        <h2 id="our-services">2. 我们的服务</h2>
+        <p>财务日记为您提供跟踪和管理个人财务的工具。我们的服务包括但不限于：</p>
+        <ul>
+            <li><strong>交易记录：</strong>手动输入您的收入和支出，包括金额、类别和相关图像（例如收据）。</li>
+            <li><strong>个人分析：</strong>根据您自己的财务数据生成统计报告、图表和见解。</li>
+            <li><strong>付费会员：</strong>为订阅费提供高级功能。</li>
+            <li><strong>匿名数据分析：</strong>在您明确同意的情况下，使用您的匿名和汇总数据提供比较分析。</li>
+        </ul>
+
+        <div class="disclaimer-box">
+            <h4 style="margin-top: 0; color: #721c24;">财务免责声明</h4>
+            <p>您确认并同意该服务是个人财务信息管理工具，<strong>不打算提供财务、投资、法律、税务或任何其他专业建议。</strong>我们不是财务规划师、经纪人或税务顾问。您的财务状况是独特的，通过服务呈现的任何信息和分析不应被视为专业建议的替代品。基于服务中的信息做出的所有决定是您的唯一责任，我们对因此类决定而产生的任何结果不承担责任。</p>
+        </div>
+
+        <h2 id="your-account">3. 您的账户</h2>
+        <ul>
+            <li><strong>资格条件：</strong>您必须至少13岁，或达到您所在司法管辖区法律要求的最低年龄才能使用我们的服务。使用虚假信息创建账户违反了这些条款。</li>
+            <li><strong>账户安全：</strong>您负责维护您的账户密码的保密性，以及在您的账户下发生的所有活动。您必须立即通知我们任何未经授权使用您账户的情况。</li>
+            <li><strong>账户信息：</strong>您同意在注册过程中提供准确、最新和完整的信息，并更新此类信息以保持其准确、最新和完整。</li>
+        </ul>
+
+        <h2 id="user-content">4. 用户内容和数据</h2>
+        <ul>
+            <li><strong>您的内容：</strong>您保留对您提交给服务的个人财务数据、文本、图像和其他内容（"用户内容"）的所有所有权。</li>
+            <li><strong>对我们的许可：</strong>通过使用该服务，您授予我们全球、非独占、免版税、可再许可和可转让的许可，以使用、复制、分发、准备衍生作品、显示和执行您的用户内容，仅用于运营、开发、提供和改进服务的目的。此许可仅限于向您提供服务，不允许我们在未经您同意的情况下将您的个人可识别内容用于其他目的。</li>
+            <li><strong>内容责任：</strong>您对您的用户内容及其发布或发表的后果单独负责。您声明并保证您拥有或拥有发布您提交的用户内容所需的必要许可、权利、同意和许可。</li>
+        </ul>
+
+        <h2 id="paid-memberships">5. 付费会员</h2>
+        <ul>
+            <li><strong>订阅：</strong>我们通过付费订阅（"付费会员"）提供增强功能。通过购买付费会员，您同意支付适用费用。</li>
+            <li><strong>账单：</strong>订阅按照定期基础（例如每月或每年）提前计费。付款将通过各自的应用商店提供商（例如Apple App Store、Google Play Store）处理。</li>
+            <li><strong>自动续订：</strong>您的订阅将在每个计费周期结束时自动续订，除非您在当前期间结束前至少24小时通过您的应用商店账户设置取消。</li>
+            <li><strong>价格变更：</strong>我们保留更改订阅费的权利。任何价格变更将提前通知您，仅适用于后续计费周期。</li>
+            <li><strong>退款和取消：</strong>您的退款和取消权受您用于购买的应用商店的政策和您所在司法管辖区的强制法律约束，如地区附加条款中进一步详述。</li>
+        </ul>
+
+        <h2 id="anonymous-data">6. 匿名数据分析</h2>
+        <p>我们的一个功能允许您将您的财务习惯与其他用户的财务习惯进行比较。此功能严格<strong>可选择。</strong></p>
+        <ul>
+            <li><strong>明确同意：</strong>仅当您在应用程序中提供明确的肯定同意时，我们才会将您的数据包含在我们的匿名分析池中。您可以随时撤回您的同意。</li>
+            <li><strong>匿名化过程：</strong>如果您同意，我们将使用一个过程来去识别您的用户内容。这涉及删除所有个人可识别信息（例如您的用户ID和图像中的任何个人详细信息）并将您的财务数据与其他同意用户的数据聚合。生成的数据集被视为"匿名数据"。</li>
+            <li><strong>匿名数据许可：</strong>您授予我们永久、不可撤销、全球、免版税的许可，以使用、复制、修改和从此匿名数据创建衍生作品用于任何目的，包括商业目的，例如向我们的用户群提供见解和改进我们的服务。</li>
+        </ul>
+
+        <h2 id="acceptable-use">7. 可接受使用政策</h2>
+        <p>您同意不滥用服务或帮助任何其他人这样做。这包括但不限于以下内容：</p>
+        <ul>
+            <li>探测、扫描或测试任何系统或网络的漏洞。</li>
+            <li>破坏或以其他方式规避任何安全或身份验证措施。</li>
+            <li>上传或共享非法、有害、威胁性、辱骂性或以其他方式令人反感的内容。</li>
+            <li>侵犯他人的隐私或侵犯他人的权利。</li>
+            <li>尝试对服务进行反向工程、反编译或发现源代码。</li>
+        </ul>
+
+        <h2 id="intellectual-property">8. 知识产权</h2>
+        <p>服务中的所有权利、所有权和利益（不包括用户内容），包括所有相关知识产权，是并将保持公司及其许可方的独占财产。该服务受新加坡和外国的版权、商标和其他法律保护。</p>
+
+        <h2 id="disclaimers">9. 免责声明、责任限制和赔偿</h2>
+        <ul>
+            <li><strong>保证免责声明：</strong>该服务按"现状"和"可用时"提供，不提供任何形式的保证，无论是明示还是暗示。在不限制前述的情况下，我们明确否认任何商品性、特定用途适用性、安静享受或非侵权性的保证。</li>
+            <li><strong>责任限制：</strong>在适用法律允许的最大范围内，公司、其附属公司、官员、员工、代理商、供应商或许可方在任何情况下对任何间接、附带、特殊、后果性或惩罚性损害赔偿，或任何利润或收入损失，无论是直接还是间接产生，或任何数据、使用、商誉或其他无形损失的损失不承担责任，这些损失由(A)您对服务的访问或使用或无法访问或使用服务；(B)服务上任何第三方的任何行为或内容；或(C)未经授权访问、使用或改变您的传输或内容而产生。在任何情况下，公司对与服务相关的所有索赔的总责任不超过一百美元（美元100.00）或您在过去十二个月内为服务支付给公司的金额，以较大者为准。</li>
+            <li><strong>赔偿：</strong>您同意为公司及其附属公司、官员、代理商和员工辩护、赔偿并使其免受因您对服务的访问或使用或您违反这些条款而产生或以任何方式与之相关的任何索赔、责任、损害赔偿、损失和费用（包括但不限于合理的法律和会计费用）的伤害。</li>
+        </ul>
+        <p><strong>注意：</strong>上述条款受您所在司法管辖区的强制法律约束，如地区附加条款中详述。</p>
+
+        <h2 id="governing-law">10. 管辖法律和争议解决</h2>
+        <p>这些条款应受<strong>新加坡</strong>法律管辖，不考虑其法律冲突原则。</p>
+        <p>由这些条款引起或与之相关的任何争议，包括关于其存在、有效性或终止的任何问题，应由新加坡国际仲裁中心（"SIAC"）根据新加坡国际仲裁中心仲裁规则（"SIAC规则"）进行仲裁解决，该规则现已生效，被视为通过参考纳入本条款。</p>
+        <p>仲裁地点应为新加坡。仲裁庭应由一名仲裁员组成。仲裁语言应为英文。</p>
+        <p>本部分不剥夺您根据您所在国家法律享有的任何强制消费者保护。请参阅地区附加条款了解特定司法管辖区的争议解决机制。</p>
+
+        <h2 id="service-changes">11. 服务变更、中断和终止</h2>
+        <ul>
+            <li><strong>变更：</strong>我们不断改进我们的服务。我们可能添加或删除功能或特性，我们可能完全暂停或停止服务。</li>
+            <li><strong>我们的终止：</strong>我们可以随时以任何理由或不通知您的情况下终止或暂停您对服务的访问。例如，如果您不遵守这些条款，或如果您以可能导致我们承担法律责任、中断服务或中断他人使用服务的方式使用服务，我们可能会暂停或终止您的使用。</li>
+            <li><strong>您的终止：</strong>您可以随时停止使用我们的服务。您也可以从应用程序设置中删除您的账户。</li>
+        </ul>
+
+        <h2 id="general-provisions">12. 一般条款</h2>
+        <ul>
+            <li><strong>可分割性：</strong>如果这些条款的任何条款被认定为无效或不可执行，该条款将在最大可允许范围内执行，这些条款的其他条款将保持完全有效。</li>
+            <li><strong>完整协议：</strong>这些条款构成您和公司之间关于服务的完整和排他性协议，并取代并替代适用于服务的任何其他协议、条款和条件。</li>
+            <li><strong>不放弃：</strong>我们未能执行条款不是我们以后这样做的权利的放弃。</li>
+        </ul>
+
+        <h2 id="contact">13. 联系信息</h2>
+        <p>如果您对这些条款有任何疑问，请通过<strong>[您的支持电子邮件地址]</strong>或邮件<strong>[您的公司物理地址]</strong>与我们联系。</p>
+
+        <div class="section-divider"></div>
+
+        <h2 id="regional">14. 地区附加条款</h2>
+
+        <h3>其他司法管辖区</h3>
+        <p>如果您是任何未在下面特别列出的司法管辖区的用户（包括但不限于菲律宾、巴西、印度、墨西哥、印度尼西亚、泰国、马来西亚、越南、巴基斯坦、尼日利亚和所有其他未被特定地区附加条款覆盖的国家和地区），以下条款适用于您：</p>
+        <ol>
+            <li><strong>管辖法律：</strong>这些条款应受新加坡法律管辖，不考虑其法律冲突原则。但是，如果您所在司法管辖区的法律禁止适用新加坡法律，则这些条款应在强制法律要求的范围内受您所在司法管辖区的法律管辖。</li>
+            <li><strong>争议解决：</strong>由这些条款引起或与之相关的任何争议应由新加坡国际仲裁中心（"SIAC"）根据新加坡国际仲裁中心仲裁规则（"SIAC规则"）进行具有约束力的仲裁解决。仲裁地点应为新加坡。仲裁庭应由一名仲裁员组成。仲裁语言应为英文。</li>
+            <li><strong>责任限制：</strong>我们对因您使用服务而产生或与之相关的任何索赔的总责任不超过一百美元（美元100.00）或您在导致责任的事件之前的十二（12）个月内支付给我们的费用，以较大者为准，除非您所在司法管辖区的强制法律另有规定。</li>
+            <li><strong>保证免责声明：</strong>服务按"现状"和"可用时"提供，不提供任何保证，无论是明示还是暗示，在适用法律允许的最大范围内。我们不保证服务将不间断、无错误或不含病毒或其他有害成分。</li>
+            <li><strong>退款和取消：</strong>对于付费会员，退款和取消受您进行购买的应用商店的政策约束（Apple App Store、Google Play Store等）。如果您所在司法管辖区的强制消费者保护法为您提供了比应用商店政策更有利的取消或退款权，您可以通过向[您的支持电子邮件地址]提供购买证明来行使该权利与我们联系。</li>
+            <li><strong>不放弃强制权利：</strong>这些条款中的任何内容不应剥夺您根据您所在司法管辖区法律无法放弃的任何强制消费者权利或保护。如果这些条款的任何条款被发现不可执行或违反您所在司法管辖区的强制法律，该条款应在必要的最小范围内进行改革以使其可执行，或如果这是不可能的，它应被删除。</li>
+            <li><strong>消费者投诉：</strong>如果您对我们的服务有投诉，您可以将其提交给您所在司法管辖区的相关消费者保护机构。我们致力于公平和诚实地解决争议。</li>
+            <li><strong>终止：</strong>如果您违反这些条款或适用法律，我们保留终止或暂停您对服务的访问的权利。但是，除非需要立即终止以防止伤害或非法活动，否则我们将在终止前向您提供合理的通知。</li>
+        </ol>
+
+        <h3>中国大陆</h3>
+        <p>如果您是中国大陆的用户（就这些条款而言，不包括香港特别行政区、澳门特别行政区和台湾）：</p>
+        <ol>
+            <li><strong>数据处理：</strong>您的个人信息将根据中华人民共和国个人信息保护法（PIPL）进行处理。通过使用服务，您同意按照我们的隐私政策中所述处理您的个人信息。您的个人信息将存储在位于中国大陆的服务器上。在将您的个人信息转移到中国大陆以外之前，我们将获得您的单独同意。</li>
+            <li><strong>责任限制：</strong>我们对因您使用服务而产生或与之相关的任何索赔的总责任不超过您在导致责任的事件之前的十二（12）个月内支付给我们的费用，除非适用的中国法律另有规定。</li>
+            <li><strong>争议解决：</strong>任何争议应提交给上海国际经济贸易仲裁委员会（SHIAC）进行仲裁，该仲裁应根据委员会在申请仲裁时生效的仲裁规则进行。</li>
+        </ol>
+
+        <h3>香港特别行政区</h3>
+        <p>如果您是香港特别行政区的用户：</p>
+        <ol>
+            <li><strong>数据隐私：</strong>您的个人数据将根据个人数据（隐私）条例（第486章）进行处理。</li>
+            <li><strong>管辖法律：</strong>这些条款受香港特别行政区法律管辖。</li>
+        </ol>
+
+        <h3>澳门特别行政区</h3>
+        <p>如果您是澳门特别行政区的用户：</p>
+        <ol>
+            <li><strong>数据隐私：</strong>您的个人数据将根据个人数据保护法（法律8/2005）进行处理。</li>
+            <li><strong>管辖法律：</strong>这些条款受澳门特别行政区法律管辖。</li>
+        </ol>
+
+        <h3>台湾</h3>
+        <p>如果您是台湾的用户：</p>
+        <ol>
+            <li><strong>消费者保护：</strong>您有权获得台湾消费者保护法的保护。</li>
+            <li><strong>取消和退款：</strong>对于付费会员，您有从购买之日起七（7）天的冷静期，在此期间您可以取消您的订阅并获得全额退款，前提是您尚未使用高级服务。</li>
+            <li><strong>责任限制：</strong>限制我们对重大过失或故意不当行为责任的任何条款无效。</li>
+        </ol>
+
+        <h3>日本</h3>
+        <p>如果您是日本的用户：</p>
+        <ol>
+            <li><strong>消费者保护：</strong>日本消费者合同法适用。这些条款中以违反诚实信用原则的方式单方面损害消费者利益的任何条款无效。</li>
+            <li><strong>责任限制：</strong>完全免除我们损害赔偿责任的任何条款无效。我们因过失（不包括重大过失）而产生的损害赔偿责任应限于您在前十二（12）个月内支付给我们的费用。</li>
+        </ol>
+
+        <h3>韩国</h3>
+        <p>如果您是韩国的用户：</p>
+        <ol>
+            <li><strong>取消和退款：</strong>对于付费会员，您有从购买之日起七（7）天的冷静期来取消您的订阅。我们将根据电子商务消费者保护法处理您的退款。</li>
+            <li><strong>数据隐私：</strong>我们将根据个人信息保护法（PIPA）的要求获得您的个人信息收集和使用同意。</li>
+            <li><strong>终止：</strong>除非您的行为对服务造成了实质性伤害或违反了适用法律，否则我们将在终止您的账户之前向您提供事先通知。</li>
+        </ol>
+
+        <h3>新加坡</h3>
+        <p>如果您是新加坡的用户：</p>
+        <ol>
+            <li><strong>数据隐私：</strong>您的个人数据将根据2012年个人数据保护法（PDPA）进行处理。</li>
+            <li><strong>管辖法律：</strong>这些条款受新加坡法律管辖，如条款正文中所述。</li>
+        </ol>
+
+        <h3>澳大利亚</h3>
+        <p>如果您是澳大利亚的用户：</p>
+        <ol>
+            <li><strong>消费者保证：</strong>我们的服务附带根据澳大利亚消费者法无法排除的保证。对于服务的主要故障，您有权与我们取消服务合同并获得未使用部分的退款，或获得其减少价值的赔偿。您也有权获得任何其他合理可预见的损失或损害的赔偿。如果故障不构成主要故障，您有权在合理的时间内纠正故障。如果这没有完成，您有权获得服务的退款并取消服务合同并获得任何未使用部分的退款。这些条款第9部分的责任限制仅在澳大利亚消费者法允许的范围内适用。</li>
+        </ol>
+
+        <h3>美国</h3>
+        <p>如果您是美国的用户：</p>
+        <ol>
+            <li><strong>仲裁和集团诉讼豁免：</strong>
+                <ul>
+                    <li><strong>强制仲裁：</strong>您和公司同意由这些条款引起或与之相关的任何争议、索赔或争议，或违反、终止、执行、解释或有效性，或使用服务（统称为"争议"）将仅通过具有约束力的个人仲裁解决，而不是在任何集团、代表或合并诉讼或诉讼中。</li>
+                    <li><strong>集团诉讼豁免：</strong>您和公司同意每一方仅以您或其个人身份提出索赔，而不是作为任何声称的集团或代表诉讼中的原告或集团成员。</li>
+                    <li><strong>例外：</strong>作为有限的例外，如果符合条件，您可以寻求在小额索赔法院解决争议。</li>
+                </ul>
+            </li>
+            <li><strong>加州居民：</strong>如果您是加州居民，您有权根据加州消费者隐私法（CCPA）（由加州隐私权法（CPRA）修订）获得特定的消费者权利保护。请参阅我们的隐私政策了解有关您的权利的更多详细信息。</li>
+        </ol>
+
+        <h3>加拿大</h3>
+        <p>如果您是加拿大的用户：</p>
+        <ol>
+            <li><strong>数据隐私：</strong>您的个人信息将根据个人信息保护和电子文件法（PIPEDA）和任何适用的省隐私立法进行处理。</li>
+            <li><strong>魁北克居民：</strong>如果您是魁北克的居民，这些条款将受魁北克法律管辖，任何争议将在魁北克蒙特利尔法院解决。</li>
+        </ol>
+
+        <h3>欧洲地区</h3>
+        <p>如果您是欧洲经济区、英国或瑞士的用户（"欧洲地区"）：</p>
+        <ol>
+            <li><strong>撤销权：</strong>对于付费会员，您有权在购买之日起十四（14）天内撤销您的订阅合同，无需提供任何理由。要行使此权利，您必须通知我们您的决定。如果您行使此权利，我们将向您退款从您那里收到的所有付款。但是，如果您在撤销期间已开始使用高级服务，我们可能会向您收取您沟通撤销之前提供的服务的比例金额。</li>
+            <li><strong>责任限制：</strong>这些条款中的任何内容不应限制或排除我们对由我们的过失、欺诈性陈述或任何其他无法根据适用法律排除或限制的责任造成的死亡或人身伤害的责任。</li>
+            <li><strong>争议解决：</strong>如果您有争议，您可以使用欧盟委员会的在线争议解决平台（ODR平台），可在<a href="http://ec.europa.eu/odr" target="_blank">http://ec.europa.eu/odr</a>访问。我们没有义务参与消费者仲裁委员会之前的争议解决诉讼。</li>
+            <li><strong>数据保护：</strong>您的个人数据将根据通用数据保护条例（GDPR）或英国和瑞士的等效数据保护法进行处理。请参阅我们的隐私政策了解有关您作为数据主体的权利的详细信息。</li>
+        </ol>
+
+        <div class="section-divider"></div>
+
+        <p style="text-align: center; font-weight: bold; margin-top: 40px;">服务条款结束</p>
+
+        <div class="footer">
+            <p>&copy; 2026 <strong>[您的公司名称]</strong>。版权所有。</p>
+            <p>最后更新：2026年2月21日</p>
+            <a href="#" class="back-to-top">返回顶部</a>
+        </div>
+    </div>
+</body>
+</html>
