@@ -344,6 +344,7 @@
             <div class="submenu" id="productList">
                 <div class="submenu-item" onclick="toggleSubmenu('ieDiary')">I/E Diary</div>
                 <div class="submenu" id="ieDiary">
+                    <!-- 修改这两行：使用函数来根据当前语言打开对应的文件 -->
                     <div class="submenu-item sub-level" onclick="openPrivacyPolicy()"><span id="privacyPolicyLabel">Privacy Policy</span></div>
                     <div class="submenu-item sub-level" onclick="openTermsOfService()"><span id="termsOfServiceLabel">Terms of Service</span></div>
                 </div>
@@ -479,6 +480,7 @@
             }
         };
 
+        // 多语言文件映射
         const documentURLs = {
             'en': {
                 privacyPolicy: 'IE_Diary_privacy-policy.html',
@@ -500,9 +502,8 @@
                 privacyPolicy: 'IE_Diary_privacy-policy_ko.html',
                 termsOfService: 'IE_Diary_Terms_of_Service_ko.html'
             }
-    };
+        };
 
-        
         let currentLang = localStorage.getItem('language') || 'en';
         let currentPage = 'home';
 
@@ -529,6 +530,18 @@
             document.getElementById('langMenu').classList.toggle('active');
         }
 
+        // ✅ 新增函数：打开对应语言的隐私政策
+        function openPrivacyPolicy() {
+            const url = documentURLs[currentLang].privacyPolicy;
+            window.open(url, '_blank');
+        }
+
+        // ✅ 新增函数：打开对应语言的服务协议
+        function openTermsOfService() {
+            const url = documentURLs[currentLang].termsOfService;
+            window.open(url, '_blank');
+        }
+
         function setLanguage(lang) {
             currentLang = lang;
             localStorage.setItem('language', lang);
@@ -551,17 +564,6 @@
             document.getElementById('termsOfServiceLabel').textContent = t.termsOfService;
         }
 
-        function openPrivacyPolicy() {
-            const url = documentURLs[currentLang].privacyPolicy;
-            window.open(url, '_blank');
-        }
-
-        function openTermsOfService() {
-            const url = documentURLs[currentLang].termsOfService;
-            window.open(url, '_blank');
-        }
-
-        
         function showPage(page) {
             currentPage = page;
             const content = document.getElementById('content');
