@@ -336,7 +336,7 @@
     </header>
 
     <div class="container">
-        <aside id="sidebar">
+<aside id="sidebar">
             <div class="sidebar-item expandable" onclick="toggleSubmenu('productList')">
                 <span id="productListLabel">Product List</span>
                 <span>›</span>
@@ -344,9 +344,14 @@
             <div class="submenu" id="productList">
                 <div class="submenu-item" onclick="toggleSubmenu('ieDiary')">I/E Diary</div>
                 <div class="submenu" id="ieDiary">
-                    <!-- 修改这两行：使用函数来根据当前语言打开对应的文件 -->
-                    <div class="submenu-item sub-level" onclick="openPrivacyPolicy()"><span id="privacyPolicyLabel">Privacy Policy</span></div>
-                    <div class="submenu-item sub-level" onclick="openTermsOfService()"><span id="termsOfServiceLabel">Terms of Service</span></div>
+                    <div class="submenu-item sub-level" onclick="window.open('IE_Diary_privacy-policy.html', '_blank')">Privacy Policy</div>
+                    <div class="submenu-item sub-level" onclick="window.open('IE_Diary_Terms_of_Service.html', '_blank')">Terms of Service</div>
+                </div>
+
+                <div class="submenu-item" onclick="toggleSubmenu('ironHegemony')">Iron Hegemony</div>
+                <div class="submenu" id="ironHegemony">
+                    <div class="submenu-item sub-level" onclick="window.open('Iron_Hegemony_privacy-policy.html', '_blank')">Privacy Policy</div>
+                    <div class="submenu-item sub-level" onclick="window.open('Iron_Hegemony_Terms_of_Service.html', '_blank')">Terms of Service</div>
                 </div>
             </div>
             <div class="sidebar-item" onclick="showPage('about')">
