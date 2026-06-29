@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3TStone Ltd - Company Website</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
             background: linear-gradient(135deg, #94a3b8 0%, #64748b 50%, #334155 100%);
@@ -19,7 +14,6 @@
             display: flex;
             flex-direction: column;
         }
-
         header {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
@@ -32,13 +26,7 @@
             top: 0;
             z-index: 100;
         }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
+        .header-left { display: flex; align-items: center; gap: 1rem; }
         .logo-box {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(4px);
@@ -50,29 +38,10 @@
             width: 50px;
             height: 50px;
         }
-
-        .logo-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .company-info h1 {
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-
-        .company-info p {
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .container {
-            display: flex;
-            flex: 1;
-            overflow: hidden;
-        }
-
+        .logo-box img { width: 100%; height: 100%; object-fit: contain; }
+        .company-info h1 { font-size: 1.3rem; font-weight: 700; }
+        .company-info p { font-size: 0.85rem; color: rgba(255, 255, 255, 0.7); }
+        .container { display: flex; flex: 1; overflow: hidden; }
         aside {
             width: 250px;
             background: rgba(0, 0, 0, 0.1);
@@ -82,7 +51,6 @@
             flex-direction: column;
             overflow-y: auto;
         }
-
         .sidebar-item {
             padding: 1rem 2rem;
             color: rgba(255, 255, 255, 0.8);
@@ -93,26 +61,10 @@
             align-items: center;
             font-size: 1rem;
         }
-
-        .sidebar-item:hover {
-            background: rgba(255, 255, 255, 0.05);
-            color: white;
-        }
-
-        .sidebar-item.expandable {
-            font-weight: 600;
-        }
-
-        .submenu {
-            display: none;
-            flex-direction: column;
-            background: rgba(0, 0, 0, 0.2);
-        }
-
-        .submenu.active {
-            display: flex;
-        }
-
+        .sidebar-item:hover { background: rgba(255, 255, 255, 0.05); color: white; }
+        .sidebar-item.expandable { font-weight: 600; }
+        .submenu { display: none; flex-direction: column; background: rgba(0, 0, 0, 0.2); }
+        .submenu.active { display: flex; }
         .submenu-item {
             padding: 0.75rem 2.5rem;
             color: rgba(255, 255, 255, 0.8);
@@ -120,22 +72,13 @@
             transition: color 0.3s;
             font-size: 0.95rem;
         }
-
         .submenu-item.sub-level {
             padding-left: 3.5rem;
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.6);
         }
-
-        .submenu-item.sub-level:hover {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .submenu-item:hover {
-            color: white;
-            background: rgba(255, 255, 255, 0.05);
-        }
-
+        .submenu-item.sub-level:hover { color: rgba(255, 255, 255, 0.9); }
+        .submenu-item:hover { color: white; background: rgba(255, 255, 255, 0.05); }
         main {
             flex: 1;
             display: flex;
@@ -144,7 +87,6 @@
             padding: 2rem;
             overflow-y: auto;
         }
-
         .welcome-box {
             background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(10px);
@@ -155,37 +97,11 @@
             text-align: center;
             line-height: 1.6;
         }
-
-        .welcome-box h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .welcome-box p {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.8;
-        }
-
-        .welcome-box h3 {
-            font-size: 1.3rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            text-align: left;
-        }
-
-        .welcome-box ul {
-            text-align: left;
-            margin: 1rem 0;
-            padding-left: 2rem;
-        }
-
-        .welcome-box li {
-            margin: 0.5rem 0;
-            color: rgba(255, 255, 255, 0.85);
-        }
-
+        .welcome-box h2 { font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 700; }
+        .welcome-box p { font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); line-height: 1.8; }
+        .welcome-box h3 { font-size: 1.3rem; margin-top: 2rem; margin-bottom: 1rem; text-align: left; }
+        .welcome-box ul { text-align: left; margin: 1rem 0; padding-left: 2rem; }
+        .welcome-box li { margin: 0.5rem 0; color: rgba(255, 255, 255, 0.85); }
         .btn {
             background: white;
             color: #334155;
@@ -198,12 +114,7 @@
             transition: all 0.3s;
             margin-top: 1rem;
         }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); }
         footer {
             background: rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(10px);
@@ -213,53 +124,7 @@
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.6);
         }
-
-        @media (max-width: 768px) {
-            aside {
-                display: none;
-                position: fixed;
-                left: 0;
-                top: 60px;
-                width: 100%;
-                height: calc(100vh - 60px);
-                z-index: 99;
-            }
-
-            aside.mobile-open {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-                background: transparent;
-                border: none;
-                color: white;
-                font-size: 1.5rem;
-                cursor: pointer;
-            }
-
-            .container {
-                flex-direction: column;
-            }
-
-            main {
-                padding: 1rem;
-            }
-
-            .welcome-box {
-                padding: 1.5rem;
-            }
-
-            .welcome-box h2 {
-                font-size: 1.5rem;
-            }
-        }
-
-        .lang-dropdown {
-            position: relative;
-        }
-
+        .lang-dropdown { position: relative; }
         .lang-selector {
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -270,11 +135,7 @@
             font-size: 0.9rem;
             transition: all 0.3s;
         }
-
-        .lang-selector:hover {
-            background: rgba(255, 255, 255, 0.15);
-        }
-
+        .lang-selector:hover { background: rgba(255, 255, 255, 0.15); }
         .lang-menu {
             display: none;
             position: absolute;
@@ -287,12 +148,7 @@
             min-width: 150px;
             z-index: 101;
         }
-
-        .lang-menu.active {
-            display: flex;
-            flex-direction: column;
-        }
-
+        .lang-menu.active { display: flex; flex-direction: column; }
         .lang-menu button {
             background: transparent;
             border: none;
@@ -303,9 +159,30 @@
             transition: all 0.3s;
             font-size: 0.9rem;
         }
-
-        .lang-menu button:hover {
-            background: rgba(255, 255, 255, 0.1);
+        .lang-menu button:hover { background: rgba(255, 255, 255, 0.1); }
+        @media (max-width: 768px) {
+            aside {
+                display: none;
+                position: fixed;
+                left: 0;
+                top: 60px;
+                width: 100%;
+                height: calc(100vh - 60px);
+                z-index: 99;
+            }
+            aside.mobile-open { display: flex; flex-direction: column; }
+            .mobile-menu-btn {
+                display: block;
+                background: transparent;
+                border: none;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+            .container { flex-direction: column; }
+            main { padding: 1rem; }
+            .welcome-box { padding: 1.5rem; }
+            .welcome-box h2 { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -336,36 +213,31 @@
     </header>
 
     <div class="container">
-<aside id="sidebar">
-    <div class="sidebar-item expandable" onclick="toggleSubmenu('productList')">
-        <span id="productListLabel">Product List</span>
-        <span>›</span>
-    </div>
-    <div class="submenu" id="productList">
-        <div class="submenu-item" onclick="toggleSubmenu('ieDiary')">I/E Diary</div>
-        <div class="submenu" id="ieDiary">
-            <!-- 使用 class 和動態函數 -->
-            <div class="submenu-item sub-level privacy-label" onclick="openDoc('ieDiary', 'privacyPolicy')">Privacy Policy</div>
-            <div class="submenu-item sub-level terms-label" onclick="openDoc('ieDiary', 'termsOfService')">Terms of Service</div>
-        </div>
+        <aside id="sidebar">
+            <div class="sidebar-item expandable" onclick="toggleSubmenu('productList')">
+                <span id="productListLabel">Product List</span>
+                <span>›</span>
+            </div>
+            <div class="submenu" id="productList">
+                <div class="submenu-item" onclick="toggleSubmenu('ieDiary')">I/E Diary</div>
+                <div class="submenu" id="ieDiary">
+                    <div class="submenu-item sub-level privacy-label" onclick="openDoc('ieDiary', 'privacyPolicy')">Privacy Policy</div>
+                    <div class="submenu-item sub-level terms-label" onclick="openDoc('ieDiary', 'termsOfService')">Terms of Service</div>
+                </div>
 
-        <div class="submenu-item" onclick="toggleSubmenu('ironHegemony')">Iron Hegemony</div>
-        <div class="submenu" id="ironHegemony">
-            <!-- 使用 class 和動態函數 -->
-            <div class="submenu-item sub-level privacy-label" onclick="openDoc('ironHegemony', 'privacyPolicy')">Privacy Policy</div>
-            <div class="submenu-item sub-level terms-label" onclick="openDoc('ironHegemony', 'termsOfService')">Terms of Service</div>
-        </div>
-    </div>
-    <div class="sidebar-item" onclick="showPage('about')">
-        <span id="aboutUsLabel">About Us</span>
-    </div>
-</aside>
+                <div class="submenu-item" onclick="toggleSubmenu('ironHegemony')">Iron Hegemony</div>
+                <div class="submenu" id="ironHegemony">
+                    <div class="submenu-item sub-level privacy-label" onclick="openDoc('ironHegemony', 'privacyPolicy')">Privacy Policy</div>
+                    <div class="submenu-item sub-level terms-label" onclick="openDoc('ironHegemony', 'termsOfService')">Terms of Service</div>
+                </div>
+            </div>
+            <div class="sidebar-item" onclick="showPage('about')">
+                <span id="aboutUsLabel">About Us</span>
+            </div>
+        </aside>
 
         <main>
-            <div class="welcome-box" id="content">
-                <h2>Welcome to 3TStone Ltd</h2>
-                <p>We're a forward-thinking tech company dedicated to improving life through innovation. Discover how our products bring convenience, efficiency, and fresh digital experiences to users worldwide.</p>
-            </div>
+            <div id="content"></div>
         </main>
     </div>
 
@@ -436,7 +308,7 @@
                 teamTitle: '我們的團隊',
                 teamText: '我們擁有來自全球各地的才華橫溢的團隊成員，他們在科技創新、產品設計、工程開發和用戶體驗最佳化等領域擁有豐富的經驗。',
                 backHome: '← 返回首頁',
-                privacyPolicy: '隱私政策',
+                privacyPolicy: '隱私權政策',
                 termsOfService: '服務條款',
                 productList: '產品列表',
                 aboutUs: '關於我們'
@@ -487,36 +359,28 @@
             }
         };
 
-        // 多语言文件映射
-// 多語言檔案映射（加入了 Iron Hegemony 並採用雙層結構）
-const documentURLs = {
-    'en': {
-        'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy.html', termsOfService: 'IE_Diary_Terms_of_Service.html' },
-        'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy.html', termsOfService: 'Iron_Hegemony_Terms_of_Service.html' }
-    },
-    'zh-CN': {
-        'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy_zh.html', termsOfService: 'IE_Diary_Terms_of_Service_zh.html' },
-        'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy_zh.html', termsOfService: 'Iron_Hegemony_Terms_of_Service_zh.html' }
-    },
-    'zh-TW': {
-        'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy_zh-tw.html', termsOfService: 'IE_Diary_Terms_of_Service_zh-tw.html' },
-        'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy_zh-tw.html', termsOfService: 'Iron_Hegemony_Terms_of_Service_zh-tw.html' }
-    },
-    'ja': {
-        'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy_ja.html', termsOfService: 'IE_Diary_Terms_of_Service_ja.html' },
-        'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy_ja.html', termsOfService: 'Iron_Hegemony_Terms_of_Service_ja.html' }
-    },
-    'ko': {
-        'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy_ko.html', termsOfService: 'IE_Diary_Terms_of_Service_ko.html' },
-        'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy_ko.html', termsOfService: 'Iron_Hegemony_Terms_of_Service_ko.html' }
-    }
-};
-
-// 統一的新增函數：根據當前語言和 App 名稱打開對應文件
-function openDoc(appName, docType) {
-    const url = documentURLs[currentLang][appName][docType];
-    window.open(url, '_blank');
-}
+        const documentURLs = {
+            'en': {
+                'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy.html', termsOfService: 'IE_Diary_Terms_of_Service.html' },
+                'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy.html', termsOfService: 'Iron_Hegemony_Terms_of_Service.html' }
+            },
+            'zh-CN': {
+                'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy_zh.html', termsOfService: 'IE_Diary_Terms_of_Service_zh.html' },
+                'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy_zh.html', termsOfService: 'Iron_Hegemony_Terms_of_Service_zh.html' }
+            },
+            'zh-TW': {
+                'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy_zh-tw.html', termsOfService: 'IE_Diary_Terms_of_Service_zh-tw.html' },
+                'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy_zh-tw.html', termsOfService: 'Iron_Hegemony_Terms_of_Service_zh-tw.html' }
+            },
+            'ja': {
+                'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy_ja.html', termsOfService: 'IE_Diary_Terms_of_Service_ja.html' },
+                'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy_ja.html', termsOfService: 'Iron_Hegemony_Terms_of_Service_ja.html' }
+            },
+            'ko': {
+                'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy_ko.html', termsOfService: 'IE_Diary_Terms_of_Service_ko.html' },
+                'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy_ko.html', termsOfService: 'Iron_Hegemony_Terms_of_Service_ko.html' }
+            }
+        };
 
         let currentLang = localStorage.getItem('language') || 'en';
         let currentPage = 'home';
@@ -535,24 +399,15 @@ function openDoc(appName, docType) {
 
         function toggleSubmenu(id) {
             const submenu = document.getElementById(id);
-            if (submenu) {
-                submenu.classList.toggle('active');
-            }
+            if (submenu) { submenu.classList.toggle('active'); }
         }
 
         function toggleLangMenu() {
             document.getElementById('langMenu').classList.toggle('active');
         }
 
-        // ✅ 新增函数：打开对应语言的隐私政策
-        function openPrivacyPolicy() {
-            const url = documentURLs[currentLang].privacyPolicy;
-            window.open(url, '_blank');
-        }
-
-        // ✅ 新增函数：打开对应语言的服务协议
-        function openTermsOfService() {
-            const url = documentURLs[currentLang].termsOfService;
+        function openDoc(appName, docType) {
+            const url = documentURLs[currentLang][appName][docType];
             window.open(url, '_blank');
         }
 
@@ -562,36 +417,19 @@ function openDoc(appName, docType) {
             document.getElementById('langText').textContent = langNames[lang];
             document.getElementById('langMenu').classList.remove('active');
             updateUI();
-            // Refresh current page with new language
-            if (currentPage === 'about') {
-                showPage('about');
-            } else {
-                showPage('home');
-            }
+            showPage(currentPage); // 刷新當前頁面的語言
         }
 
         function updateUI() {
-    const t = translations[currentLang];
-    
-    // 替換主標籤
-    document.getElementById('productListLabel').textContent = t.productList;
-    document.getElementById('aboutUsLabel').textContent = t.aboutUs;
-    
-    // 替換側邊欄所有的 Privacy Policy 與 Terms of Service
-    const privacyLabels = document.querySelectorAll('.privacy-label');
-    privacyLabels.forEach(el => el.textContent = t.privacyPolicy);
-    
-    const termsLabels = document.querySelectorAll('.terms-label');
-    termsLabels.forEach(el => el.textContent = t.termsOfService);
-    
-    // 如果首頁在歡迎頁面，順便更新歡迎詞
-    if(currentPage === 'home') {
-        const welcomeBox = document.querySelector('#content .welcome-box');
-        if(welcomeBox) {
-            welcomeBox.innerHTML = `<h2>${t.welcomeTitle}</h2><p>${t.welcomeText}</p>`;
+            const t = translations[currentLang];
+            // 更新選單大標題
+            document.getElementById('productListLabel').textContent = t.productList;
+            document.getElementById('aboutUsLabel').textContent = t.aboutUs;
+            
+            // 安全地更新所有子選單（不會再發生 Crash）
+            document.querySelectorAll('.privacy-label').forEach(el => el.textContent = t.privacyPolicy);
+            document.querySelectorAll('.terms-label').forEach(el => el.textContent = t.termsOfService);
         }
-    }
-}
 
         function showPage(page) {
             currentPage = page;
@@ -627,11 +465,10 @@ function openDoc(appName, docType) {
                     </div>
                 `;
             }
-            
             document.getElementById('sidebar').classList.remove('mobile-open');
         }
 
-        // Initialize
+        // 初始化
         document.getElementById('langText').textContent = langNames[currentLang];
         updateUI();
         showPage('home');
