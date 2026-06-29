@@ -337,27 +337,29 @@
 
     <div class="container">
 <aside id="sidebar">
-            <div class="sidebar-item expandable" onclick="toggleSubmenu('productList')">
-                <span id="productListLabel">Product List</span>
-                <span>›</span>
-            </div>
-            <div class="submenu" id="productList">
-                <div class="submenu-item" onclick="toggleSubmenu('ieDiary')">I/E Diary</div>
-                <div class="submenu" id="ieDiary">
-                    <div class="submenu-item sub-level" onclick="window.open('IE_Diary_privacy-policy.html', '_blank')">Privacy Policy</div>
-                    <div class="submenu-item sub-level" onclick="window.open('IE_Diary_Terms_of_Service.html', '_blank')">Terms of Service</div>
-                </div>
+    <div class="sidebar-item expandable" onclick="toggleSubmenu('productList')">
+        <span id="productListLabel">Product List</span>
+        <span>›</span>
+    </div>
+    <div class="submenu" id="productList">
+        <div class="submenu-item" onclick="toggleSubmenu('ieDiary')">I/E Diary</div>
+        <div class="submenu" id="ieDiary">
+            <!-- 使用 class 和動態函數 -->
+            <div class="submenu-item sub-level privacy-label" onclick="openDoc('ieDiary', 'privacyPolicy')">Privacy Policy</div>
+            <div class="submenu-item sub-level terms-label" onclick="openDoc('ieDiary', 'termsOfService')">Terms of Service</div>
+        </div>
 
-                <div class="submenu-item" onclick="toggleSubmenu('ironHegemony')">Iron Hegemony</div>
-                <div class="submenu" id="ironHegemony">
-                    <div class="submenu-item sub-level" onclick="window.open('Iron_Hegemony_privacy-policy.html', '_blank')">Privacy Policy</div>
-                    <div class="submenu-item sub-level" onclick="window.open('Iron_Hegemony_Terms_of_Service.html', '_blank')">Terms of Service</div>
-                </div>
-            </div>
-            <div class="sidebar-item" onclick="showPage('about')">
-                <span id="aboutUsLabel">About Us</span>
-            </div>
-        </aside>
+        <div class="submenu-item" onclick="toggleSubmenu('ironHegemony')">Iron Hegemony</div>
+        <div class="submenu" id="ironHegemony">
+            <!-- 使用 class 和動態函數 -->
+            <div class="submenu-item sub-level privacy-label" onclick="openDoc('ironHegemony', 'privacyPolicy')">Privacy Policy</div>
+            <div class="submenu-item sub-level terms-label" onclick="openDoc('ironHegemony', 'termsOfService')">Terms of Service</div>
+        </div>
+    </div>
+    <div class="sidebar-item" onclick="showPage('about')">
+        <span id="aboutUsLabel">About Us</span>
+    </div>
+</aside>
 
         <main>
             <div class="welcome-box" id="content">
@@ -486,28 +488,35 @@
         };
 
         // 多语言文件映射
-        const documentURLs = {
-            'en': {
-                privacyPolicy: 'IE_Diary_privacy-policy.html',
-                termsOfService: 'IE_Diary_Terms_of_Service.html'
-            },
-            'zh-CN': {
-                privacyPolicy: 'IE_Diary_privacy-policy_zh.html',
-                termsOfService: 'IE_Diary_Terms_of_Service_zh.html'
-            },
-            'zh-TW': {
-                privacyPolicy: 'IE_Diary_privacy-policy_zh-tw.html',
-                termsOfService: 'IE_Diary_Terms_of_Service_zh-tw.html'
-            },
-            'ja': {
-                privacyPolicy: 'IE_Diary_privacy-policy_ja.html',
-                termsOfService: 'IE_Diary_Terms_of_Service_ja.html'
-            },
-            'ko': {
-                privacyPolicy: 'IE_Diary_privacy-policy_ko.html',
-                termsOfService: 'IE_Diary_Terms_of_Service_ko.html'
-            }
-        };
+// 多語言檔案映射（加入了 Iron Hegemony 並採用雙層結構）
+const documentURLs = {
+    'en': {
+        'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy.html', termsOfService: 'IE_Diary_Terms_of_Service.html' },
+        'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy.html', termsOfService: 'Iron_Hegemony_Terms_of_Service.html' }
+    },
+    'zh-CN': {
+        'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy_zh.html', termsOfService: 'IE_Diary_Terms_of_Service_zh.html' },
+        'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy_zh.html', termsOfService: 'Iron_Hegemony_Terms_of_Service_zh.html' }
+    },
+    'zh-TW': {
+        'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy_zh-tw.html', termsOfService: 'IE_Diary_Terms_of_Service_zh-tw.html' },
+        'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy_zh-tw.html', termsOfService: 'Iron_Hegemony_Terms_of_Service_zh-tw.html' }
+    },
+    'ja': {
+        'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy_ja.html', termsOfService: 'IE_Diary_Terms_of_Service_ja.html' },
+        'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy_ja.html', termsOfService: 'Iron_Hegemony_Terms_of_Service_ja.html' }
+    },
+    'ko': {
+        'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy_ko.html', termsOfService: 'IE_Diary_Terms_of_Service_ko.html' },
+        'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy_ko.html', termsOfService: 'Iron_Hegemony_Terms_of_Service_ko.html' }
+    }
+};
+
+// 統一的新增函數：根據當前語言和 App 名稱打開對應文件
+function openDoc(appName, docType) {
+    const url = documentURLs[currentLang][appName][docType];
+    window.open(url, '_blank');
+}
 
         let currentLang = localStorage.getItem('language') || 'en';
         let currentPage = 'home';
@@ -562,12 +571,27 @@
         }
 
         function updateUI() {
-            const t = translations[currentLang];
-            document.getElementById('productListLabel').textContent = t.productList;
-            document.getElementById('aboutUsLabel').textContent = t.aboutUs;
-            document.getElementById('privacyPolicyLabel').textContent = t.privacyPolicy;
-            document.getElementById('termsOfServiceLabel').textContent = t.termsOfService;
+    const t = translations[currentLang];
+    
+    // 替換主標籤
+    document.getElementById('productListLabel').textContent = t.productList;
+    document.getElementById('aboutUsLabel').textContent = t.aboutUs;
+    
+    // 替換側邊欄所有的 Privacy Policy 與 Terms of Service
+    const privacyLabels = document.querySelectorAll('.privacy-label');
+    privacyLabels.forEach(el => el.textContent = t.privacyPolicy);
+    
+    const termsLabels = document.querySelectorAll('.terms-label');
+    termsLabels.forEach(el => el.textContent = t.termsOfService);
+    
+    // 如果首頁在歡迎頁面，順便更新歡迎詞
+    if(currentPage === 'home') {
+        const welcomeBox = document.querySelector('#content .welcome-box');
+        if(welcomeBox) {
+            welcomeBox.innerHTML = `<h2>${t.welcomeTitle}</h2><p>${t.welcomeText}</p>`;
         }
+    }
+}
 
         function showPage(page) {
             currentPage = page;
