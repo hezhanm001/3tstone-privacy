@@ -7,10 +7,13 @@
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 0 20px; }
         h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #34495e; margin-top: 30px; }
+        h2 { color: #34495e; margin-top: 30px; border-left: 4px solid #3498db; padding-left: 10px; }
         h3 { color: #4b6584; font-size: 1.1em; }
         p, li { color: #555; }
         ul { margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f8f9fa; color: #2c3e50; }
         .contact-info { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 30px; }
         .footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.9em; color: #777; text-align: center; }
     </style>
@@ -69,35 +72,76 @@
 
     <h2>4. Legal Basis for Processing</h2>
     <p>Where the UK GDPR or other data protection laws apply, we rely on the following legal bases to process your personal data:</p>
-    <ul>
-        <li><strong>Providing core bookkeeping, account management, and cloud sync:</strong> Performance of a Contract</li>
-        <li><strong>Preventing fraud, abuse, and maintaining App security:</strong> Legitimate Interests</li>
-        <li><strong>Data sharing and group comparison features:</strong> Consent (can be withdrawn at any time)</li>
-        <li><strong>Handling customer feedback and providing support:</strong> Performance of a Contract and Legitimate Interests</li>
-        <li><strong>Complying with legal obligations and regulatory requests:</strong> Legal Obligation</li>
-    </ul>
+    <table>
+        <tr>
+            <th>Processing Activity</th>
+            <th>Legal Basis</th>
+        </tr>
+        <tr>
+            <td>Providing core bookkeeping, account management, and cloud sync</td>
+            <td>Performance of a Contract</td>
+        </tr>
+        <tr>
+            <td>Preventing fraud, abuse, and maintaining App security</td>
+            <td>Legitimate Interests</td>
+        </tr>
+        <tr>
+            <td>Data sharing and group comparison features</td>
+            <td>Consent (can be withdrawn at any time)</td>
+        </tr>
+        <tr>
+            <td>Handling customer feedback and providing support</td>
+            <td>Performance of a Contract & Legitimate Interests</td>
+        </tr>
+        <tr>
+            <td>Complying with legal obligations and regulatory requests</td>
+            <td>Legal Obligation</td>
+        </tr>
+    </table>
 
     <h2>5. Data Retention Periods</h2>
     <p>In accordance with the principle of data minimization, we retain your personal information only as long as necessary:</p>
-    <ul>
-        <li><strong>Account and text-based transaction records:</strong> Retained indefinitely until you manually delete individual records or your entire account.</li>
-        <li><strong>Uploaded photos:</strong> Stored securely for exactly 3 years from the upload date, after which they are automatically and permanently deleted.</li>
-        <li><strong>Pseudonymized data in the comparison database:</strong> Retained indefinitely until you perform any of the following actions: 1) actively withdraw historical shared data using the dedicated in-app button; 2) manually delete the corresponding individual personal transaction record; 3) delete your entire account.</li>
-        <li><strong>Customer support and feedback data:</strong> Retained for a maximum of 2 years after your issue is resolved, then automatically deleted.</li>
-        <li><strong>Legal/Compliance data:</strong> Retained for up to 7 years where required by law (e.g., tax records).</li>
-    </ul>
+    <table>
+        <tr>
+            <th>Data Type</th>
+            <th>Retention Period</th>
+        </tr>
+        <tr>
+            <td>Account & text-based transaction records</td>
+            <td>Retained indefinitely until you manually delete individual records or your entire account.</td>
+        </tr>
+        <tr>
+            <td>Uploaded photos</td>
+            <td>Stored securely for exactly 3 years from the upload date, then automatically permanently deleted.</td>
+        </tr>
+        <tr>
+            <td>Pseudonymized data in comparison database</td>
+            <td>Retained indefinitely until you: 1) withdraw historical shared data via the App; 2) manually delete the corresponding personal transaction record; or 3) delete your entire account.</td>
+        </tr>
+        <tr>
+            <td>Customer support and feedback data</td>
+            <td>Retained for a maximum of 2 years after your issue is resolved, then automatically deleted.</td>
+        </tr>
+        <tr>
+            <td>Legal / Compliance data</td>
+            <td>Retained for up to 7 years where required by law (e.g., tax records).</td>
+        </tr>
+    </table>
+    <p>If we cease operations, we will immediately stop all personal information collection activities, notify you via in-app notification or email, and delete or anonymize all personal information we hold.</p>
 
     <h2>6. Your Rights</h2>
     <p>Regarding the personal data (including pseudonymized data) we process, you possess the following core rights:</p>
     <ul>
-        <li><strong>Right to Access:</strong> To obtain confirmation of whether we process your data and a copy of the data.</li>
-        <li><strong>Right to Rectification:</strong> To correct inaccurate or incomplete data.</li>
-        <li><strong>Right to Erasure (Deletion):</strong> To request the deletion of your data.</li>
-        <li><strong>Right to Restrict Processing:</strong> To request that we limit how your data is used.</li>
-        <li><strong>Right to Data Portability:</strong> To receive your data in a structured, commonly used format.</li>
-        <li><strong>Right to Object:</strong> To object to processing based on legitimate interests.</li>
-        <li><strong>Right to Withdraw Consent:</strong> To withdraw your consent for the data sharing feature at any time.</li>
+        <li><strong>Right to Access</strong> — To obtain confirmation of whether we process your data and a copy of the data.</li>
+        <li><strong>Right to Rectification</strong> — To correct inaccurate or incomplete data.</li>
+        <li><strong>Right to Erasure (Deletion)</strong> — To request the deletion of your data.</li>
+        <li><strong>Right to Restrict Processing</strong> — To request that we limit how your data is used.</li>
+        <li><strong>Right to Data Portability</strong> — To receive your data in a structured, commonly used format.</li>
+        <li><strong>Right to Object</strong> — To object to processing based on legitimate interests.</li>
+        <li><strong>Right to Withdraw Consent</strong> — To withdraw your consent for the data sharing feature at any time. Withdrawal does not affect the lawfulness of processing based on consent before its withdrawal.</li>
     </ul>
+    <p>Users in specific regions may also enjoy other rights granted by their local mandatory laws, including but not limited to the California (CCPA/CPRA) right to opt-out of the "sale" or "sharing" of personal information (we do not sell personal information); South Korea (PIPA) right to temporary suspension; Japan (APPI) right to cease utilization; Taiwan right to cease collection; and Hong Kong (PDPO), Macau (PDPA), Singapore, and Malaysia (PDPA) rights to access and correction.</p>
+
     <p><strong>How to Exercise Your Rights:</strong><br>
     You can exercise some rights directly within the App's "Settings" page:</p>
     <ul>
@@ -105,24 +149,64 @@
         <li><strong>Clear historical shared data button:</strong> Withdraws and deletes your historical pseudonymized data from the comparison database with one click.</li>
         <li><strong>"Security Settings > Delete Account":</strong> Permanently deletes your account and all associated data.</li>
     </ul>
-    <p>To request to exercise other rights (including data access, export, or restriction), please email support@3tstone.com.</p>
+    <p>Please note that some data (such as original account registration credentials) cannot be directly modified or deleted through the app interface. If needed, please contact us via email to handle this.</p>
+    <p>To request to exercise other rights (including data access, export, or restriction), please email support@3tstone.com. We may verify your identity before replying and will respond within the following timeframes: 1 month under UK GDPR; 15 business days under CCPA; 30 days for other general inquiries.</p>
 
     <h2>7. Cross-Border Transfers and Sharing</h2>
-    <p>We will never sell your personal information to third parties. We only share data with service providers essential to maintaining App operations (such as Google Firebase for authentication, data storage, and photo storage). Due to our multinational operations, your information may be processed and accessed outside your country of residence, including in the United States. We strictly comply with the UK International Data Transfer Agreement (IDTA) or European Commission-approved Standard Contractual Clauses (SCCs) to ensure your data's security.</p>
+    <p><strong>We will never sell your personal information to third parties.</strong></p>
+    <p>We only share data with service providers essential to maintaining App operations, and only share the minimum information necessary. Below is the list of third-party service providers we use:</p>
+    <table>
+        <tr>
+            <th>Service Provider</th>
+            <th>Service Type</th>
+            <th>Data That May Be Accessed</th>
+        </tr>
+        <tr>
+            <td>Google Firebase Authentication</td>
+            <td>Account identity verification</td>
+            <td>Email address, encrypted password</td>
+        </tr>
+        <tr>
+            <td>Google Firestore</td>
+            <td>Cloud data storage</td>
+            <td>Transaction records, user profiles, feedback</td>
+        </tr>
+        <tr>
+            <td>Google Firebase Storage</td>
+            <td>Photo cloud storage</td>
+            <td>Receipt/invoice photos you upload</td>
+        </tr>
+        <tr>
+            <td>Third-party Exchange Rate API</td>
+            <td>Currency exchange conversion</td>
+            <td>Only receives currency codes, no personal data involved</td>
+        </tr>
+    </table>
+    <p>All the aforementioned third-party service providers are bound by strict data processing agreements and are prohibited from using your data for any purposes outside the scope of this App's services.</p>
+    <p>Due to our multinational operations, your information may be processed and accessed outside your country of residence, including in the United States (where Google Firebase servers are located). We strictly comply with the UK International Data Transfer Agreement (IDTA) or European Commission-approved Standard Contractual Clauses (SCCs), coupled with strict internal access controls, to ensure your data's security during cross-border transfers.</p>
+    <p>In the event of a merger, acquisition, or asset sale, your information may be transferred as part of the transaction. We will notify you in advance via in-app notifications or email before the transfer is completed and explain your relevant rights (including the right to request data deletion).</p>
 
     <h2>8. Security and Data Breach Notification</h2>
-    <p>We implement reasonable technical and organizational measures, including HTTPS for data in transit, access controls, and encryption at rest. If a data breach affecting your information occurs, we will notify the relevant regulatory authorities (such as the UK ICO) within 72 hours (or as required by law) and inform affected users without undue delay.</p>
+    <p>We implement reasonable technical and organizational measures, including HTTPS for data in transit, access controls and authentication, Firebase Security Rules, and encryption at rest for sensitive data stored in Firebase. While no system is completely secure, we are committed to protecting your information.</p>
+    <p>If a data breach affecting your information occurs, we will notify the relevant data protection regulatory authorities (such as the UK ICO) within 72 hours (or as required by law) and inform affected users without undue delay once the scope of the breach is confirmed.</p>
 
     <h2>9. Children's Privacy</h2>
-    <p>The App is not directed at children under the age of 13 (or the statutory age in your jurisdiction). We do not knowingly collect personal information from children.</p>
+    <p>The App is not directed at children under the age of 13 (or the statutory age in your jurisdiction, such as 16 in the EU region). We do not knowingly collect personal information from children. If we discover that we have inadvertently collected data from a child, we will delete it immediately. If you believe a child has provided us with personal information, please contact support@3tstone.com.</p>
 
     <h2>10. Contact Us and Complaints</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact:</p>
     <p><strong>Email:</strong> support@3tstone.com<br>
     <strong>Registered Office:</strong> [Please enter UK Registered Office Address]</p>
-    <p>If you have any complaints regarding our privacy practices, please email us. You also have the right to lodge a complaint with your relevant data protection authority (e.g., the ICO in the UK).</p>
+    <p>In accordance with the UK Data Use and Access Bill 2025 (DUAA) and relevant data protection laws, if you have any complaints about our privacy practices, please email support@3tstone.com. We will acknowledge receipt of the complaint within 30 days and investigate and respond without undue delay.</p>
+    <p>You also have the right to lodge a complaint with your relevant data protection regulatory authority, including:</p>
+    <ul>
+        <li><strong>UK:</strong> Information Commissioner's Office (ICO): https://ico.org.uk/</li>
+        <li><strong>EU/EEA:</strong> The data protection authority in your member state</li>
+        <li><strong>Other regions:</strong> The competent data protection authority in your jurisdiction</li>
+    </ul>
 
     <h2>11. Policy Updates</h2>
-    <p>We reserve the right to update this policy at any time. We will notify users in advance of significant changes via in-app notifications and email.</p>
+    <p>We reserve the right to update this policy at any time. If significant changes occur (such as new data collection purposes or processing methods), we will notify users in advance via in-app notifications and email. For minor changes (such as clarifications or formatting adjustments), we may only update the effective date. Your continued use of the App after the update signifies your acceptance of the revised policy.</p>
 
     <div class="footer">
         <p>End of Privacy Policy</p>
