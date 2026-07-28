@@ -367,24 +367,29 @@
 
         const documentURLs = {
             'en': {
-                'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy.html', termsOfService: 'IE_Diary_Terms_of_Service.html' },
-                'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy.html', termsOfService: 'Iron_Hegemony_Terms_of_Service.html' }
+                'ieDiary':       { privacyPolicy: 'IE_Diary_privacy-policy.html',            termsOfService: 'IE_Diary_Terms_of_Service.html' },
+                'ironHegemony':  { privacyPolicy: 'Iron_Hegemony_privacy-policy.html',        termsOfService: 'Iron_Hegemony_Terms_of_Service.html' },
+                'marketSniper':  { privacyPolicy: 'Market_Sniper_privacy-policy.html',        termsOfService: 'Market_Sniper_Terms_of_Service.html' }
             },
             'zh-CN': {
-                'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy_zh.html', termsOfService: 'IE_Diary_Terms_of_Service_zh.html' },
-                'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy_zh.html', termsOfService: 'Iron_Hegemony_Terms_of_Service_zh.html' }
+                'ieDiary':       { privacyPolicy: 'IE_Diary_privacy-policy_zh.html',          termsOfService: 'IE_Diary_Terms_of_Service_zh.html' },
+                'ironHegemony':  { privacyPolicy: 'Iron_Hegemony_privacy-policy_zh.html',     termsOfService: 'Iron_Hegemony_Terms_of_Service_zh.html' },
+                'marketSniper':  { privacyPolicy: 'Market_Sniper_privacy-policy_zh.html',     termsOfService: 'Market_Sniper_Terms_of_Service_zh.html' }
             },
             'zh-TW': {
-                'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy_zh-tw.html', termsOfService: 'IE_Diary_Terms_of_Service_zh-tw.html' },
-                'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy_zh-tw.html', termsOfService: 'Iron_Hegemony_Terms_of_Service_zh-tw.html' }
+                'ieDiary':       { privacyPolicy: 'IE_Diary_privacy-policy_zh-tw.html',       termsOfService: 'IE_Diary_Terms_of_Service_zh-tw.html' },
+                'ironHegemony':  { privacyPolicy: 'Iron_Hegemony_privacy-policy_zh-tw.html',  termsOfService: 'Iron_Hegemony_Terms_of_Service_zh-tw.html' },
+                'marketSniper':  { privacyPolicy: 'Market_Sniper_privacy-policy_zh-tw.html',  termsOfService: 'Market_Sniper_Terms_of_Service_zh-tw.html' }
             },
             'ja': {
-                'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy_ja.html', termsOfService: 'IE_Diary_Terms_of_Service_ja.html' },
-                'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy_ja.html', termsOfService: 'Iron_Hegemony_Terms_of_Service_ja.html' }
+                'ieDiary':       { privacyPolicy: 'IE_Diary_privacy-policy_ja.html',          termsOfService: 'IE_Diary_Terms_of_Service_ja.html' },
+                'ironHegemony':  { privacyPolicy: 'Iron_Hegemony_privacy-policy_ja.html',     termsOfService: 'Iron_Hegemony_Terms_of_Service_ja.html' },
+                'marketSniper':  { privacyPolicy: 'Market_Sniper_privacy-policy_ja.html',     termsOfService: 'Market_Sniper_Terms_of_Service_ja.html' }
             },
             'ko': {
-                'ieDiary': { privacyPolicy: 'IE_Diary_privacy-policy_ko.html', termsOfService: 'IE_Diary_Terms_of_Service_ko.html' },
-                'ironHegemony': { privacyPolicy: 'Iron_Hegemony_privacy-policy_ko.html', termsOfService: 'Iron_Hegemony_Terms_of_Service_ko.html' }
+                'ieDiary':       { privacyPolicy: 'IE_Diary_privacy-policy_ko.html',          termsOfService: 'IE_Diary_Terms_of_Service_ko.html' },
+                'ironHegemony':  { privacyPolicy: 'Iron_Hegemony_privacy-policy_ko.html',     termsOfService: 'Iron_Hegemony_Terms_of_Service_ko.html' },
+                'marketSniper':  { privacyPolicy: 'Market_Sniper_privacy-policy_ko.html',     termsOfService: 'Market_Sniper_Terms_of_Service_ko.html' }
             }
         };
 
@@ -423,16 +428,13 @@
             document.getElementById('langText').textContent = langNames[lang];
             document.getElementById('langMenu').classList.remove('active');
             updateUI();
-            showPage(currentPage); // 刷新當前頁面的語言
+            showPage(currentPage);
         }
 
         function updateUI() {
             const t = translations[currentLang];
-            // 更新選單大標題
             document.getElementById('productListLabel').textContent = t.productList;
             document.getElementById('aboutUsLabel').textContent = t.aboutUs;
-            
-            // 安全地更新所有子選單（不會再發生 Crash）
             document.querySelectorAll('.privacy-label').forEach(el => el.textContent = t.privacyPolicy);
             document.querySelectorAll('.terms-label').forEach(el => el.textContent = t.termsOfService);
         }
