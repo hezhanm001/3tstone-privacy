@@ -298,6 +298,10 @@ h1 em, h2 em { color: var(--muted-light); font-style: normal; }
 .product-row-legal .legal-links a:hover { background: #e4efee; }
 .directory-hint { margin: 17px 0 0; color: #7a8a98; font-size: .82rem; }
 
+@media (min-width: 1240px) {
+  .product-row-legal .legal-links { top: 50%; right: auto; left: calc(100% + 12px); transform: translateY(-50%); }
+}
+
 .about { display: grid; grid-template-columns: 0.8fr 1.35fr; gap: clamp(48px, 9vw, 145px); padding: 94px 0; border-top: 1px solid var(--line); }
 .about-intro h2 { max-width: 410px; margin-bottom: 0; }
 .about-summary { margin: 0 0 46px; color: #41566b; font-size: clamp(1.18rem, 1.8vw, 1.52rem); line-height: 1.55; letter-spacing: -0.025em; }
