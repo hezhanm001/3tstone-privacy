@@ -296,6 +296,12 @@ categoryTabs.forEach((tab, index) => {
   });
 });
 
+document.querySelectorAll('.product-row-legal').forEach((details) => {
+  details.addEventListener('toggle', () => {
+    details.closest('.product-row')?.classList.toggle('is-legal-open', details.open);
+  });
+});
+
 setProductCategory(getSavedProductCategory());
 
 document.getElementById('year').textContent = new Date().getFullYear();
