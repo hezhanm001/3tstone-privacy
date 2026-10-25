@@ -1,472 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Diary - Conditions d’utilisation</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #1a1a1a;
-            border-bottom: 3px solid #007bff;
-            padding-bottom: 15px;
-        }
-
-        .effective-date {
-            font-size: 0.95em;
-            color: #666;
-            margin-bottom: 30px;
-            font-style: italic;
-        }
-
-        h2 {
-            font-size: 1.8em;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            color: #1a1a1a;
-            border-left: 4px solid #007bff;
-            padding-left: 15px;
-        }
-
-        h3 {
-            font-size: 1.3em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        h4 {
-            font-size: 1.1em;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            color: #444;
-            font-weight: 600;
-        }
-
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
-        ul, ol {
-            margin-left: 30px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 10px;
-            text-align: justify;
-        }
-
-        strong {
-            color: #1a1a1a;
-            font-weight: 600;
-        }
-
-        em {
-            color: #555;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #0056b3;
-            text-decoration: underline;
-        }
-
-        .toc {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 20px;
-            margin: 30px 0;
-        }
-
-        .toc h3 {
-            margin-top: 0;
-        }
-
-        .toc ul {
-            list-style-type: none;
-            margin-left: 0;
-        }
-
-        .toc li {
-            margin-bottom: 8px;
-        }
-
-        .toc a {
-            color: #007bff;
-        }
-
-        .important-box {
-            background-color: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-
-        .important-box strong {
-            color: #856404;
-        }
-
-        .disclaimer-box {
-            background-color: #f8d7da;
-            border-left: 4px solid #dc3545;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-
-        .disclaimer-box strong {
-            color: #721c24;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #007bff;
-            color: white;
-            font-weight: 600;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        .section-divider {
-            border-top: 2px solid #ddd;
-            margin: 40px 0;
-        }
-
-        .footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            text-align: center;
-            color: #666;
-            font-size: 0.9em;
-        }
-
-        .back-to-top {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border-radius: 4px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .back-to-top:hover {
-            background-color: #0056b3;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px 15px;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            h2 {
-                font-size: 1.4em;
-            }
-
-            h3 {
-                font-size: 1.1em;
-            }
-
-            table {
-                font-size: 0.9em;
-            }
-
-            th, td {
-                padding: 8px;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Financial Diary - Conditions d’utilisation</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link rel="stylesheet" href="legal.css" />
 </head>
-<body>
-    <div class="container">
-        <h1>Financial Diary - Conditions d’utilisation</h1>
-        <p class="effective-date"><strong>Date d’entrée en vigueur :</strong> February 21, 2026</p>
+<body id="top">
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html">3TStone LLC <em>· I/E Diary Legal</em></a>
+    <nav class="language-nav" aria-label="Language"><a href="IE_Diary_Terms_of_Service.html">EN</a><a href="IE_Diary_Terms_of_Service_zh.html">简</a><a href="IE_Diary_Terms_of_Service_zh-tw.html">繁</a><a href="IE_Diary_Terms_of_Service_ja.html">日</a><a href="IE_Diary_Terms_of_Service_ko.html">한</a><a href="IE_Diary_Terms_of_Service_fr.html" aria-current="page">FR</a></nav>
+  </div></header>
+  <main><article class="legal-document">
+    <p class="eyebrow">3TStone LLC · I/E Diary</p>
+    <h1>Financial Diary - Conditions d’utilisation</h1>
+    <section class="company-card" aria-label="Company information"><div><strong>Société</strong><span>3TStone LLC</span></div><div><strong>Adresse enregistrée</strong><span>30 N Gould St, STE R, Sheridan, WY 82801, USA</span></div><div><strong>Assistance</strong><span><a href="mailto:support@3tstone.com">support@3tstone.com</a></span></div></section>
 
-        <div class="toc">
-            <h3>Table des matières</h3>
-            <ul>
-                <li><a href="#introduction">1. Introduction</a></li>
-                <li><a href="#our-services">2. Nos services</a></li>
-                <li><a href="#your-account">3. Votre compte</a></li>
-                <li><a href="#user-content">4. Contenu et données de l’utilisateur</a></li>
-                <li><a href="#paid-memberships">5. Abonnements payants</a></li>
-                <li><a href="#anonymous-data">6. Analyse de données anonymes</a></li>
-                <li><a href="#acceptable-use">7. Politique d’utilisation acceptable</a></li>
-                <li><a href="#intellectual-property">8. Droits de propriété intellectuelle</a></li>
-                <li><a href="#disclaimers">9. Exclusions de garantie, limitation de responsabilité et indemnisation</a></li>
-                <li><a href="#governing-law">10. Droit applicable et règlement des litiges</a></li>
-                <li><a href="#service-changes">11. Modifications, interruption et résiliation du Service</a></li>
-                <li><a href="#general-provisions">12. Dispositions générales</a></li>
-                <li><a href="#contact">13. Coordonnées</a></li>
-                <li><a href="#regional">14. Addenda régionaux</a></li>
-            </ul>
-        </div>
-
-        <div class="important-box">
-            <h3 style="margin-top: 0;">IMPORTANT : QUELLES CONDITIONS VOUS SONT APPLICABLES ?</h3>
-            <p>Les présentes conditions d’utilisation (« Conditions ») constituent un accord juridiquement contraignant entre vous et <strong>[Your Company Name]</strong> (« Société », « nous » ou « notre »).</p>
-            <p>En créant un compte ou en utilisant notre application, Financial Diary (le « Service »), vous acceptez les présentes Conditions d’utilisation mondiales.</p>
-            <p><strong>Si vous résidez dans l’une des juridictions énumérées dans la section <a href="#regional">Addenda régionaux</a>, les conditions spécifiques à votre juridiction vous sont également applicables.</strong> En cas de conflit entre les Conditions d’utilisation mondiales et un Addendum régional, les conditions de l’Addendum régional prévaudront pour les utilisateurs de cette juridiction.</p>
-            <p>Si vous n’acceptez pas les présentes Conditions, vous ne devez pas accéder à notre Service ni l’utiliser.</p>
-        </div>
-
-        <div class="section-divider"></div>
-
-        <h2 id="introduction">1. Introduction</h2>
-        <p>Bienvenue sur Financial Diary. Les présentes Conditions régissent votre accès à notre application mobile et à tout service connexe, ainsi que leur utilisation. Si vous utilisez le Service pour le compte d’une entreprise ou d’une entité, vous déclarez avoir le pouvoir de lier cette entité aux présentes Conditions.</p>
-
-        <h2 id="our-services">2. Nos services</h2>
-        <p>Financial Diary vous fournit des outils pour suivre et gérer vos finances personnelles. Nos services comprennent notamment :</p>
-        <ul>
-            <li><strong>Enregistrement des transactions :</strong> Saisie manuelle de vos revenus et dépenses, y compris les montants, les catégories et les images associées (par exemple, les reçus).</li>
-            <li><strong>Analyses personnelles :</strong> Production de rapports statistiques, de graphiques et d’analyses à partir de vos propres données financières.</li>
-            <li><strong>Abonnements payants :</strong> Proposition de fonctionnalités premium moyennant des frais d’abonnement.</li>
-            <li><strong>Analyse de données anonymes :</strong> Avec votre consentement explicite, fourniture d’analyses comparatives à partir de vos données anonymisées et agrégées.</li>
-        </ul>
-
-        <div class="disclaimer-box">
-            <h4 style="margin-top: 0; color: #721c24;">Avertissement financier</h4>
-            <p>Vous reconnaissez et acceptez que le Service est un outil de gestion d’informations relatives aux finances personnelles et qu’il <strong>n’est pas destiné à fournir des conseils financiers, d’investissement, juridiques, fiscaux ou tout autre conseil professionnel.</strong> Nous ne sommes ni un planificateur financier, ni un courtier, ni un conseiller fiscal. Votre situation financière est unique, et les informations et analyses présentées par le biais du Service ne doivent pas être considérées comme un substitut à des conseils professionnels. Toutes les décisions prises sur la base d’informations provenant du Service relèvent de votre seule responsabilité, et nous ne sommes pas responsables des conséquences de ces décisions.</p>
-        </div>
-
-        <h2 id="your-account">3. Votre compte</h2>
-        <ul>
-            <li><strong>Admissibilité :</strong> Vous devez avoir au moins 13 ans, ou l’âge minimum requis par les lois de votre juridiction pour utiliser notre Service. La création d’un compte avec de fausses informations constitue une violation des présentes Conditions.</li>
-            <li><strong>Sécurité du compte :</strong> Vous êtes responsable du maintien de la confidentialité du mot de passe de votre compte et de toutes les activités effectuées sous votre compte. Vous devez nous informer immédiatement de toute utilisation non autorisée de votre compte.</li>
-            <li><strong>Informations du compte :</strong> Vous acceptez de fournir des informations exactes, à jour et complètes lors de l’inscription et de les mettre à jour afin qu’elles demeurent exactes, à jour et complètes.</li>
-        </ul>
-
-        <h2 id="user-content">4. Contenu et données de l’utilisateur</h2>
-        <ul>
-            <li><strong>Votre contenu :</strong> Vous conservez tous les droits de propriété sur les données financières personnelles, textes, images et autres contenus que vous soumettez au Service (« Contenu de l’utilisateur »).</li>
-            <li><strong>Licence que vous nous accordez :</strong> En utilisant le Service, vous nous accordez une licence mondiale, non exclusive, libre de redevances, pouvant faire l’objet de sous-licences et transférable, pour utiliser, reproduire, distribuer, préparer des œuvres dérivées de votre Contenu de l’utilisateur, l’afficher et le représenter, exclusivement aux fins d’exploiter, de développer, de fournir et d’améliorer le Service. Cette licence est limitée à la fourniture du service à votre intention et ne nous autorise pas à utiliser votre contenu personnel identifiable à d’autres fins sans votre consentement.</li>
-            <li><strong>Responsabilité du contenu :</strong> Vous êtes seul responsable de votre Contenu de l’utilisateur et des conséquences de sa mise en ligne ou de sa publication. Vous déclarez et garantissez que vous détenez ou disposez des licences, droits, consentements et autorisations nécessaires pour publier le Contenu de l’utilisateur que vous soumettez.</li>
-        </ul>
-
-        <h2 id="paid-memberships">5. Abonnements payants</h2>
-        <ul>
-            <li><strong>Abonnements :</strong> Nous proposons des fonctionnalités améliorées par le biais d’abonnements payants (« Abonnements payants »). En achetant un Abonnement payant, vous acceptez de payer les frais applicables.</li>
-            <li><strong>Facturation :</strong> Les abonnements sont facturés à l’avance de manière récurrente (par exemple, mensuellement ou annuellement). Les paiements seront traités par le fournisseur de la boutique d’applications concernée (par exemple, Apple App Store, Google Play Store).</li>
-            <li><strong>Renouvellement automatique :</strong> Votre abonnement sera automatiquement renouvelé à la fin de chaque cycle de facturation, sauf si vous le résiliez dans les paramètres de votre compte de la boutique d’applications au moins 24 heures avant la fin de la période en cours.</li>
-            <li><strong>Modifications des prix :</strong> Nous nous réservons le droit de modifier les frais d’abonnement. Toute modification des prix vous sera communiquée à l’avance et ne s’appliquera qu’aux cycles de facturation ultérieurs.</li>
-            <li><strong>Remboursements et résiliations :</strong> Vos droits en matière de remboursement et de résiliation sont soumis aux politiques de la boutique d’applications utilisée pour l’achat et aux lois impératives de votre juridiction, comme précisé dans les <a href="#regional">Addenda régionaux</a>.</li>
-        </ul>
-
-        <h2 id="anonymous-data">6. Analyse de données anonymes</h2>
-        <p>L’une de nos fonctionnalités vous permet de comparer vos habitudes financières à celles d’autres utilisateurs. Cette fonctionnalité est strictement <strong>soumise à une adhésion volontaire</strong>.</p>
-        <ul>
-            <li><strong>Consentement explicite :</strong> Nous n’inclurons vos données dans notre ensemble de données d’analyse anonymes que si vous donnez un consentement explicite et affirmatif dans l’application. Vous pouvez retirer votre consentement à tout moment.</li>
-            <li><strong>Processus d’anonymisation :</strong> Si vous y consentez, nous utiliserons un processus de désidentification de votre Contenu de l’utilisateur. Celui-ci consiste à supprimer toutes les informations permettant de vous identifier personnellement (telles que votre identifiant utilisateur et tout détail personnel figurant dans les images) et à agréger vos données financières avec celles d’autres utilisateurs consentants. L’ensemble de données obtenu est considéré comme des « Données anonymes ».</li>
-            <li><strong>Licence relative aux Données anonymes :</strong> Vous nous accordez une licence perpétuelle, irrévocable, mondiale et libre de redevances pour utiliser, copier, modifier et créer des œuvres dérivées à partir de ces Données anonymes à toute fin, y compris à des fins commerciales, telles que la fourniture d’analyses à nos utilisateurs et l’amélioration de nos services.</li>
-        </ul>
-
-        <h2 id="acceptable-use">7. Politique d’utilisation acceptable</h2>
-        <p>Vous acceptez de ne pas faire un usage abusif du Service ni d’aider quiconque à le faire. Cela comprend notamment les actes suivants :</p>
-        <ul>
-            <li>Sonder, analyser ou tester la vulnérabilité de tout système ou réseau.</li>
-            <li>Enfreindre ou contourner de quelque autre manière toute mesure de sécurité ou d’authentification.</li>
-            <li>Téléverser ou partager du contenu illicite, préjudiciable, menaçant, abusif ou autrement répréhensible.</li>
-            <li>Porter atteinte à la vie privée ou aux droits d’autrui.</li>
-            <li>Tenter de procéder à l’ingénierie inverse du Service, de le décompiler ou d’en découvrir le code source.</li>
-        </ul>
-
-        <h2 id="intellectual-property">8. Droits de propriété intellectuelle</h2>
-        <p>Tous les droits, titres et intérêts relatifs au Service (à l’exclusion du Contenu de l’utilisateur), y compris tous les droits de propriété intellectuelle associés, sont et demeureront la propriété exclusive de la Société et de ses concédants de licence. Le Service est protégé par les lois sur le droit d’auteur, les marques et d’autres lois de Singapour et de pays étrangers.</p>
-
-        <h2 id="disclaimers">9. Exclusions de garantie, limitation de responsabilité et indemnisation</h2>
-        <ul>
-            <li><strong>Exclusion de garanties :</strong> LE SERVICE EST FOURNI « EN L’ÉTAT » ET « SELON SA DISPONIBILITÉ », SANS GARANTIE D’AUCUNE SORTE, EXPRESSE OU IMPLICITE. SANS LIMITER CE QUI PRÉCÈDE, NOUS EXCLUONS EXPRESSÉMENT TOUTE GARANTIE DE QUALITÉ MARCHANDE, D’ADÉQUATION À UN USAGE PARTICULIER, DE JOUISSANCE PAISIBLE OU D’ABSENCE DE CONTREFAÇON.</li>
-            <li><strong>Limitation de responsabilité :</strong> DANS TOUTE LA MESURE PERMISE PAR LE DROIT APPLICABLE, LA SOCIÉTÉ, SES SOCIÉTÉS AFFILIÉES, DIRIGEANTS, EMPLOYÉS, MANDATAIRES, FOURNISSEURS OU CONCÉDANTS DE LICENCE NE SERONT EN AUCUN CAS RESPONSABLES DE DOMMAGES INDIRECTS, ACCESSOIRES, SPÉCIAUX, CONSÉCUTIFS OU PUNITIFS, NI DE TOUTE PERTE DE BÉNÉFICES OU DE REVENUS, SUBIE DIRECTEMENT OU INDIRECTEMENT, NI DE TOUTE PERTE DE DONNÉES, D’UTILISATION, DE CLIENTÈLE OU D’AUTRES PERTES INCORPORELLES RÉSULTANT (A) DE VOTRE ACCÈS AU SERVICE OU DE SON UTILISATION, OU DE L’IMPOSSIBILITÉ D’Y ACCÉDER OU DE L’UTILISER ; (B) DE TOUT COMPORTEMENT OU CONTENU D’UN TIERS SUR LE SERVICE ; OU (C) DE L’ACCÈS NON AUTORISÉ À VOS TRANSMISSIONS OU CONTENUS, DE LEUR UTILISATION OU DE LEUR MODIFICATION NON AUTORISÉES. EN AUCUN CAS LA RESPONSABILITÉ TOTALE DE LA SOCIÉTÉ POUR L’ENSEMBLE DES RÉCLAMATIONS RELATIVES AU SERVICE NE DÉPASSERA LE PLUS ÉLEVÉ DES MONTANTS SUIVANTS : CENT DOLLARS AMÉRICAINS (U.S. $100.00) OU LES SOMMES QUE VOUS AVEZ VERSÉES À LA SOCIÉTÉ, LE CAS ÉCHÉANT, AU COURS DES DOUZE DERNIERS MOIS POUR LES SERVICES.</li>
-            <li><strong>Indemnisation :</strong> Vous acceptez de défendre, d’indemniser et de dégager de toute responsabilité la Société ainsi que ses sociétés affiliées, dirigeants, mandataires et employés à l’égard de toutes réclamations, responsabilités, dommages, pertes et dépenses, y compris, sans limitation, les frais juridiques et comptables raisonnables, découlant de votre accès au Service ou de son utilisation, ou de votre violation des présentes Conditions, ou s’y rapportant de quelque manière que ce soit.</li>
-        </ul>
-        <p><strong>Remarque :</strong> Les clauses ci-dessus sont soumises aux lois impératives de votre juridiction, comme précisé dans les <a href="#regional">Addenda régionaux</a>.</p>
-
-        <h2 id="governing-law">10. Droit applicable et règlement des litiges</h2>
-        <p>Les présentes Conditions sont régies par les lois de <strong>Singapour</strong>, sans égard à ses principes de conflit de lois.</p>
-        <p>Tout litige découlant des présentes Conditions ou s’y rapportant, y compris toute question concernant leur existence, leur validité ou leur résiliation, sera soumis à un arbitrage administré par le Singapore International Arbitration Centre (« SIAC ») et définitivement réglé par celui-ci conformément au règlement d’arbitrage du Singapore International Arbitration Centre (« Règlement SIAC ») alors en vigueur, lequel règlement est réputé incorporé par référence à la présente clause.</p>
-        <p>Le siège de l’arbitrage sera Singapour. Le tribunal sera composé d’un arbitre. La langue de l’arbitrage sera l’anglais.</p>
-        <p>La présente section ne vous prive d’aucune protection impérative des consommateurs prévue par le droit de votre pays de résidence. Veuillez consulter les <a href="#regional">Addenda régionaux</a> pour connaître les mécanismes de règlement des litiges propres à chaque juridiction.</p>
-
-        <h2 id="service-changes">11. Modifications, interruption et résiliation du Service</h2>
-        <ul>
-            <li><strong>Modifications :</strong> Nous modifions et améliorons constamment notre Service. Nous pouvons ajouter ou supprimer des fonctionnalités ou des fonctions, et nous pouvons suspendre ou arrêter entièrement un Service.</li>
-            <li><strong>Résiliation par nous :</strong> Nous pouvons résilier ou suspendre votre accès au Service à tout moment, avec ou sans motif et avec ou sans préavis. Par exemple, nous pouvons suspendre ou mettre fin à votre utilisation si vous ne respectez pas les présentes Conditions ou si vous utilisez le Service d’une manière susceptible d’engager notre responsabilité juridique, de perturber le Service ou de perturber son utilisation par autrui.</li>
-            <li><strong>Résiliation par vous :</strong> Vous pouvez cesser d’utiliser notre Service à tout moment. Vous pouvez également supprimer votre compte depuis les paramètres de l’application.</li>
-        </ul>
-
-        <h2 id="general-provisions">12. Dispositions générales</h2>
-        <ul>
-            <li><strong>Divisibilité :</strong> Si une disposition des présentes Conditions est jugée invalide ou inapplicable, elle sera appliquée dans toute la mesure permise et les autres dispositions des présentes Conditions demeureront pleinement en vigueur.</li>
-            <li><strong>Intégralité de l’accord :</strong> Les présentes Conditions constituent l’accord intégral et exclusif entre vous et la Société concernant le Service, et remplacent tout autre accord ou toutes autres conditions applicables au Service.</li>
-            <li><strong>Absence de renonciation :</strong> Le fait que nous ne fassions pas appliquer une disposition ne constitue pas une renonciation à notre droit de le faire ultérieurement.</li>
-        </ul>
-
-        <h2 id="contact">13. Coordonnées</h2>
-        <p>Si vous avez des questions concernant les présentes Conditions, veuillez nous contacter à <strong>[Your Support Email Address]</strong> ou par courrier à <strong>[Your Company's Physical Address]</strong>.</p>
-
-        <div class="section-divider"></div>
-
-        <h2 id="regional">14. Addenda régionaux</h2>
-
-        <h3>Autres juridictions</h3>
-        <p>Si vous êtes un utilisateur dans une juridiction qui n’est pas expressément énumérée ci-dessous (y compris, sans limitation, les Philippines, le Brésil, l’Inde, le Mexique, l’Indonésie, la Thaïlande, la Malaisie, le Vietnam, le Pakistan, le Nigeria et tous les autres pays et territoires non couverts par les addenda régionaux spécifiques), les conditions suivantes vous sont applicables :</p>
-        <ol>
-            <li><strong>Droit applicable :</strong> Les présentes Conditions sont régies par les lois de Singapour, sans égard à ses principes de conflit de lois. Toutefois, si les lois de votre juridiction interdisent l’application du droit de Singapour, les présentes Conditions seront régies par les lois de votre juridiction dans la mesure requise par le droit impératif.</li>
-            <li><strong>Règlement des litiges :</strong> Tout litige découlant des présentes Conditions ou s’y rapportant sera soumis à un arbitrage contraignant administré par le Singapore International Arbitration Centre (« SIAC ») et définitivement réglé par celui-ci conformément au règlement d’arbitrage du Singapore International Arbitration Centre (« Règlement SIAC ») alors en vigueur. Le siège de l’arbitrage sera Singapour. Le tribunal sera composé d’un arbitre. La langue de l’arbitrage sera l’anglais.</li>
-            <li><strong>Limitation de responsabilité :</strong> Notre responsabilité totale envers vous pour toute réclamation découlant de votre utilisation du Service ou s’y rapportant ne dépassera pas le plus élevé des montants suivants : cent dollars américains (U.S. $100.00) ou les frais (le cas échéant) que vous nous avez versés au cours des douze (12) mois précédant l’événement donnant lieu à la responsabilité, sauf disposition contraire des lois impératives de votre juridiction.</li>
-            <li><strong>Exclusion de garanties :</strong> Le Service est fourni « EN L’ÉTAT » et « SELON SA DISPONIBILITÉ », sans aucune garantie, expresse ou implicite, dans toute la mesure permise par le droit applicable. Nous ne garantissons pas que le Service sera ininterrompu, exempt d’erreurs ou exempt de virus ou d’autres composants nuisibles.</li>
-            <li><strong>Remboursements et résiliations :</strong> Pour les Abonnements payants, les remboursements et résiliations sont soumis aux politiques de la boutique d’applications par l’intermédiaire de laquelle vous avez effectué l’achat (Apple App Store, Google Play Store, etc.). Si les lois impératives de protection des consommateurs de votre juridiction vous accordent un droit de résiliation ou de remboursement plus favorable que la politique de la boutique d’applications, vous pouvez exercer ce droit en nous contactant à [Your Support Email Address] avec une preuve d’achat.</li>
-            <li><strong>Absence de renonciation aux droits impératifs :</strong> Aucune disposition des présentes Conditions ne vous prive des droits ou protections impératifs des consommateurs auxquels il ne peut être renoncé en vertu des lois de votre juridiction. Si une disposition des présentes Conditions est jugée inapplicable ou contraire aux lois impératives de votre juridiction, elle sera modifiée dans la mesure minimale nécessaire pour la rendre applicable ou, si cela n’est pas possible, elle sera dissociée.</li>
-            <li><strong>Réclamations des consommateurs :</strong> Si vous avez une réclamation concernant notre Service, vous pouvez la soumettre à l’autorité de protection des consommateurs compétente de votre juridiction. Nous nous engageons à résoudre les litiges équitablement et de bonne foi.</li>
-            <li><strong>Résiliation :</strong> Nous nous réservons le droit de résilier ou de suspendre votre accès au Service si vous violez les présentes Conditions ou les lois applicables. Toutefois, nous vous donnerons un préavis raisonnable avant la résiliation, sauf lorsqu’une résiliation immédiate est nécessaire pour prévenir un préjudice ou une activité illégale.</li>
-        </ol>
-
-        <h3>Chine continentale</h3>
-        <p>Si vous êtes un utilisateur en Chine continentale (qui, aux fins des présentes Conditions, exclut la R.A.S. de Hong Kong, la R.A.S. de Macao et Taïwan) :</p>
-        <ol>
-            <li><strong>Traitement des données :</strong> Vos informations personnelles seront traitées conformément à la loi sur la protection des informations personnelles (PIPL) de la République populaire de Chine. En utilisant le Service, vous consentez au traitement de vos informations personnelles tel que décrit dans notre Politique de confidentialité. Vos informations personnelles seront stockées sur des serveurs situés en Chine continentale. Nous obtiendrons votre consentement distinct avant de transférer vos informations personnelles hors de Chine continentale.</li>
-            <li><strong>Limitation de responsabilité :</strong> Notre responsabilité totale envers vous pour toute réclamation découlant de votre utilisation du Service ou s’y rapportant ne dépassera pas les frais (le cas échéant) que vous nous avez versés au cours des douze (12) mois précédant l’événement donnant lieu à la responsabilité, sauf disposition contraire des lois chinoises applicables.</li>
-            <li><strong>Règlement des litiges :</strong> Tout litige sera soumis à la Commission d’arbitrage économique et commercial international de Shanghai (SHIAC) pour un arbitrage qui sera mené conformément au règlement d’arbitrage de la Commission en vigueur au moment de la demande d’arbitrage.</li>
-        </ol>
-
-        <h3>R.A.S. de Hong Kong</h3>
-        <p>Si vous êtes un utilisateur dans la Région administrative spéciale de Hong Kong :</p>
-        <ol>
-            <li><strong>Confidentialité des données :</strong> Vos données personnelles seront traitées conformément à l’ordonnance sur les données personnelles (confidentialité) (Cap. 486).</li>
-            <li><strong>Droit applicable :</strong> Les présentes Conditions sont régies par les lois de la R.A.S. de Hong Kong.</li>
-        </ol>
-
-        <h3>R.A.S. de Macao</h3>
-        <p>Si vous êtes un utilisateur dans la Région administrative spéciale de Macao :</p>
-        <ol>
-            <li><strong>Confidentialité des données :</strong> Vos données personnelles seront traitées conformément à la loi sur la protection des données personnelles (loi 8/2005).</li>
-            <li><strong>Droit applicable :</strong> Les présentes Conditions sont régies par les lois de la R.A.S. de Macao.</li>
-        </ol>
-
-        <h3>Taïwan</h3>
-        <p>Si vous êtes un utilisateur à Taïwan :</p>
-        <ol>
-            <li><strong>Protection des consommateurs :</strong> Vous bénéficiez des protections prévues par la loi taïwanaise sur la protection des consommateurs.</li>
-            <li><strong>Résiliations et remboursements :</strong> Pour les Abonnements payants, vous disposez d’un délai de rétractation de sept (7) jours à compter de la date d’achat, pendant lequel vous pouvez résilier votre abonnement et obtenir un remboursement intégral, à condition de ne pas avoir utilisé les services premium.</li>
-            <li><strong>Limitation de responsabilité :</strong> Toute clause limitant notre responsabilité en cas de faute lourde ou de faute intentionnelle est invalide.</li>
-        </ol>
-
-        <h3>Japon</h3>
-        <p>Si vous êtes un utilisateur au Japon :</p>
-        <ol>
-            <li><strong>Protection des consommateurs :</strong> La loi japonaise sur les contrats de consommation s’applique. Toute disposition des présentes Conditions qui porte unilatéralement atteinte aux intérêts des consommateurs en violation des principes de bonne foi et de confiance est nulle.</li>
-            <li><strong>Limitation de responsabilité :</strong> Toute disposition qui nous exonère entièrement de notre responsabilité pour des dommages est nulle. Notre responsabilité pour les dommages découlant de notre négligence (à l’exclusion de la faute lourde) sera limitée au montant des frais que vous nous avez versés au cours des douze (12) mois précédents.</li>
-        </ol>
-
-        <h3>Corée du Sud</h3>
-        <p>Si vous êtes un utilisateur en République de Corée :</p>
-        <ol>
-            <li><strong>Résiliations et remboursements :</strong> Pour les Abonnements payants, vous disposez d’un délai de rétractation de sept (7) jours à compter de la date d’achat pour résilier votre abonnement. Nous traiterons votre remboursement conformément à la loi sur la protection des consommateurs dans le commerce électronique.</li>
-            <li><strong>Confidentialité des données :</strong> Nous obtiendrons votre consentement à la collecte et à l’utilisation des informations personnelles comme l’exige la loi sur la protection des informations personnelles (PIPA).</li>
-            <li><strong>Résiliation :</strong> Nous vous donnerons un préavis avant de fermer votre compte, sauf si vos actions ont causé un préjudice important au service ou enfreint les lois applicables.</li>
-        </ol>
-
-        <h3>Singapour</h3>
-        <p>Si vous êtes un utilisateur à Singapour :</p>
-        <ol>
-            <li><strong>Confidentialité des données :</strong> Vos données personnelles seront traitées conformément à la loi de 2012 sur la protection des données personnelles (PDPA).</li>
-            <li><strong>Droit applicable :</strong> Les présentes Conditions sont régies par les lois de Singapour, comme indiqué dans le corps principal des Conditions.</li>
-        </ol>
-
-        <h3>Australie</h3>
-        <p>Si vous êtes un utilisateur en Australie :</p>
-        <ol>
-            <li><strong>Garanties des consommateurs :</strong> Nos services sont assortis de garanties qui ne peuvent être exclues en vertu du droit australien de la consommation. En cas de défaillance majeure du service, vous avez le droit de résilier votre contrat de service avec nous et d’obtenir un remboursement pour la partie non utilisée, ou une indemnisation pour la diminution de sa valeur. Vous avez également droit à une indemnisation pour toute autre perte ou tout autre dommage raisonnablement prévisible. Si la défaillance ne constitue pas une défaillance majeure, vous avez le droit à ce qu’elle soit corrigée dans un délai raisonnable. Si cela n’est pas fait, vous avez droit à un remboursement du service, ainsi qu’à la résiliation du contrat de service et au remboursement de toute partie non utilisée. Les limitations de responsabilité prévues à la section 9 des présentes Conditions ne s’appliquent que dans la mesure permise par le droit australien de la consommation.</li>
-        </ol>
-
-        <h3>États-Unis</h3>
-        <p>Si vous êtes un utilisateur aux États-Unis :</p>
-        <ol>
-            <li><strong>Arbitrage et renonciation aux actions collectives :</strong>
-                <ul>
-                    <li><strong>Arbitrage obligatoire :</strong> Vous et la Société convenez que tout litige, toute réclamation ou toute controverse découlant des présentes Conditions ou s’y rapportant, ou concernant leur violation, leur résiliation, leur exécution, leur interprétation ou leur validité, ou l’utilisation des Services (collectivement, les « Litiges »), sera réglé exclusivement par un arbitrage individuel contraignant et non dans le cadre d’une action ou procédure collective, représentative ou regroupée.</li>
-                    <li><strong>Renonciation aux actions collectives :</strong> VOUS ET LA SOCIÉTÉ CONVENEZ QUE CHACUN NE PEUT PRÉSENTER DE RÉCLAMATIONS CONTRE L’AUTRE QU’À TITRE INDIVIDUEL, ET NON EN TANT QUE DEMANDEUR OU MEMBRE D’UN GROUPE DANS UNE QUELCONQUE PROCÉDURE PRÉSENTÉE COMME COLLECTIVE OU REPRÉSENTATIVE.</li>
-                    <li><strong>Exceptions :</strong> À titre d’exception limitée, vous pouvez chercher à résoudre un Litige devant une juridiction des petites créances s’il remplit les conditions requises.</li>
-                </ul>
-            </li>
-            <li><strong>Résidents de Californie :</strong> Si vous résidez en Californie, vous bénéficiez des protections spécifiques des droits des consommateurs prévues par la loi californienne sur la confidentialité des consommateurs (CCPA), telle que modifiée par la loi californienne sur les droits à la confidentialité (CPRA). Veuillez consulter notre Politique de confidentialité pour plus de détails sur vos droits.</li>
-        </ol>
-
-        <h3>Canada</h3>
-        <p>Si vous êtes un utilisateur au Canada :</p>
-        <ol>
-            <li><strong>Confidentialité des données :</strong> Vos renseignements personnels seront traités conformément à la Loi sur la protection des renseignements personnels et les documents électroniques (PIPEDA) et à toute législation provinciale applicable en matière de protection de la vie privée.</li>
-            <li><strong>Résidents du Québec :</strong> Si vous résidez au Québec, les présentes Conditions seront régies par les lois du Québec, et tout litige sera réglé devant les tribunaux de Montréal, au Québec.</li>
-        </ol>
-
-        <h3>Région européenne</h3>
-        <p>Si vous êtes un utilisateur dans l’Espace économique européen, au Royaume-Uni ou en Suisse (la « Région européenne ») :</p>
-        <ol>
-            <li><strong>Droit de rétractation :</strong> Pour les Abonnements payants, vous avez le droit de vous rétracter de votre contrat d’abonnement dans un délai de quatorze (14) jours à compter de la date d’achat, sans donner de motif. Pour exercer ce droit, vous devez nous informer de votre décision. Si vous exercez ce droit, nous vous rembourserons tous les paiements reçus de votre part. Toutefois, si vous avez commencé à utiliser les services premium pendant le délai de rétractation, nous pouvons vous facturer un montant proportionnel au service fourni jusqu’au moment où vous avez communiqué votre rétractation.</li>
-            <li><strong>Limitation de responsabilité :</strong> Aucune disposition des présentes Conditions ne limite ni n’exclut notre responsabilité en cas de décès ou de dommages corporels causés par notre négligence, de déclaration frauduleuse ou de toute autre responsabilité qui ne peut être exclue ou limitée par le droit applicable.</li>
-            <li><strong>Règlement des litiges :</strong> Si vous avez un litige, vous pouvez utiliser la plateforme de règlement en ligne des litiges de la Commission européenne (plateforme ODR), accessible à l’adresse <a href="http://ec.europa.eu/odr" target="_blank">http://ec.europa.eu/odr</a>. Nous ne sommes pas tenus de participer à des procédures de règlement des litiges devant un organisme d’arbitrage des litiges de consommation.</li>
-            <li><strong>Protection des données :</strong> Vos données personnelles seront traitées conformément au Règlement général sur la protection des données (GDPR) ou aux lois équivalentes de protection des données au Royaume-Uni et en Suisse. Veuillez consulter notre Politique de confidentialité pour obtenir des détails sur vos droits en tant que personne concernée.</li>
-        </ol>
-
-        <div class="section-divider"></div>
-
-        <p style="text-align: center; font-weight: bold; margin-top: 40px;">Fin des Conditions d’utilisation</p>
-
-        <div class="footer">
-            <p>&copy; 2026 <strong>[Your Company Name]</strong>. Tous droits réservés.</p>
-            <p>Dernière mise à jour : February 21, 2026</p>
-            <a href="#" class="back-to-top">Retour en haut</a>
-        </div>
-    </div>
+    <div class="legal-content"><p class="effective-date"><strong>Date d’entrée en vigueur :</strong> February 21, 2026</p><div class="toc">
+<h3>Table des matières</h3>
+<ul>
+<li><a href="#introduction">1. Introduction</a></li>
+<li><a href="#our-services">2. Nos services</a></li>
+<li><a href="#your-account">3. Votre compte</a></li>
+<li><a href="#user-content">4. Contenu et données de l’utilisateur</a></li>
+<li><a href="#paid-memberships">5. Abonnements payants</a></li>
+<li><a href="#anonymous-data">6. Analyse de données anonymes</a></li>
+<li><a href="#acceptable-use">7. Politique d’utilisation acceptable</a></li>
+<li><a href="#intellectual-property">8. Droits de propriété intellectuelle</a></li>
+<li><a href="#disclaimers">9. Exclusions de garantie, limitation de responsabilité et indemnisation</a></li>
+<li><a href="#governing-law">10. Droit applicable et règlement des litiges</a></li>
+<li><a href="#service-changes">11. Modifications, interruption et résiliation du Service</a></li>
+<li><a href="#general-provisions">12. Dispositions générales</a></li>
+<li><a href="#contact">13. Coordonnées</a></li>
+<li><a href="#regional">14. Addenda régionaux</a></li>
+</ul>
+</div><div class="important-box">
+<h3 style="margin-top: 0;">IMPORTANT : QUELLES CONDITIONS VOUS SONT APPLICABLES ?</h3>
+<p>Les présentes conditions d’utilisation (« Conditions ») constituent un accord juridiquement contraignant entre vous et <strong>[Your Company Name]</strong> (« Société », « nous » ou « notre »).</p>
+<p>En créant un compte ou en utilisant notre application, Financial Diary (le « Service »), vous acceptez les présentes Conditions d’utilisation mondiales.</p>
+<p><strong>Si vous résidez dans l’une des juridictions énumérées dans la section <a href="#regional">Addenda régionaux</a>, les conditions spécifiques à votre juridiction vous sont également applicables.</strong> En cas de conflit entre les Conditions d’utilisation mondiales et un Addendum régional, les conditions de l’Addendum régional prévaudront pour les utilisateurs de cette juridiction.</p>
+<p>Si vous n’acceptez pas les présentes Conditions, vous ne devez pas accéder à notre Service ni l’utiliser.</p>
+</div><div class="section-divider"></div><h2 id="introduction">1. Introduction</h2><p>Bienvenue sur Financial Diary. Les présentes Conditions régissent votre accès à notre application mobile et à tout service connexe, ainsi que leur utilisation. Si vous utilisez le Service pour le compte d’une entreprise ou d’une entité, vous déclarez avoir le pouvoir de lier cette entité aux présentes Conditions.</p><h2 id="our-services">2. Nos services</h2><p>Financial Diary vous fournit des outils pour suivre et gérer vos finances personnelles. Nos services comprennent notamment :</p><ul>
+<li><strong>Enregistrement des transactions :</strong> Saisie manuelle de vos revenus et dépenses, y compris les montants, les catégories et les images associées (par exemple, les reçus).</li>
+<li><strong>Analyses personnelles :</strong> Production de rapports statistiques, de graphiques et d’analyses à partir de vos propres données financières.</li>
+<li><strong>Abonnements payants :</strong> Proposition de fonctionnalités premium moyennant des frais d’abonnement.</li>
+<li><strong>Analyse de données anonymes :</strong> Avec votre consentement explicite, fourniture d’analyses comparatives à partir de vos données anonymisées et agrégées.</li>
+</ul><div class="disclaimer-box">
+<h4 style="margin-top: 0; color: #721c24;">Avertissement financier</h4>
+<p>Vous reconnaissez et acceptez que le Service est un outil de gestion d’informations relatives aux finances personnelles et qu’il <strong>n’est pas destiné à fournir des conseils financiers, d’investissement, juridiques, fiscaux ou tout autre conseil professionnel.</strong> Nous ne sommes ni un planificateur financier, ni un courtier, ni un conseiller fiscal. Votre situation financière est unique, et les informations et analyses présentées par le biais du Service ne doivent pas être considérées comme un substitut à des conseils professionnels. Toutes les décisions prises sur la base d’informations provenant du Service relèvent de votre seule responsabilité, et nous ne sommes pas responsables des conséquences de ces décisions.</p>
+</div><h2 id="your-account">3. Votre compte</h2><ul>
+<li><strong>Admissibilité :</strong> Vous devez avoir au moins 13 ans, ou l’âge minimum requis par les lois de votre juridiction pour utiliser notre Service. La création d’un compte avec de fausses informations constitue une violation des présentes Conditions.</li>
+<li><strong>Sécurité du compte :</strong> Vous êtes responsable du maintien de la confidentialité du mot de passe de votre compte et de toutes les activités effectuées sous votre compte. Vous devez nous informer immédiatement de toute utilisation non autorisée de votre compte.</li>
+<li><strong>Informations du compte :</strong> Vous acceptez de fournir des informations exactes, à jour et complètes lors de l’inscription et de les mettre à jour afin qu’elles demeurent exactes, à jour et complètes.</li>
+</ul><h2 id="user-content">4. Contenu et données de l’utilisateur</h2><ul>
+<li><strong>Votre contenu :</strong> Vous conservez tous les droits de propriété sur les données financières personnelles, textes, images et autres contenus que vous soumettez au Service (« Contenu de l’utilisateur »).</li>
+<li><strong>Licence que vous nous accordez :</strong> En utilisant le Service, vous nous accordez une licence mondiale, non exclusive, libre de redevances, pouvant faire l’objet de sous-licences et transférable, pour utiliser, reproduire, distribuer, préparer des œuvres dérivées de votre Contenu de l’utilisateur, l’afficher et le représenter, exclusivement aux fins d’exploiter, de développer, de fournir et d’améliorer le Service. Cette licence est limitée à la fourniture du service à votre intention et ne nous autorise pas à utiliser votre contenu personnel identifiable à d’autres fins sans votre consentement.</li>
+<li><strong>Responsabilité du contenu :</strong> Vous êtes seul responsable de votre Contenu de l’utilisateur et des conséquences de sa mise en ligne ou de sa publication. Vous déclarez et garantissez que vous détenez ou disposez des licences, droits, consentements et autorisations nécessaires pour publier le Contenu de l’utilisateur que vous soumettez.</li>
+</ul><h2 id="paid-memberships">5. Abonnements payants</h2><ul>
+<li><strong>Abonnements :</strong> Nous proposons des fonctionnalités améliorées par le biais d’abonnements payants (« Abonnements payants »). En achetant un Abonnement payant, vous acceptez de payer les frais applicables.</li>
+<li><strong>Facturation :</strong> Les abonnements sont facturés à l’avance de manière récurrente (par exemple, mensuellement ou annuellement). Les paiements seront traités par le fournisseur de la boutique d’applications concernée (par exemple, Apple App Store, Google Play Store).</li>
+<li><strong>Renouvellement automatique :</strong> Votre abonnement sera automatiquement renouvelé à la fin de chaque cycle de facturation, sauf si vous le résiliez dans les paramètres de votre compte de la boutique d’applications au moins 24 heures avant la fin de la période en cours.</li>
+<li><strong>Modifications des prix :</strong> Nous nous réservons le droit de modifier les frais d’abonnement. Toute modification des prix vous sera communiquée à l’avance et ne s’appliquera qu’aux cycles de facturation ultérieurs.</li>
+<li><strong>Remboursements et résiliations :</strong> Vos droits en matière de remboursement et de résiliation sont soumis aux politiques de la boutique d’applications utilisée pour l’achat et aux lois impératives de votre juridiction, comme précisé dans les <a href="#regional">Addenda régionaux</a>.</li>
+</ul><h2 id="anonymous-data">6. Analyse de données anonymes</h2><p>L’une de nos fonctionnalités vous permet de comparer vos habitudes financières à celles d’autres utilisateurs. Cette fonctionnalité est strictement <strong>soumise à une adhésion volontaire</strong>.</p><ul>
+<li><strong>Consentement explicite :</strong> Nous n’inclurons vos données dans notre ensemble de données d’analyse anonymes que si vous donnez un consentement explicite et affirmatif dans l’application. Vous pouvez retirer votre consentement à tout moment.</li>
+<li><strong>Processus d’anonymisation :</strong> Si vous y consentez, nous utiliserons un processus de désidentification de votre Contenu de l’utilisateur. Celui-ci consiste à supprimer toutes les informations permettant de vous identifier personnellement (telles que votre identifiant utilisateur et tout détail personnel figurant dans les images) et à agréger vos données financières avec celles d’autres utilisateurs consentants. L’ensemble de données obtenu est considéré comme des « Données anonymes ».</li>
+<li><strong>Licence relative aux Données anonymes :</strong> Vous nous accordez une licence perpétuelle, irrévocable, mondiale et libre de redevances pour utiliser, copier, modifier et créer des œuvres dérivées à partir de ces Données anonymes à toute fin, y compris à des fins commerciales, telles que la fourniture d’analyses à nos utilisateurs et l’amélioration de nos services.</li>
+</ul><h2 id="acceptable-use">7. Politique d’utilisation acceptable</h2><p>Vous acceptez de ne pas faire un usage abusif du Service ni d’aider quiconque à le faire. Cela comprend notamment les actes suivants :</p><ul>
+<li>Sonder, analyser ou tester la vulnérabilité de tout système ou réseau.</li>
+<li>Enfreindre ou contourner de quelque autre manière toute mesure de sécurité ou d’authentification.</li>
+<li>Téléverser ou partager du contenu illicite, préjudiciable, menaçant, abusif ou autrement répréhensible.</li>
+<li>Porter atteinte à la vie privée ou aux droits d’autrui.</li>
+<li>Tenter de procéder à l’ingénierie inverse du Service, de le décompiler ou d’en découvrir le code source.</li>
+</ul><h2 id="intellectual-property">8. Droits de propriété intellectuelle</h2><p>Tous les droits, titres et intérêts relatifs au Service (à l’exclusion du Contenu de l’utilisateur), y compris tous les droits de propriété intellectuelle associés, sont et demeureront la propriété exclusive de la Société et de ses concédants de licence. Le Service est protégé par les lois sur le droit d’auteur, les marques et d’autres lois de Singapour et de pays étrangers.</p><h2 id="disclaimers">9. Exclusions de garantie, limitation de responsabilité et indemnisation</h2><ul>
+<li><strong>Exclusion de garanties :</strong> LE SERVICE EST FOURNI « EN L’ÉTAT » ET « SELON SA DISPONIBILITÉ », SANS GARANTIE D’AUCUNE SORTE, EXPRESSE OU IMPLICITE. SANS LIMITER CE QUI PRÉCÈDE, NOUS EXCLUONS EXPRESSÉMENT TOUTE GARANTIE DE QUALITÉ MARCHANDE, D’ADÉQUATION À UN USAGE PARTICULIER, DE JOUISSANCE PAISIBLE OU D’ABSENCE DE CONTREFAÇON.</li>
+<li><strong>Limitation de responsabilité :</strong> DANS TOUTE LA MESURE PERMISE PAR LE DROIT APPLICABLE, LA SOCIÉTÉ, SES SOCIÉTÉS AFFILIÉES, DIRIGEANTS, EMPLOYÉS, MANDATAIRES, FOURNISSEURS OU CONCÉDANTS DE LICENCE NE SERONT EN AUCUN CAS RESPONSABLES DE DOMMAGES INDIRECTS, ACCESSOIRES, SPÉCIAUX, CONSÉCUTIFS OU PUNITIFS, NI DE TOUTE PERTE DE BÉNÉFICES OU DE REVENUS, SUBIE DIRECTEMENT OU INDIRECTEMENT, NI DE TOUTE PERTE DE DONNÉES, D’UTILISATION, DE CLIENTÈLE OU D’AUTRES PERTES INCORPORELLES RÉSULTANT (A) DE VOTRE ACCÈS AU SERVICE OU DE SON UTILISATION, OU DE L’IMPOSSIBILITÉ D’Y ACCÉDER OU DE L’UTILISER ; (B) DE TOUT COMPORTEMENT OU CONTENU D’UN TIERS SUR LE SERVICE ; OU (C) DE L’ACCÈS NON AUTORISÉ À VOS TRANSMISSIONS OU CONTENUS, DE LEUR UTILISATION OU DE LEUR MODIFICATION NON AUTORISÉES. EN AUCUN CAS LA RESPONSABILITÉ TOTALE DE LA SOCIÉTÉ POUR L’ENSEMBLE DES RÉCLAMATIONS RELATIVES AU SERVICE NE DÉPASSERA LE PLUS ÉLEVÉ DES MONTANTS SUIVANTS : CENT DOLLARS AMÉRICAINS (U.S. $100.00) OU LES SOMMES QUE VOUS AVEZ VERSÉES À LA SOCIÉTÉ, LE CAS ÉCHÉANT, AU COURS DES DOUZE DERNIERS MOIS POUR LES SERVICES.</li>
+<li><strong>Indemnisation :</strong> Vous acceptez de défendre, d’indemniser et de dégager de toute responsabilité la Société ainsi que ses sociétés affiliées, dirigeants, mandataires et employés à l’égard de toutes réclamations, responsabilités, dommages, pertes et dépenses, y compris, sans limitation, les frais juridiques et comptables raisonnables, découlant de votre accès au Service ou de son utilisation, ou de votre violation des présentes Conditions, ou s’y rapportant de quelque manière que ce soit.</li>
+</ul><p><strong>Remarque :</strong> Les clauses ci-dessus sont soumises aux lois impératives de votre juridiction, comme précisé dans les <a href="#regional">Addenda régionaux</a>.</p><h2 id="governing-law">10. Droit applicable et règlement des litiges</h2><p>Les présentes Conditions sont régies par les lois de <strong>Singapour</strong>, sans égard à ses principes de conflit de lois.</p><p>Tout litige découlant des présentes Conditions ou s’y rapportant, y compris toute question concernant leur existence, leur validité ou leur résiliation, sera soumis à un arbitrage administré par le Singapore International Arbitration Centre (« SIAC ») et définitivement réglé par celui-ci conformément au règlement d’arbitrage du Singapore International Arbitration Centre (« Règlement SIAC ») alors en vigueur, lequel règlement est réputé incorporé par référence à la présente clause.</p><p>Le siège de l’arbitrage sera Singapour. Le tribunal sera composé d’un arbitre. La langue de l’arbitrage sera l’anglais.</p><p>La présente section ne vous prive d’aucune protection impérative des consommateurs prévue par le droit de votre pays de résidence. Veuillez consulter les <a href="#regional">Addenda régionaux</a> pour connaître les mécanismes de règlement des litiges propres à chaque juridiction.</p><h2 id="service-changes">11. Modifications, interruption et résiliation du Service</h2><ul>
+<li><strong>Modifications :</strong> Nous modifions et améliorons constamment notre Service. Nous pouvons ajouter ou supprimer des fonctionnalités ou des fonctions, et nous pouvons suspendre ou arrêter entièrement un Service.</li>
+<li><strong>Résiliation par nous :</strong> Nous pouvons résilier ou suspendre votre accès au Service à tout moment, avec ou sans motif et avec ou sans préavis. Par exemple, nous pouvons suspendre ou mettre fin à votre utilisation si vous ne respectez pas les présentes Conditions ou si vous utilisez le Service d’une manière susceptible d’engager notre responsabilité juridique, de perturber le Service ou de perturber son utilisation par autrui.</li>
+<li><strong>Résiliation par vous :</strong> Vous pouvez cesser d’utiliser notre Service à tout moment. Vous pouvez également supprimer votre compte depuis les paramètres de l’application.</li>
+</ul><h2 id="general-provisions">12. Dispositions générales</h2><ul>
+<li><strong>Divisibilité :</strong> Si une disposition des présentes Conditions est jugée invalide ou inapplicable, elle sera appliquée dans toute la mesure permise et les autres dispositions des présentes Conditions demeureront pleinement en vigueur.</li>
+<li><strong>Intégralité de l’accord :</strong> Les présentes Conditions constituent l’accord intégral et exclusif entre vous et la Société concernant le Service, et remplacent tout autre accord ou toutes autres conditions applicables au Service.</li>
+<li><strong>Absence de renonciation :</strong> Le fait que nous ne fassions pas appliquer une disposition ne constitue pas une renonciation à notre droit de le faire ultérieurement.</li>
+</ul><h2 id="contact">13. Coordonnées</h2><p>Si vous avez des questions concernant les présentes Conditions, veuillez nous contacter à <strong>[Your Support Email Address]</strong> ou par courrier à <strong>[Your Company's Physical Address]</strong>.</p><div class="section-divider"></div><h2 id="regional">14. Addenda régionaux</h2><h3>Autres juridictions</h3><p>Si vous êtes un utilisateur dans une juridiction qui n’est pas expressément énumérée ci-dessous (y compris, sans limitation, les Philippines, le Brésil, l’Inde, le Mexique, l’Indonésie, la Thaïlande, la Malaisie, le Vietnam, le Pakistan, le Nigeria et tous les autres pays et territoires non couverts par les addenda régionaux spécifiques), les conditions suivantes vous sont applicables :</p><ol>
+<li><strong>Droit applicable :</strong> Les présentes Conditions sont régies par les lois de Singapour, sans égard à ses principes de conflit de lois. Toutefois, si les lois de votre juridiction interdisent l’application du droit de Singapour, les présentes Conditions seront régies par les lois de votre juridiction dans la mesure requise par le droit impératif.</li>
+<li><strong>Règlement des litiges :</strong> Tout litige découlant des présentes Conditions ou s’y rapportant sera soumis à un arbitrage contraignant administré par le Singapore International Arbitration Centre (« SIAC ») et définitivement réglé par celui-ci conformément au règlement d’arbitrage du Singapore International Arbitration Centre (« Règlement SIAC ») alors en vigueur. Le siège de l’arbitrage sera Singapour. Le tribunal sera composé d’un arbitre. La langue de l’arbitrage sera l’anglais.</li>
+<li><strong>Limitation de responsabilité :</strong> Notre responsabilité totale envers vous pour toute réclamation découlant de votre utilisation du Service ou s’y rapportant ne dépassera pas le plus élevé des montants suivants : cent dollars américains (U.S. $100.00) ou les frais (le cas échéant) que vous nous avez versés au cours des douze (12) mois précédant l’événement donnant lieu à la responsabilité, sauf disposition contraire des lois impératives de votre juridiction.</li>
+<li><strong>Exclusion de garanties :</strong> Le Service est fourni « EN L’ÉTAT » et « SELON SA DISPONIBILITÉ », sans aucune garantie, expresse ou implicite, dans toute la mesure permise par le droit applicable. Nous ne garantissons pas que le Service sera ininterrompu, exempt d’erreurs ou exempt de virus ou d’autres composants nuisibles.</li>
+<li><strong>Remboursements et résiliations :</strong> Pour les Abonnements payants, les remboursements et résiliations sont soumis aux politiques de la boutique d’applications par l’intermédiaire de laquelle vous avez effectué l’achat (Apple App Store, Google Play Store, etc.). Si les lois impératives de protection des consommateurs de votre juridiction vous accordent un droit de résiliation ou de remboursement plus favorable que la politique de la boutique d’applications, vous pouvez exercer ce droit en nous contactant à [Your Support Email Address] avec une preuve d’achat.</li>
+<li><strong>Absence de renonciation aux droits impératifs :</strong> Aucune disposition des présentes Conditions ne vous prive des droits ou protections impératifs des consommateurs auxquels il ne peut être renoncé en vertu des lois de votre juridiction. Si une disposition des présentes Conditions est jugée inapplicable ou contraire aux lois impératives de votre juridiction, elle sera modifiée dans la mesure minimale nécessaire pour la rendre applicable ou, si cela n’est pas possible, elle sera dissociée.</li>
+<li><strong>Réclamations des consommateurs :</strong> Si vous avez une réclamation concernant notre Service, vous pouvez la soumettre à l’autorité de protection des consommateurs compétente de votre juridiction. Nous nous engageons à résoudre les litiges équitablement et de bonne foi.</li>
+<li><strong>Résiliation :</strong> Nous nous réservons le droit de résilier ou de suspendre votre accès au Service si vous violez les présentes Conditions ou les lois applicables. Toutefois, nous vous donnerons un préavis raisonnable avant la résiliation, sauf lorsqu’une résiliation immédiate est nécessaire pour prévenir un préjudice ou une activité illégale.</li>
+</ol><h3>Chine continentale</h3><p>Si vous êtes un utilisateur en Chine continentale (qui, aux fins des présentes Conditions, exclut la R.A.S. de Hong Kong, la R.A.S. de Macao et Taïwan) :</p><ol>
+<li><strong>Traitement des données :</strong> Vos informations personnelles seront traitées conformément à la loi sur la protection des informations personnelles (PIPL) de la République populaire de Chine. En utilisant le Service, vous consentez au traitement de vos informations personnelles tel que décrit dans notre Politique de confidentialité. Vos informations personnelles seront stockées sur des serveurs situés en Chine continentale. Nous obtiendrons votre consentement distinct avant de transférer vos informations personnelles hors de Chine continentale.</li>
+<li><strong>Limitation de responsabilité :</strong> Notre responsabilité totale envers vous pour toute réclamation découlant de votre utilisation du Service ou s’y rapportant ne dépassera pas les frais (le cas échéant) que vous nous avez versés au cours des douze (12) mois précédant l’événement donnant lieu à la responsabilité, sauf disposition contraire des lois chinoises applicables.</li>
+<li><strong>Règlement des litiges :</strong> Tout litige sera soumis à la Commission d’arbitrage économique et commercial international de Shanghai (SHIAC) pour un arbitrage qui sera mené conformément au règlement d’arbitrage de la Commission en vigueur au moment de la demande d’arbitrage.</li>
+</ol><h3>R.A.S. de Hong Kong</h3><p>Si vous êtes un utilisateur dans la Région administrative spéciale de Hong Kong :</p><ol>
+<li><strong>Confidentialité des données :</strong> Vos données personnelles seront traitées conformément à l’ordonnance sur les données personnelles (confidentialité) (Cap. 486).</li>
+<li><strong>Droit applicable :</strong> Les présentes Conditions sont régies par les lois de la R.A.S. de Hong Kong.</li>
+</ol><h3>R.A.S. de Macao</h3><p>Si vous êtes un utilisateur dans la Région administrative spéciale de Macao :</p><ol>
+<li><strong>Confidentialité des données :</strong> Vos données personnelles seront traitées conformément à la loi sur la protection des données personnelles (loi 8/2005).</li>
+<li><strong>Droit applicable :</strong> Les présentes Conditions sont régies par les lois de la R.A.S. de Macao.</li>
+</ol><h3>Taïwan</h3><p>Si vous êtes un utilisateur à Taïwan :</p><ol>
+<li><strong>Protection des consommateurs :</strong> Vous bénéficiez des protections prévues par la loi taïwanaise sur la protection des consommateurs.</li>
+<li><strong>Résiliations et remboursements :</strong> Pour les Abonnements payants, vous disposez d’un délai de rétractation de sept (7) jours à compter de la date d’achat, pendant lequel vous pouvez résilier votre abonnement et obtenir un remboursement intégral, à condition de ne pas avoir utilisé les services premium.</li>
+<li><strong>Limitation de responsabilité :</strong> Toute clause limitant notre responsabilité en cas de faute lourde ou de faute intentionnelle est invalide.</li>
+</ol><h3>Japon</h3><p>Si vous êtes un utilisateur au Japon :</p><ol>
+<li><strong>Protection des consommateurs :</strong> La loi japonaise sur les contrats de consommation s’applique. Toute disposition des présentes Conditions qui porte unilatéralement atteinte aux intérêts des consommateurs en violation des principes de bonne foi et de confiance est nulle.</li>
+<li><strong>Limitation de responsabilité :</strong> Toute disposition qui nous exonère entièrement de notre responsabilité pour des dommages est nulle. Notre responsabilité pour les dommages découlant de notre négligence (à l’exclusion de la faute lourde) sera limitée au montant des frais que vous nous avez versés au cours des douze (12) mois précédents.</li>
+</ol><h3>Corée du Sud</h3><p>Si vous êtes un utilisateur en République de Corée :</p><ol>
+<li><strong>Résiliations et remboursements :</strong> Pour les Abonnements payants, vous disposez d’un délai de rétractation de sept (7) jours à compter de la date d’achat pour résilier votre abonnement. Nous traiterons votre remboursement conformément à la loi sur la protection des consommateurs dans le commerce électronique.</li>
+<li><strong>Confidentialité des données :</strong> Nous obtiendrons votre consentement à la collecte et à l’utilisation des informations personnelles comme l’exige la loi sur la protection des informations personnelles (PIPA).</li>
+<li><strong>Résiliation :</strong> Nous vous donnerons un préavis avant de fermer votre compte, sauf si vos actions ont causé un préjudice important au service ou enfreint les lois applicables.</li>
+</ol><h3>Singapour</h3><p>Si vous êtes un utilisateur à Singapour :</p><ol>
+<li><strong>Confidentialité des données :</strong> Vos données personnelles seront traitées conformément à la loi de 2012 sur la protection des données personnelles (PDPA).</li>
+<li><strong>Droit applicable :</strong> Les présentes Conditions sont régies par les lois de Singapour, comme indiqué dans le corps principal des Conditions.</li>
+</ol><h3>Australie</h3><p>Si vous êtes un utilisateur en Australie :</p><ol>
+<li><strong>Garanties des consommateurs :</strong> Nos services sont assortis de garanties qui ne peuvent être exclues en vertu du droit australien de la consommation. En cas de défaillance majeure du service, vous avez le droit de résilier votre contrat de service avec nous et d’obtenir un remboursement pour la partie non utilisée, ou une indemnisation pour la diminution de sa valeur. Vous avez également droit à une indemnisation pour toute autre perte ou tout autre dommage raisonnablement prévisible. Si la défaillance ne constitue pas une défaillance majeure, vous avez le droit à ce qu’elle soit corrigée dans un délai raisonnable. Si cela n’est pas fait, vous avez droit à un remboursement du service, ainsi qu’à la résiliation du contrat de service et au remboursement de toute partie non utilisée. Les limitations de responsabilité prévues à la section 9 des présentes Conditions ne s’appliquent que dans la mesure permise par le droit australien de la consommation.</li>
+</ol><h3>États-Unis</h3><p>Si vous êtes un utilisateur aux États-Unis :</p><ol>
+<li><strong>Arbitrage et renonciation aux actions collectives :</strong>
+<ul>
+<li><strong>Arbitrage obligatoire :</strong> Vous et la Société convenez que tout litige, toute réclamation ou toute controverse découlant des présentes Conditions ou s’y rapportant, ou concernant leur violation, leur résiliation, leur exécution, leur interprétation ou leur validité, ou l’utilisation des Services (collectivement, les « Litiges »), sera réglé exclusivement par un arbitrage individuel contraignant et non dans le cadre d’une action ou procédure collective, représentative ou regroupée.</li>
+<li><strong>Renonciation aux actions collectives :</strong> VOUS ET LA SOCIÉTÉ CONVENEZ QUE CHACUN NE PEUT PRÉSENTER DE RÉCLAMATIONS CONTRE L’AUTRE QU’À TITRE INDIVIDUEL, ET NON EN TANT QUE DEMANDEUR OU MEMBRE D’UN GROUPE DANS UNE QUELCONQUE PROCÉDURE PRÉSENTÉE COMME COLLECTIVE OU REPRÉSENTATIVE.</li>
+<li><strong>Exceptions :</strong> À titre d’exception limitée, vous pouvez chercher à résoudre un Litige devant une juridiction des petites créances s’il remplit les conditions requises.</li>
+</ul>
+</li>
+<li><strong>Résidents de Californie :</strong> Si vous résidez en Californie, vous bénéficiez des protections spécifiques des droits des consommateurs prévues par la loi californienne sur la confidentialité des consommateurs (CCPA), telle que modifiée par la loi californienne sur les droits à la confidentialité (CPRA). Veuillez consulter notre Politique de confidentialité pour plus de détails sur vos droits.</li>
+</ol><h3>Canada</h3><p>Si vous êtes un utilisateur au Canada :</p><ol>
+<li><strong>Confidentialité des données :</strong> Vos renseignements personnels seront traités conformément à la Loi sur la protection des renseignements personnels et les documents électroniques (PIPEDA) et à toute législation provinciale applicable en matière de protection de la vie privée.</li>
+<li><strong>Résidents du Québec :</strong> Si vous résidez au Québec, les présentes Conditions seront régies par les lois du Québec, et tout litige sera réglé devant les tribunaux de Montréal, au Québec.</li>
+</ol><h3>Région européenne</h3><p>Si vous êtes un utilisateur dans l’Espace économique européen, au Royaume-Uni ou en Suisse (la « Région européenne ») :</p><ol>
+<li><strong>Droit de rétractation :</strong> Pour les Abonnements payants, vous avez le droit de vous rétracter de votre contrat d’abonnement dans un délai de quatorze (14) jours à compter de la date d’achat, sans donner de motif. Pour exercer ce droit, vous devez nous informer de votre décision. Si vous exercez ce droit, nous vous rembourserons tous les paiements reçus de votre part. Toutefois, si vous avez commencé à utiliser les services premium pendant le délai de rétractation, nous pouvons vous facturer un montant proportionnel au service fourni jusqu’au moment où vous avez communiqué votre rétractation.</li>
+<li><strong>Limitation de responsabilité :</strong> Aucune disposition des présentes Conditions ne limite ni n’exclut notre responsabilité en cas de décès ou de dommages corporels causés par notre négligence, de déclaration frauduleuse ou de toute autre responsabilité qui ne peut être exclue ou limitée par le droit applicable.</li>
+<li><strong>Règlement des litiges :</strong> Si vous avez un litige, vous pouvez utiliser la plateforme de règlement en ligne des litiges de la Commission européenne (plateforme ODR), accessible à l’adresse <a href="http://ec.europa.eu/odr" target="_blank">http://ec.europa.eu/odr</a>. Nous ne sommes pas tenus de participer à des procédures de règlement des litiges devant un organisme d’arbitrage des litiges de consommation.</li>
+<li><strong>Protection des données :</strong> Vos données personnelles seront traitées conformément au Règlement général sur la protection des données (GDPR) ou aux lois équivalentes de protection des données au Royaume-Uni et en Suisse. Veuillez consulter notre Politique de confidentialité pour obtenir des détails sur vos droits en tant que personne concernée.</li>
+</ol><div class="section-divider"></div><p style="text-align: center; font-weight: bold; margin-top: 40px;">Fin des Conditions d’utilisation</p><div class="document-footer">
+<p>© 2026 <strong>[Your Company Name]</strong>. Tous droits réservés.</p>
+<p>Dernière mise à jour : February 21, 2026</p>
+<a class="back-to-top" href="#">Retour en haut</a>
+</div></div>
+  </article></main>
+  <footer class="site-footer"><div class="footer-inner"><a href="IE_Diary_privacy-policy_fr.html">Politique de confidentialité</a> · <a href="#top">Retour en haut</a></div></footer>
 </body>
 </html>
