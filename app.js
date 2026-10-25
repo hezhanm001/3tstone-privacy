@@ -100,6 +100,16 @@ const documentURLs = {
   }
 };
 
+
+const directoryTranslations = {
+  en: { categoryBrowserLabel: 'Product categories', lifeCategoryLabel: 'Life applications', lifeCategoryCount: '2 products', entertainmentCategoryLabel: 'Entertainment applications', entertainmentCategoryCount: '2 products', lifePanelKicker: 'Life applications', lifePanelTitle: 'Made for everyday life.', lifePanelDescription: 'Organise what matters, and keep the moments worth revisiting.', entertainmentPanelKicker: 'Entertainment applications', entertainmentPanelTitle: 'Explore, decide, play.', entertainmentPanelDescription: 'Strategy experiences built for curiosity, play and exploration.', categoryProductCount: '2 products', categoryHint: 'Select a category to browse its products.', ieDiaryDescription: 'Personal finance, made easier to revisit.', patinoteDescription: 'Your places, moments and memories in one journal.', ironHegemonyDescription: 'A strategic world simulation for considered decisions.', marketSniperDescription: 'Explore historical markets through a risk-free simulation.' },
+  'zh-CN': { categoryBrowserLabel: '产品分类', lifeCategoryLabel: '生活应用', lifeCategoryCount: '2 个产品', entertainmentCategoryLabel: '娱乐应用', entertainmentCategoryCount: '2 个产品', lifePanelKicker: '生活应用', lifePanelTitle: '为日常留下空间。', lifePanelDescription: '整理重要的事，留住值得回看的片刻。', entertainmentPanelKicker: '娱乐应用', entertainmentPanelTitle: '探索、决策、畅玩。', entertainmentPanelDescription: '为好奇心、策略与探索而生的游戏体验。', categoryProductCount: '2 个产品', categoryHint: '选择分类以浏览该类产品。', ieDiaryDescription: '更轻松回顾的个人财务记录。', patinoteDescription: '在一本日记里收集地点、片刻与回忆。', ironHegemonyDescription: '适合深思决策的世界战略模拟。', marketSniperDescription: '在无风险模拟中探索历史市场。' },
+  'zh-TW': { categoryBrowserLabel: '產品分類', lifeCategoryLabel: '生活應用', lifeCategoryCount: '2 個產品', entertainmentCategoryLabel: '娛樂應用', entertainmentCategoryCount: '2 個產品', lifePanelKicker: '生活應用', lifePanelTitle: '為日常留下空間。', lifePanelDescription: '整理重要的事，留住值得回看的片刻。', entertainmentPanelKicker: '娛樂應用', entertainmentPanelTitle: '探索、決策、暢玩。', entertainmentPanelDescription: '為好奇心、策略與探索而生的遊戲體驗。', categoryProductCount: '2 個產品', categoryHint: '選擇分類以瀏覽該類產品。', ieDiaryDescription: '更輕鬆回顧的個人財務記錄。', patinoteDescription: '在一本日記裡收集地點、片刻與回憶。', ironHegemonyDescription: '適合深思決策的世界戰略模擬。', marketSniperDescription: '在無風險模擬中探索歷史市場。' },
+  ja: { categoryBrowserLabel: '製品カテゴリー', lifeCategoryLabel: 'ライフアプリ', lifeCategoryCount: '2 製品', entertainmentCategoryLabel: 'エンターテインメント', entertainmentCategoryCount: '2 製品', lifePanelKicker: 'ライフアプリ', lifePanelTitle: '毎日に、余白を。', lifePanelDescription: '大切なことを整え、振り返りたい瞬間を残します。', entertainmentPanelKicker: 'エンターテインメント', entertainmentPanelTitle: '探究し、考え、遊ぶ。', entertainmentPanelDescription: '好奇心と戦略、探索のための体験です。', categoryProductCount: '2 製品', categoryHint: 'カテゴリーを選んで製品を表示します。', ieDiaryDescription: '振り返りやすい、個人のお金の記録。', patinoteDescription: '場所、瞬間、思い出を一冊の記録に。', ironHegemonyDescription: '熟考を楽しむ世界戦略シミュレーション。', marketSniperDescription: 'リスクのないシミュレーションで歴史的市場を探究。' },
+  ko: { categoryBrowserLabel: '제품 카테고리', lifeCategoryLabel: '라이프 애플리케이션', lifeCategoryCount: '제품 2개', entertainmentCategoryLabel: '엔터테인먼트 애플리케이션', entertainmentCategoryCount: '제품 2개', lifePanelKicker: '라이프 애플리케이션', lifePanelTitle: '일상에 여백을 더하다.', lifePanelDescription: '중요한 것을 정리하고 다시 보고 싶은 순간을 남깁니다.', entertainmentPanelKicker: '엔터테인먼트 애플리케이션', entertainmentPanelTitle: '탐색하고, 판단하고, 즐기세요.', entertainmentPanelDescription: '호기심과 전략, 탐험을 위한 경험입니다.', categoryProductCount: '제품 2개', categoryHint: '카테고리를 선택해 제품을 살펴보세요.', ieDiaryDescription: '되돌아보기 쉬운 개인 금융 기록.', patinoteDescription: '장소와 순간, 추억을 하나의 기록으로.', ironHegemonyDescription: '신중한 결정을 위한 세계 전략 시뮬레이션.', marketSniperDescription: '위험 없는 시뮬레이션으로 역사적 시장을 탐색하세요.' },
+  fr: { categoryBrowserLabel: 'Catégories de produits', lifeCategoryLabel: 'Applications du quotidien', lifeCategoryCount: '2 produits', entertainmentCategoryLabel: 'Applications de divertissement', entertainmentCategoryCount: '2 produits', lifePanelKicker: 'Applications du quotidien', lifePanelTitle: 'Pensées pour la vie de tous les jours.', lifePanelDescription: 'Organisez ce qui compte et conservez les moments que vous voudrez revivre.', entertainmentPanelKicker: 'Applications de divertissement', entertainmentPanelTitle: 'Explorer, décider, jouer.', entertainmentPanelDescription: 'Des expériences de stratégie conçues pour la curiosité, le jeu et l’exploration.', categoryProductCount: '2 produits', categoryHint: 'Sélectionnez une catégorie pour parcourir ses produits.', ieDiaryDescription: 'Vos finances personnelles, plus faciles à revisiter.', patinoteDescription: 'Vos lieux, vos moments et vos souvenirs dans un seul journal.', ironHegemonyDescription: 'Une simulation stratégique mondiale pour des décisions réfléchies.', marketSniperDescription: 'Explorez les marchés historiques dans une simulation sans risque.' }
+};
+
 const languageTrigger = document.getElementById('languageTrigger');
 const languageMenu = document.getElementById('languageMenu');
 const languageLabel = document.getElementById('languageLabel');
@@ -144,6 +154,7 @@ function setLanguage(language) {
   });
 
   updateLegalLinks(language);
+  updateDirectoryCopy(language);
   languageMenu.querySelectorAll('[data-language]').forEach((button) => {
     button.setAttribute('aria-current', button.dataset.language === language ? 'true' : 'false');
   });
@@ -229,6 +240,63 @@ document.addEventListener('keydown', (event) => {
     closeNavigation();
   }
 });
+
+
+const categoryTabs = [...document.querySelectorAll('[data-category-tab]')];
+const categoryPanels = [...document.querySelectorAll('[data-category-panel]')];
+const productCategoryStorageKey = '3tstone-product-category';
+
+function updateDirectoryCopy(language) {
+  const copy = directoryTranslations[language] || directoryTranslations.en;
+  document.querySelectorAll('[data-directory-i18n]').forEach((element) => {
+    const value = copy[element.dataset.directoryI18n];
+    if (value) element.textContent = value;
+  });
+  document.querySelectorAll('[data-directory-i18n-aria]').forEach((element) => {
+    const value = copy[element.dataset.directoryI18nAria];
+    if (value) element.setAttribute('aria-label', value);
+  });
+}
+
+function setProductCategory(category) {
+  const tab = categoryTabs.find((item) => item.dataset.categoryTab === category);
+  if (!tab) return;
+  categoryTabs.forEach((item) => {
+    const active = item === tab;
+    item.classList.toggle('is-active', active);
+    item.setAttribute('aria-selected', String(active));
+    item.tabIndex = active ? 0 : -1;
+  });
+  categoryPanels.forEach((panel) => { panel.hidden = panel.dataset.categoryPanel !== category; });
+  try { window.localStorage.setItem(productCategoryStorageKey, category); } catch { /* Storage may be unavailable. */ }
+}
+
+function getSavedProductCategory() {
+  try {
+    const saved = window.localStorage.getItem(productCategoryStorageKey);
+    return categoryTabs.some((tab) => tab.dataset.categoryTab === saved) ? saved : 'life';
+  } catch {
+    return 'life';
+  }
+}
+
+categoryTabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => setProductCategory(tab.dataset.categoryTab));
+  tab.addEventListener('keydown', (event) => {
+    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+    event.preventDefault();
+    let nextIndex = index;
+    if (event.key === 'ArrowLeft') nextIndex = (index - 1 + categoryTabs.length) % categoryTabs.length;
+    if (event.key === 'ArrowRight') nextIndex = (index + 1) % categoryTabs.length;
+    if (event.key === 'Home') nextIndex = 0;
+    if (event.key === 'End') nextIndex = categoryTabs.length - 1;
+    const next = categoryTabs[nextIndex];
+    setProductCategory(next.dataset.categoryTab);
+    next.focus();
+  });
+});
+
+setProductCategory(getSavedProductCategory());
 
 document.getElementById('year').textContent = new Date().getFullYear();
 setLanguage(getSavedLanguage());

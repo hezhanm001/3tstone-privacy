@@ -101,62 +101,70 @@
           <p data-i18n="productsDescription">Explore the products and legal information that support the 3TStone experience.</p>
         </div>
 
-        <div class="product-grid">
-          <article class="product-card product-card--diary">
-            <div class="card-topline"><span>01</span><svg aria-hidden="true" viewBox="0 0 32 32"><path d="m6 12 10-5 10 5-10 5-10-5ZM6 17l10 5 10-5M6 22l10 5 10-5"/></svg></div>
-            <h3>I/E Diary</h3>
-            <p data-i18n="productDescription">Access product information and the documents that explain how your data is handled.</p>
-           <details class="legal-details">
-             <summary><span data-i18n="legalDocuments">Legal documents</span><span aria-hidden="true">↗</span></summary>
-             <div class="legal-links" data-product="ieDiary">
-                <a href="IE_Diary_privacy-policy.html" data-doc="privacy" target="_blank" rel="noopener"><span data-i18n="privacyPolicy">Privacy Policy</span><span aria-hidden="true">→</span></a>
-                <a href="IE_Diary_Terms_of_Service.html" data-doc="terms" target="_blank" rel="noopener"><span data-i18n="termsOfService">Terms of Service</span><span aria-hidden="true">→</span></a>
-             </div>
-           </details>
-            <span class="card-shape" aria-hidden="true"></span>
-          </article>
+        <div class="product-directory">
+          <div class="category-tabs" role="tablist" aria-label="Product categories" data-directory-i18n-aria="categoryBrowserLabel">
+            <button class="category-tab is-active" id="category-life" type="button" role="tab" aria-selected="true" aria-controls="life-products" tabindex="0" data-category-tab="life">
+              <span class="category-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19.7 4.3C13.4 4.6 8.3 6.7 6.1 10.7c-1.6 2.9-1.1 6.4 1.4 8.4 2.1 1.7 5.3 1.5 7.4-.3 3.2-2.7 4.5-7.7 4.8-14.5Z"/><path d="M5 20c2.5-3.8 5.9-6.5 10.6-8.5"/></svg></span>
+              <span><small data-directory-i18n="lifeCategoryLabel">Life applications</small><strong data-directory-i18n="lifeCategoryCount">2 products</strong></span>
+              <span class="category-tab-arrow" aria-hidden="true">→</span>
+            </button>
+            <button class="category-tab" id="category-entertainment" type="button" role="tab" aria-selected="false" aria-controls="entertainment-products" tabindex="-1" data-category-tab="entertainment">
+              <span class="category-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 7.5 4.3 10.3a3.5 3.5 0 0 0-.8 3.7l1.1 3.3a2.2 2.2 0 0 0 2.1 1.5h10.6a2.2 2.2 0 0 0 2.1-1.5l1.1-3.3a3.5 3.5 0 0 0-.8-3.7L17 7.5H7Z"/><path d="m9 12-1.8 1.8L9 15.6M15 12l1.8 1.8-1.8 1.8M12 7.5l1-2.1"/></svg></span>
+              <span><small data-directory-i18n="entertainmentCategoryLabel">Entertainment applications</small><strong data-directory-i18n="entertainmentCategoryCount">2 products</strong></span>
+              <span class="category-tab-arrow" aria-hidden="true">→</span>
+            </button>
+          </div>
 
-          <article class="product-card product-card--iron">
-            <div class="card-topline"><span>02</span><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M16 3v26M8 8l8-5 8 5M7 14l9 5 9-5M7 21l9 5 9-5"/></svg></div>
-            <h3>Iron Hegemony</h3>
-            <p data-i18n="productDescription">Access product information and the documents that explain how your data is handled.</p>
-           <details class="legal-details">
-             <summary><span data-i18n="legalDocuments">Legal documents</span><span aria-hidden="true">↗</span></summary>
-             <div class="legal-links" data-product="ironHegemony">
-                <a href="Iron_Hegemony_privacy-policy.html" data-doc="privacy" target="_blank" rel="noopener"><span data-i18n="privacyPolicy">Privacy Policy</span><span aria-hidden="true">→</span></a>
-                <a href="Iron_Hegemony_Terms_of_Service.html" data-doc="terms" target="_blank" rel="noopener"><span data-i18n="termsOfService">Terms of Service</span><span aria-hidden="true">→</span></a>
-             </div>
-           </details>
-            <span class="card-shape" aria-hidden="true"></span>
-          </article>
-
-          <article class="product-card product-card--market">
-            <div class="card-topline"><span>03</span><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M5 25 12 17l5 4 10-12"/><path d="M21 9h6v6"/></svg></div>
-            <h3>Market Sniper</h3>
-            <p data-i18n="productDescription">Access product information and the documents that explain how your data is handled.</p>
-           <details class="legal-details">
-             <summary><span data-i18n="legalDocuments">Legal documents</span><span aria-hidden="true">↗</span></summary>
-             <div class="legal-links" data-product="marketSniper">
-                <a href="Market_Sniper_privacy-policy.html" data-doc="privacy" target="_blank" rel="noopener"><span data-i18n="privacyPolicy">Privacy Policy</span><span aria-hidden="true">→</span></a>
-                <a href="Market_Sniper_Terms_of_Service.html" data-doc="terms" target="_blank" rel="noopener"><span data-i18n="termsOfService">Terms of Service</span><span aria-hidden="true">→</span></a>
-             </div>
-           </details>
-            <span class="card-shape" aria-hidden="true"></span>
-          </article>
-
-          <article class="product-card product-card--patinote">
-            <div class="card-topline"><span>04</span><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M16 4c4.8 5.4 7.2 9.6 7.2 12.8a7.2 7.2 0 1 1-14.4 0C8.8 13.6 11.2 9.4 16 4Z"/><path d="M13 19c.8 1.2 1.9 1.8 3.4 1.8 1.2 0 2.2-.4 3-1.2"/></svg></div>
-            <h3>Patinote</h3>
-            <p data-i18n="productDescription">Access product information and the documents that explain how your data is handled.</p>
-            <details class="legal-details">
-              <summary><span data-i18n="legalDocuments">Legal documents</span><span aria-hidden="true">↗</span></summary>
-              <div class="legal-links" data-product="patinote">
-                <a href="patinote-privacy-policy.html" data-doc="privacy" target="_blank" rel="noopener"><span data-i18n="privacyPolicy">Privacy Policy</span><span aria-hidden="true">→</span></a>
-                <a href="patinote-terms-of-service.html" data-doc="terms" target="_blank" rel="noopener"><span data-i18n="termsOfService">Terms of Service</span><span aria-hidden="true">→</span></a>
+          <section class="category-panel" id="life-products" role="tabpanel" aria-labelledby="category-life" data-category-panel="life">
+            <header class="category-panel-header">
+              <div>
+                <p class="category-kicker" data-directory-i18n="lifePanelKicker">Life applications</p>
+                <h3 data-directory-i18n="lifePanelTitle">Made for everyday life.</h3>
+                <p data-directory-i18n="lifePanelDescription">Organise what matters, and keep the moments worth revisiting.</p>
               </div>
-            </details>
-            <span class="card-shape" aria-hidden="true"></span>
-          </article>
+              <span class="category-product-count" data-directory-i18n="categoryProductCount">2 products</span>
+            </header>
+            <div class="product-list">
+              <article class="product-row product-row--diary">
+                <span class="product-row-index">01</span>
+                <span class="product-row-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m6 12 10-5 10 5-10 5-10-5ZM6 17l10 5 10-5M6 22l10 5 10-5"/></svg></span>
+                <div class="product-row-copy"><h4>I/E Diary</h4><p data-directory-i18n="ieDiaryDescription">Personal finance, made easier to revisit.</p></div>
+                <details class="legal-details product-row-legal"><summary><span data-i18n="legalDocuments">Legal documents</span><span aria-hidden="true">↗</span></summary><div class="legal-links" data-product="ieDiary"><a href="IE_Diary_privacy-policy.html" data-doc="privacy" target="_blank" rel="noopener"><span data-i18n="privacyPolicy">Privacy Policy</span><span aria-hidden="true">→</span></a><a href="IE_Diary_Terms_of_Service.html" data-doc="terms" target="_blank" rel="noopener"><span data-i18n="termsOfService">Terms of Service</span><span aria-hidden="true">→</span></a></div></details>
+              </article>
+              <article class="product-row product-row--patinote">
+                <span class="product-row-index">02</span>
+                <span class="product-row-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 4c4.8 5.4 7.2 9.6 7.2 12.8a7.2 7.2 0 1 1-14.4 0C8.8 13.6 11.2 9.4 16 4Z"/><path d="M13 19c.8 1.2 1.9 1.8 3.4 1.8 1.2 0 2.2-.4 3-1.2"/></svg></span>
+                <div class="product-row-copy"><h4>Patinote</h4><p data-directory-i18n="patinoteDescription">Your places, moments and memories in one journal.</p></div>
+                <details class="legal-details product-row-legal"><summary><span data-i18n="legalDocuments">Legal documents</span><span aria-hidden="true">↗</span></summary><div class="legal-links" data-product="patinote"><a href="patinote-privacy-policy.html" data-doc="privacy" target="_blank" rel="noopener"><span data-i18n="privacyPolicy">Privacy Policy</span><span aria-hidden="true">→</span></a><a href="patinote-terms-of-service.html" data-doc="terms" target="_blank" rel="noopener"><span data-i18n="termsOfService">Terms of Service</span><span aria-hidden="true">→</span></a></div></details>
+              </article>
+            </div>
+          </section>
+
+          <section class="category-panel" id="entertainment-products" role="tabpanel" aria-labelledby="category-entertainment" data-category-panel="entertainment" hidden>
+            <header class="category-panel-header">
+              <div>
+                <p class="category-kicker" data-directory-i18n="entertainmentPanelKicker">Entertainment applications</p>
+                <h3 data-directory-i18n="entertainmentPanelTitle">Explore, decide, play.</h3>
+                <p data-directory-i18n="entertainmentPanelDescription">Strategy experiences built for curiosity, play and exploration.</p>
+              </div>
+              <span class="category-product-count" data-directory-i18n="categoryProductCount">2 products</span>
+            </header>
+            <div class="product-list">
+              <article class="product-row product-row--iron">
+                <span class="product-row-index">01</span>
+                <span class="product-row-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3v26M8 8l8-5 8 5M7 14l9 5 9-5M7 21l9 5 9-5"/></svg></span>
+                <div class="product-row-copy"><h4>Iron Hegemony</h4><p data-directory-i18n="ironHegemonyDescription">A strategic world simulation for considered decisions.</p></div>
+                <details class="legal-details product-row-legal"><summary><span data-i18n="legalDocuments">Legal documents</span><span aria-hidden="true">↗</span></summary><div class="legal-links" data-product="ironHegemony"><a href="Iron_Hegemony_privacy-policy.html" data-doc="privacy" target="_blank" rel="noopener"><span data-i18n="privacyPolicy">Privacy Policy</span><span aria-hidden="true">→</span></a><a href="Iron_Hegemony_Terms_of_Service.html" data-doc="terms" target="_blank" rel="noopener"><span data-i18n="termsOfService">Terms of Service</span><span aria-hidden="true">→</span></a></div></details>
+              </article>
+              <article class="product-row product-row--market">
+                <span class="product-row-index">02</span>
+                <span class="product-row-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 25 12 17l5 4 10-12"/><path d="M21 9h6v6"/></svg></span>
+                <div class="product-row-copy"><h4>Market Sniper</h4><p data-directory-i18n="marketSniperDescription">Explore historical markets through a risk-free simulation.</p></div>
+                <details class="legal-details product-row-legal"><summary><span data-i18n="legalDocuments">Legal documents</span><span aria-hidden="true">↗</span></summary><div class="legal-links" data-product="marketSniper"><a href="Market_Sniper_privacy-policy.html" data-doc="privacy" target="_blank" rel="noopener"><span data-i18n="privacyPolicy">Privacy Policy</span><span aria-hidden="true">→</span></a><a href="Market_Sniper_Terms_of_Service.html" data-doc="terms" target="_blank" rel="noopener"><span data-i18n="termsOfService">Terms of Service</span><span aria-hidden="true">→</span></a></div></details>
+              </article>
+            </div>
+          </section>
+          <p class="directory-hint" data-directory-i18n="categoryHint">Select a category to browse its products.</p>
         </div>
       </section>
 
