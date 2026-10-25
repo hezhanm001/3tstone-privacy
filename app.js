@@ -48,6 +48,16 @@ const translations = {
     productsEyebrow: '제품', productsLead: '아이디어를', productsAccent: '연결합니다.', productsDescription: '3TStone 경험을 뒷받침하는 제품과 법적 정보를 확인하세요.', productDescription: '제품 정보와 데이터 처리 방식을 설명하는 문서를 확인할 수 있습니다.', legalDocuments: '법적 문서', privacyPolicy: '개인정보 처리방침', termsOfService: '서비스 약관',
     aboutEyebrow: '3TStone 소개', aboutTitle: '삶을 위한 기술.', aboutText: '3TStone은 기술을 통해 삶을 개선하는 데 전념하는 혁신 기술 기업입니다. 혁신적인 제품과 솔루션으로 전 세계 사용자에게 편리함, 효율성, 그리고 새로운 디지털 경험을 제공합니다.',
     missionTitle: '미션', missionText: '사려 깊은 기술과 사용자 친화적인 디자인을 통해 삶을 더 좋게 만드는 편리하고 효율적인 디지털 솔루션을 만듭니다.', visionTitle: '비전', visionText: '다양한 제품과 서비스를 통해 더 직관적인 디지털 미래를 만들어 갑니다.', teamTitle: '팀', teamText: '기술 혁신, 디자인, 엔지니어링, 사용자 경험 최적화 전반에 경험을 가진 글로벌 팀입니다.', rights: 'All rights reserved.', backToTop: '맨 위로 ↑'
+  },
+  fr: {
+    code: 'FR', htmlLang: 'fr', brandTagline: 'Technologie innovante, vie meilleure', skipToContent: 'Aller au contenu', menuLabel: 'Ouvrir la navigation',
+    navProducts: 'Produits', navAbout: 'À propos', navCompany: 'Entreprise',
+    eyebrow: 'Technologie innovante · vie meilleure', heroLead: 'Demain paraît', heroAccent: 'plus simple.',
+    heroDescription: '3TStone conçoit des expériences numériques intelligentes qui aident chacun à avancer dans la vie avec confiance.', heroCta: 'Découvrir nos produits',
+    principlesTitle: 'Conçu pour la vie réelle', valueOneTitle: 'Intuitif', valueOneText: 'Naturel dès le premier jour.', valueTwoTitle: 'Efficace', valueTwoText: 'Faire plus avec moins d’effort.', valueThreeTitle: 'Universel', valueThreeText: 'Conçu pour les personnes du monde entier.',
+    productsEyebrow: 'Nos produits', productsLead: 'Des idées qui', productsAccent: 'créent du lien.', productsDescription: 'Découvrez les produits et les informations juridiques qui accompagnent l’expérience 3TStone.', productDescription: 'Accédez aux informations du produit et aux documents expliquant le traitement de vos données.', legalDocuments: 'Documents juridiques', privacyPolicy: 'Politique de confidentialité', termsOfService: 'Conditions d’utilisation',
+    aboutEyebrow: 'À propos de 3TStone', aboutTitle: 'La technologie au service de la vie.', aboutText: 'Nous sommes une entreprise technologique innovante qui améliore la vie grâce à la technologie. Nous créons des produits qui offrent des expériences numériques pratiques, efficaces et nouvelles aux personnes du monde entier.',
+    missionTitle: 'Notre mission', missionText: 'Par une technologie réfléchie et une conception facile à utiliser, nous créons des solutions numériques pratiques et efficaces qui améliorent la vie.', visionTitle: 'Notre vision', visionText: 'Façonner un avenir numérique plus intuitif grâce à des produits et services variés.', teamTitle: 'Notre équipe', teamText: 'Une équipe internationale réunissant des expériences en innovation technologique, design, ingénierie et optimisation de l’expérience.', rights: 'Tous droits réservés.', backToTop: 'Retour en haut ↑'
   }
 };
 
@@ -55,27 +65,38 @@ const documentURLs = {
   en: {
     ieDiary: { privacy: 'IE_Diary_privacy-policy.html', terms: 'IE_Diary_Terms_of_Service.html' },
     ironHegemony: { privacy: 'Iron_Hegemony_privacy-policy.html', terms: 'Iron_Hegemony_Terms_of_Service.html' },
-    marketSniper: { privacy: 'Market_Sniper_privacy-policy.html', terms: 'Market_Sniper_Terms_of_Service.html' }
+    marketSniper: { privacy: 'Market_Sniper_privacy-policy.html', terms: 'Market_Sniper_Terms_of_Service.html' },
+    patinote: { privacy: 'patinote-privacy-policy.html', terms: 'patinote-terms-of-service.html' }
   },
   'zh-CN': {
     ieDiary: { privacy: 'IE_Diary_privacy-policy_zh.html', terms: 'IE_Diary_Terms_of_Service_zh.html' },
     ironHegemony: { privacy: 'Iron_Hegemony_privacy-policy_zh.html', terms: 'Iron_Hegemony_Terms_of_Service_zh.html' },
-    marketSniper: { privacy: 'Market_Sniper_privacy-policy_zh.html', terms: 'Market_Sniper_Terms_of_Service_zh.html' }
+    marketSniper: { privacy: 'Market_Sniper_privacy-policy_zh.html', terms: 'Market_Sniper_Terms_of_Service_zh.html' },
+    patinote: { privacy: 'patinote-privacy-policy-zh-hans.html', terms: 'patinote-terms-of-service-zh-hans.html' }
   },
   'zh-TW': {
     ieDiary: { privacy: 'IE_Diary_privacy-policy_zh-tw.html', terms: 'IE_Diary_Terms_of_Service_zh-tw.html' },
     ironHegemony: { privacy: 'Iron_Hegemony_privacy-policy_zh-tw.html', terms: 'Iron_Hegemony_Terms_of_Service_zh-tw.html' },
-    marketSniper: { privacy: 'Market_Sniper_privacy-policy_zh-tw.html', terms: 'Market_Sniper_Terms_of_Service_zh-tw.html' }
+    marketSniper: { privacy: 'Market_Sniper_privacy-policy_zh-tw.html', terms: 'Market_Sniper_Terms_of_Service_zh-tw.html' },
+    patinote: { privacy: 'patinote-privacy-policy-zh-hant.html', terms: 'patinote-terms-of-service-zh-hant.html' }
   },
   ja: {
     ieDiary: { privacy: 'IE_Diary_privacy-policy_ja.html', terms: 'IE_Diary_Terms_of_Service_ja.html' },
     ironHegemony: { privacy: 'Iron_Hegemony_privacy-policy_ja.html', terms: 'Iron_Hegemony_Terms_of_Service_ja.html' },
-    marketSniper: { privacy: 'Market_Sniper_privacy-policy_ja.html', terms: 'Market_Sniper_Terms_of_Service_ja.html' }
+    marketSniper: { privacy: 'Market_Sniper_privacy-policy_ja.html', terms: 'Market_Sniper_Terms_of_Service_ja.html' },
+    patinote: { privacy: 'patinote-privacy-policy-ja.html', terms: 'patinote-terms-of-service-ja.html' }
   },
   ko: {
     ieDiary: { privacy: 'IE_Diary_privacy-policy_ko.html', terms: 'IE_Diary_Terms_of_Service_ko.html' },
     ironHegemony: { privacy: 'Iron_Hegemony_privacy-policy_ko.html', terms: 'Iron_Hegemony_Terms_of_Service_ko.html' },
-    marketSniper: { privacy: 'Market_Sniper_privacy-policy_ko.html', terms: 'Market_Sniper_Terms_of_Service_ko.html' }
+    marketSniper: { privacy: 'Market_Sniper_privacy-policy_ko.html', terms: 'Market_Sniper_Terms_of_Service_ko.html' },
+    patinote: { privacy: 'patinote-privacy-policy-ko.html', terms: 'patinote-terms-of-service-ko.html' }
+  },
+  fr: {
+    ieDiary: { privacy: 'IE_Diary_privacy-policy_fr.html', terms: 'IE_Diary_Terms_of_Service_fr.html' },
+    ironHegemony: { privacy: 'Iron_Hegemony_privacy-policy_fr.html', terms: 'Iron_Hegemony_Terms_of_Service_fr.html' },
+    marketSniper: { privacy: 'Market_Sniper_privacy-policy_fr.html', terms: 'Market_Sniper_Terms_of_Service_fr.html' },
+    patinote: { privacy: 'patinote-privacy-policy-fr.html', terms: 'patinote-terms-of-service-fr.html' }
   }
 };
 
@@ -99,7 +120,8 @@ function updateLegalLinks(language) {
   document.querySelectorAll('.legal-links[data-product]').forEach((group) => {
     const product = group.dataset.product;
     group.querySelectorAll('a[data-doc]').forEach((link) => {
-      link.href = documentURLs[language][product][link.dataset.doc];
+      const productDocuments = documentURLs[language]?.[product] || documentURLs.en[product];
+      if (productDocuments?.[link.dataset.doc]) link.href = productDocuments[link.dataset.doc];
     });
   });
 }
